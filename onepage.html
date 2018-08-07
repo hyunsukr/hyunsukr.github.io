@@ -25,7 +25,55 @@
     <link href="css/creative.min.css" rel="stylesheet">
 
   </head>
-
+  <style>
+  .square_btn {
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #fff;
+    background-color:#000;
+    border-radius: 2px;
+    box-shadow:0 1px 1px #fff;
+    transition: .4s;
+    width:200px;
+    height: 50px;
+    margin: auto;
+    text-align: center;
+    padding-right: 20px;
+    line-height: 44px;
+    margin-left:41%;
+    margin-right:39%;
+  position: relative;
+}
+.square_btn:hover {
+    background-color:#706f6f;
+    color: white;
+}
+.class_btn {
+    background-color: transparent;
+    border:0px;
+}
+.class_btn:hover {
+    background-color:#15335a;
+    color: white;
+}
+</style>    
+<script>
+    function showclass(classid) {
+        var all = document.getElementsByClassName("class")
+        for (i = 0; i < all.length; i++) {
+            if (all[i].id == classid) {
+                if (all[i].style.display=="block") {
+                    document.getElementById(classid).style.display="none";
+                }else {
+                    document.getElementById(classid).style.display="block";
+                }
+            }else {
+                all[i].style.display = "none";
+            }
+        }
+    }
+</script>
   <body id="page-top">
 
     <!-- Navigation -->
@@ -41,14 +89,20 @@
               <a class="nav-link js-scroll-trigger" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
-            </li>
+                <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+              </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+              <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
             </li>
+            <li class ="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+            <li class ="nav-item">
+                <a class="nav-link" href="/index">Multi-Page Version</a>
+              </li>
           </ul>
         </div>
       </div>
@@ -64,8 +118,8 @@
             <hr>
           </div>
           <div class="col-lg-8 mx-auto">
-            <p class="text-faded mb-5">Programmer and Data Scientist</p>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+            <p class="text-faded mb-5"><strong>Programmer and Data Scientist</strong></p>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">About Me!</a>
           </div>
         </div>
       </div>
@@ -74,183 +128,532 @@
     <section class="bg-primary" id="about">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">We've got what you need!</h2>
-            <hr class="light my-4">
-            <p class="text-faded mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
-            <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
+          <div class="col-8 mx-auto text-center">
+            <h2 class="section-heading text-white">About Me!</h2>
+            <hr class="light my-4"><br> 
           </div>
         </div>
+        <div class="row">
+          <div class="col-8">
+            <p class="text-faded mb-4" style="text-align:left;">
+              Hello! My name is Max Ryoo, and I am currently studying Computer Science and Statistics (Biostatics Concentration) at the University of Virginia. 
+              My graduation year is 2020, which means I will be entering my third Year at UVa in the fall. I am currently looking for internships for the positions of software development or database development!
+            </p>
+            <p class="text-faded mb-4" style="text-align:left;">
+              I was born in Busan, South Korea, and after living 19 years in the United States I finally became a citizen. I lived all over the states ranging from Nebraska to Virginia!
+              Because I grew up in a Korean Household I am fluent in both English and Korean. 
+            </p>
+            <p class="text-faded mb-4" style="text-align:left;">
+              My future goal is to combine the areas of Computer Science and Statistics to implement automated systems for different areas. I hope you check out the other tabs to learn more about me! Thanks!
+            </p>
+          </div>
+          <div class="col-4">
+            <div class="card" style="background-color:transparent;border:5px solid rgba(224, 222, 217, 0.74)">
+              <img class="card-img-top" src="./pictures/hyunsuk.jpg" alt="Hyunsuk Ryoo">
+              <div class="card-body" style="text-align:left">
+                <strong><i class="fa fa-map-marker" aria-hidden="true"></i> Location:</strong> <span style="color:white">Charlottesville, VA</span><br>
+                <strong><i class="fa fa-envelope-o"></i> Email:</strong> <a style="color:white" href="mailto:hr2ee@virginia.edu">hr2ee@virginia.edu</a><br>
+                <strong><i class="fa fa-github" aria-hidden="true"></i> Github:</strong> <a style="color:white" href="https://github.com/hyunsukr">hyunsukr</a><br>
+                <strong><i class="fa fa-linkedin-square"></i> Linked-in: </strong><a style="color:white" href="http://www.linkedin.com/in/hyun-suk-ryoo">hyun-suk-ryoo</a><br>
+                <strong><i class="fa fa-download" aria-hidden="true"></i> Resume/CV:</strong> <a style="color:white" href="./resume_ryoo.pdf">resume</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-8 mx-auto text-center"><br><br>
+              <a class="btn btn-light btn-xl js-scroll-trigger text-center" href="#education">Education</a>
+            </div>
+          </div>
       </div>
-    </section>
+      </section>
 
-    <section id="services">
+    <section id="education">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading">At Your Service</h2>
+            <h2 class="section-heading">Education</h2>
             <hr class="my-4">
           </div>
         </div>
       </div>
       <div class="container">
+          <h2 style="text-align: center;">University of Virginia</h2>
+          <h5 style="text-align: center;">B.A. Computer Science <br> B.A. Statistics (Biostatisics)</h5>
+          <h6 style="text-align: center;">Expected:2020</h6><br>
+          <span style="text-align: center;"><a href="./resume_ryoo.pdf" style="display: block; margin: 0 auto;" class="square_btn">Resume</a></span><br><br>
+          <h4 style="text-align: center;"><strong>Relevant Courses</strong></h4><br>
+          <div class="row">
+            <div class="col-6 text-center">
+              <h5 style="text-align: center;"><strong>Computer Science</strong></h5>
+              <hr style = "height:1px;border-color:rgb(99, 99, 99); ">
+                  <button class = "class_btn" onclick="showclass('cs4750')">Database Systems (CS 4750)</button>
+                  <p id = "cs4750" class = "class" style="border-bottom: groove;display: none">
+                    <br>Introduces the fundamental concepts for design and development of database systems. Emphasizes relational data model and conceptual schema design using ER model, practical issues in commercial database systems, database design using functional dependencies, and other data models. Develops a working relational database for a realistic application.
+                  </p><br>
+                  <button class="class_btn" onclick="showclass('cs4102')">Algorithms (CS 4102)</button>
+                    <p id = "cs4102" class = "class" style="border-bottom: groove;display: none">
+                      <br>Introduces the analysis of algorithms and the effects of data structures on them. Algorithms selected from areas such as sorting, searching, shortest paths, greedy algorithms, backtracking, divide-and-conquer, and dynamic programming. Data structures include heaps and search, splay, and spanning trees. Analysis techniques include asymtotic worst case, expected time, amortized analysis, and reductions between problems. 
+                    </p><br>
+                      <button class="class_btn" onclick="showclass('cs3330')">Computer Architecture (CS 3330)</button>
+                      <p id = "cs3330" class = "class"style="border-bottom: groove;display: none">
+                          <br>Includes the organization and architecture of computer systems hardware; instruction set architectures; addressing modes; register transfer notation; processor design and computer arithmetic; memory systems; hardware implementations of virtual memory, and input/output control and devices. 
+                      </p><br>
+                      <button class="class_btn" onclick="showclass('cs2150')">Program and Data Representations (CS 2150)</button>
+                      <p id = "cs2150" class = "class" style="border-bottom: groove;display: none">
+                          <br>Introduces programs and data representation at the machine level. Data structuring techniques and the representation of data structures during program execution. Operations and control structures and their representation during program execution. Representations of numbers, arithmetic operations, arrays, records, recursion, hashing, stacks, queues, trees, graphs, and related concepts. 
+                      </p><br>
+                      <button class="class_btn" onclick="showclass('cs2110')">Software Development Methods (CS 2110)</button>
+                      <p id = "cs2110" class = "class" style="border-bottom: groove;display: none">
+                          <br>A second course in computing with an emphasis on modern software development and principles central to computer science. Topics include software requirements, testing, object-oriented design, abstraction, encapsulation, recursion, and time-complexity.
+                      </p><br>
+                      <button class="class_btn" onclick="showclass('cs2102')">Discrete Mathematics (CS 2102)</button>
+                      <p id = "cs2102" class = "class" style="border-bottom: groove;display:none">
+                          <br>Introduces discrete mathematics and proof techniques involving first order predicate logic and induction. Application areas include finite and infinite sets, elementary combinatorial problems, and graph theory. Development of tools and mechanisms for reasoning about discrete problems.
+                      </p><br>
+                      <button class="class_btn" onclick="showclass('stat1559')">Introduction Data Science with Python (STAT 1559)</button>
+                      <p id = "stat1559" class= "class" style="border-bottom: groove;display: none">
+                          <br>Introduces Data Science methodologies with Python with Anaconda. All methods are taught with real data mining techniques
+                      </p><br>
+                      <button class="class_btn" onclick="showclass('cs1113')">Introduction to Programming (CS 1113)</button>
+                      <p id="cs1113" class ="class" style="border-bottom: groove;display: none">
+                          <br>A first course in programming, software development, and computer science. Introduces computing fundamentals and an appreciation for computational thinking. No previous programming experience required.
+                      </p><br>
+      
+      
+                  </div>
+                  <div class="col-6 text-center">
+                          <h5 style="text-align: center;"><strong>Statistics (Biostatisics)</strong></h5>
+                          <hr style = "height:1px;border-color:rgb(99, 99, 99); ">
+                          <button class="class_btn" onclick="showclass('stat3220')">Introduction to Regression Analysis (STAT 3220),</button><br>
+                          <p id = "stat3220" class = "class" style="border-bottom: groove;display:none">
+                              <br>This course provides a survey of regression analysis techniques, covering topics from simple regression, multiple regression, logistic regression, and analysis of variance. The primary focus is on model development and applications.
+                          </p>
+                          <button class="class_btn" onclick="showclass('math3351')">Elementary Linear Algebra (MATH 3351)</button>
+                          <p id = "math3351" class ="class" style="border-bottom: groove;display:none">
+                              <br>Includes matrices, elementary row operations, inverses, vector spaces and bases, inner products and Gram-Schmidt orthogonalization, orthogonal matrices, linear transformations and change of basis, eigenvalues, eigenvectors, and symmetric matrices. 
+                          </p>
+                          <button class="class_btn" onclick="showclass('math3100')">Introduction to Probability (MATH 3100)</button>
+                          <p id ="math3100" class ="class" style="border-bottom: groove;display:none">
+                              <br>Introduces fundamental concepts/techniques of probability/the theory of randomness. Focuses on problem solving/understanding key theoretical ideas. Topics include sample spaces combinatorial analysis/discrete and continuous random variables/classical distributions/expectation/Chebyshev's inequality/independence/central limit theorem/conditional probability/generating functions. 
+                          </p>
+                          <button class="class_btn" onclick="showclass('stat3080')">From Data to Knowledge (STAT 3080)</button>
+                          <p id="stat3080" class = "class" style="border-bottom: groove;display:none">
+                              <br>Most elementary statistics courses start with a technique & present various surface level examples. This course will use relatively complicated data sets and approach them from multiple angles with elementary statistical techniques. Simulation techniques such as the bootstrap will also be used. Conceptual discussion in lectures is supplemented with hands-on practice in applied data-analysis tasks using R statistical software.
+                          </p>
+                          <button class="class_btn" onclick="showclass('biol2100')">Introduction to Biology (BIOL 2100 & BIOL 2200)</button>
+                          <p id="biol2100" class = "class" style="border-bottom: groove;display:none">
+                              <br> BIOL 2100 is one of two semester courses that together provide an intensive introduction to biology for prospective Biology majors and pre-health (med, vet, dental) students. This course focuses on the fundamentals of cell biology and genetics with an emphasis on classical and modern experimental approaches. 
+                              <br><br>BIOL 2200 is one of two semester courses that together provide an intensive introduction to biology for prospective Biology majors and pre-health (med, vet, dental) students. This course focuses on evolution, physiology and development.
+                          </p>
+                          <button class="class_btn" onclick="showclass('stat2120')">Introduction to Statistical Analysis (STAT 2120)</button>
+                          <p id="stat2120" class = "class" style="border-bottom: groove;display:none"></pid>
+                              <br>Introduction to the probability and statistical theory underlying the estimation of parameters and testing of statistical hypotheses, including those arising in the context of simple and multiple regression models. Students will use computers and statistical programs to analyze data. Examples and applications are drawn from economics, business, and other fields.
+                          </p>
+                          <button class="class_btn" onclick="showclass('stat15591')"> Introduction to Data Science with Python (STAT 1559)</button>
+                          <p id="stat15591" class = "class" style="border-bottom: groove;display:none"></pid>
+                              <br>Introduces Data Science methodologies with Python with Anaconda. All methods are taught with real data mining techniques
+                          </p>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-8 mx-auto text-center"><br><br>
+                    <a class="btn btn-primary btn-xl js-scroll-trigger" href="#projects">Projects</a>
+                  </div>
+                </div>
+            </div>
+      </div>
+    </section>
+
+    <section class="bg-primary" id="projects">
+      <div class="container-fluid p-0 text-center">
+          <div class="row">
+              <div class="col-8 mx-auto text-center">
+                <h2 class="section-heading text-white">Projects!</h2>
+                <hr class="light my-4"><br> 
+              </div>
+            </div>
+          <div class ="row">
+              <div class="col-6 text-center">
+                  <h3 class="text-white">Personal Projects</h3>
+                  <h6 class="text-white">Click on picture for more details</h6>
+                  <figure class="figure">
+                      <a class="js-scroll-trigger" href="#ksea"><img style ="width:225px;height:150px" src="pictures/KSEA.png" class="figure-img img-fluid rounded" alt="ksae"></a>
+                      <figcaption style ="width:300px;" class="figure-caption text-white text-center">KSEA(Korean-American Scientist and Engineering Assocation) Web-Page development</figcaption>
+                  </figure>
+                  <figure class="figure">
+                      <a class="js-scroll-trigger" href="#uscconsultation"><img style ="width:225px;height:150px" src="pictures/uscconsultation.png" class="figure-img img-fluid rounded" alt="uscconsulation"></a>
+                      <figcaption style ="width:300px;" class="figure-caption text-white text-center">Web-Page development for Consultation Services for Biostatics Core at the Saban Research Institute of CHLA</figcaption>
+                  </figure>
+                  <figure class="figure">
+                          <a class="js-scroll-trigger" href="#swifteats"><img style ="width:225px;height:150px" src="pictures/swifteats.png" class="figure-img img-fluid rounded" alt="uscconsulation"></a>
+                          <figcaption style ="width:300px;" class="figure-caption text-white text-center">Web-Page development for Meal Order Online for S.W.I.F.T<br><br></figcaption>
+                  </figure>
+                </div>
+                <div class="col-6 text-center">
+                    <h3 class="text-white">Research Projects</h3>
+                    <h6 class="text-white">Click on picture for more details</h6>
+                    <figure class="figure" style="padding-right:20px">
+                      <a class="js-scroll-trigger" href="#shinlab"><img style ="width:225px;height:150px" src="pictures/shinlab.png" class="figure-img img-fluid rounded" alt="ksae"></a>
+                        <figcaption style ="width:300px;" class="figure-caption text-white text-center">Research Assistant, University of Virginia. <br>Department of Neuroscience <br>
+                        </figcaption>
+                      </figure> 
+                  </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-8 mx-auto text-center"><br><br>
+            <a class="btn btn-light btn-xl js-scroll-trigger" href="#experience">Learn about my Experiences</a>
+          </div>
+        </div>
+        </div>
+    </section>
+    
+    <section class="bg-primary" id="ksea">
+      <div class="container text-left">
         <div class="row">
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Sturdy Templates</h3>
-              <p class="text-muted mb-0">Our templates are updated regularly so they don't break.</p>
+            <div class="col-8">
+                <h2 class="text-white"><strong>KSEA Web-Page</strong></h2>
+                <p style="color:rgb(212, 209, 209)">
+                    This personal project was for developing a Web-Page for KSEA at UVa (Central Virginia Chapter). With this website people can contact us directly about offers or opportunities.
+                    The website also displays upcoming events for the KSEA members.
+                </p><br><br>  
+                <a  class="btn btn-light btn-xl js-scroll-trigger" href="#projects">Back to Projects</a>
+                <a class="btn btn-light btn-xl js-scroll-trigger" href="#experience">My Experience?</a>
             </div>
+            <div class="col-4">
+                <hr style = "max-width: none;height:1px;border-color:#090986; ">
+                <p>
+                    <strong>Role:</strong> <span style="color:white">Full Stack Developer</span>
+                </p>
+                <hr style = "max-width: none;height:1px;border-color:#090986; ">
+                <p>
+                    <strong>Language:</strong> <span style="color:white">Node Js, Sqlite3, Python, HTML, CSS</span>
+                </p>
+                <hr style = "max-width: none;height:1px;border-color:#090986; ">
+                <p>
+                    <strong>Time:</strong> <span style="color:white">June - August 2018</span>
+                </p>
+                <hr style = "max-width: none;height:1px;border-color:#090986; ">
+                <p>
+                    <strong>Link:</strong> <a style="color:white" href ="http://www.uva-ksea.org">http://www.uva-ksea.org</a>
+                </p>
+              </div>
+        </div>
+    </div>
+    <div class ="container">
+    <hr style = "max-width: none;height:1px;border-color:#090986; ">
+    <span style="color:white"><strong>Pictures:</strong></span><br><br>
+    <figure class="figure" style="padding-right:65px">
+           <img style ="width:300px;height:200px" src="pictures/KSEA.png" class="figure-img img-fluid rounded" alt="ksae">
+            <figcaption style ="width:300px;" class="figure-caption text-center text-white">Homepage</figcaption>
+        </figure> 
+        <figure class="figure" style="padding-right:65px">
+            <img style ="width:300px;height:200px" src="pictures/kseahome.png" class="figure-img img-fluid rounded" alt="uscconsulation">
+            <figcaption style ="width:300px;" class="figure-caption text-center text-white">Welcome Page</figcaption>
+        </figure>
+        <figure class="figure" style="padding-right:65px">
+            <img style ="width:300px;height:200px;" src="pictures/kseaabout.png" class="figure-img img-fluid rounded" alt="uscconsulation">
+            <figcaption style ="width:300px;" class="figure-caption text-center text-white">About</figcaption>
+        </figure>
+        <figure class="figure" style="padding-right:65px">
+                <img style ="width:300px;height:200px" src="pictures/events.png" class="figure-img img-fluid rounded" alt="uscconsulation">
+                <figcaption style ="width:300px;" class="figure-caption text-center text-white">Social Events Page</figcaption>
+        </figure>
+        <figure class="figure" style="padding-right:65px">
+                <img style ="width:300px;height:200px" src="pictures/getconnected.png" class="figure-img img-fluid rounded" alt="uscconsulation">
+                <figcaption style ="width:300px;" class="figure-caption text-center text-white">Get Connected Page</figcaption>
+        </figure>
+    </div>
+  </div>
+  </section>
+  <section class="bg-primary" id="uscconsultation">
+      <div class="container text-left">
+          <div class="row">
+              <div class="col-8">
+                  <h2 class="text-white"><strong>Univeristy of Southern California Consultation Services Web-Page</strong></h2>
+                  <p style="color:rgb(212, 209, 209)">
+                      This project was to maintain a Web-Page for the Biostatics Core at the Saban Research Institute of CHLA. This website is used to schdule and maintain appointments for the consultation service 
+                      that is offered by the Core Program. Also, information about the Core and Events/Lessons are available on the webpage. There is also a contact page for people to freely contact whomever they need.
+                      <br><br>Basic functionalities include:
+                      <ul style="color:rgb(212, 209,209); margin-bottom:0rem;">
+                          <li>User Management System</li>
+                          <li>Scheduling Events</li>
+                          <li>Date Checking System</li>
+                          <li>Updating Appointments System</li>
+                          <li>Viewing Appointments System</li>
+                          <li>Uploading Documents/Papers for revision System</li>
+                          <li>Sending Request for Appointments to the organizers by Email</li>
+                          <li>Database Retrieval</li>
+                      </ul>
+                  </p>
+                  <a  class="btn btn-light btn-xl js-scroll-trigger" href="#projects">Back to Projects</a>
+                  <a class="btn btn-light btn-xl js-scroll-trigger" href="#experience">My Experience?</a>
+  
+              </div>
+              <div class="col-4">
+                  <hr style = "max-width: none;height:1px;border-color:#090986; ">
+                  <p>
+                      <strong>Role:</strong> <span style="color:white">Full Stack Developer</span>
+                  </p>
+                  <hr style = "max-width: none;height:1px;border-color:#090986; ">
+                  <p>
+                      <strong>Language:</strong> <span style="color:white">Node Js, Sqlite3, Python, HTML, CSS</span>
+                  </p>
+                  <hr style = "max-width: none;height:1px;border-color:#090986; ">
+                  <p>
+                      <strong>Time:</strong> <span style="color:white">June - August 2018</span>
+                  </p>
+                  <hr style = "max-width: none;height:1px;border-color:#090986; ">
+                  <p>
+                      <strong>Temporary Link:</strong> <a style="color:white" href ="http://178.128.178.177:3000/">http://178.128.178.177:3000/</a>
+                  </p>
+                  <hr style = "max-width: none;height:1px;border-color:#090986; ">
+                </div>
           </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Ready to Ship</h3>
-              <p class="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
+      </div>
+      <div class ="container">
+          <hr style = "max-width: none;height:1px;border-color:#090986; ">
+          <span style="color:white"><strong>Pictures:</strong></span><br><br>
+      <figure class="figure" style="padding-right:65px">
+             <img style ="width:300px;height:200px" src="pictures/usclogin.png" class="figure-img img-fluid rounded" alt="ksae">
+              <figcaption style ="width:300px;" class="figure-caption text-center text-white">Login Page</figcaption>
+          </figure> 
+          <figure class="figure" style="padding-right:65px">
+              <img style ="width:300px;height:200px" src="pictures/uscconsultation.png" class="figure-img img-fluid rounded" alt="uscconsulation">
+              <figcaption style ="width:300px;" class="figure-caption text-center text-white">Welcome Page</figcaption>
+          </figure>
+          <figure class="figure" style="padding-right:65px">
+              <img style ="width:300px;height:200px;" src="pictures/uscform.png" class="figure-img img-fluid rounded" alt="uscconsulation">
+              <figcaption style ="width:300px;" class="figure-caption text-center text-white">Schedule Appointments</figcaption>
+          </figure>
+          <figure class="figure" style="padding-right:65px">
+                  <img style ="width:300px;height:200px" src="pictures/uscviewappt.png" class="figure-img img-fluid rounded" alt="uscconsulation">
+                  <figcaption style ="width:300px;" class="figure-caption text-center text-white">View Appointments</figcaption>
+          </figure>
+          <figure class="figure" style="padding-right:65px">
+                  <img style ="width:300px;height:200px" src="pictures/contact.png" class="figure-img img-fluid rounded" alt="uscconsulation">
+                  <figcaption style ="width:300px;" class="figure-caption text-center text-white">Contact Faculty</figcaption>
+          </figure>
+          <figure class="figure" style="padding-right:65px">
+                  <img style ="width:300px;height:200px" src="pictures/directorusc.png" class="figure-img img-fluid rounded" alt="uscconsulation">
+                  <figcaption style ="width:300px;" class="figure-caption text-center text-white">Sample Profile</figcaption>
+          </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-primary" id="swifteats">
+      <div class="container text-left">
+          <div class="row">
+              <div class="col-8">
+                  <h2 class="text-white"><strong>Swift Eats!</strong></h2>
+                  <p style="color:rgb(212, 209, 209)">
+                      This project was the award winning 1st Place project at the S.W.I.F.T(Society for the Worldwide Interbank Financial Telecommunication) Hackathon. The application is an online web-application
+                      where people in S.W.I.F.T can order food from anywhere in the building to easily faciliate their busy schedules. The README.md on the github link for this projet describes in full detail how to download
+                      and start using. This application can be used for any food company if they wanted to. Also a demo can be done on YOUR local computer if you follow the readme correctly. Go check it out!
+                      <br><br>Basic functionalities include:
+                      <ul style="color:rgb(212, 209,209); margin-bottom:0rem;">
+                          <li>Ordering Items</li>
+                          <li>Text Msg Notification</li>
+                          <li>Approximate Time of Completion of Food</li>
+                          <li>Database Extraction (API)</li>
+                      </ul>
+                  </p>
+                  <a  class="btn btn-light btn-xl js-scroll-trigger" href="#projects">Back to Projects</a>
+                  <a class="btn btn-light btn-xl js-scroll-trigger" href="#experience">My Experience?</a>
+  
+              </div>
+              <div class="col-4">
+                  <hr style = "max-width: none;height:1px;border-color:#090986; ">
+                  <p>
+                      <strong>Role:</strong> <span style="color:white">Full Stack Developer</span>
+                  </p>
+                  <hr style = "max-width: none;height:1px;border-color:#090986; ">
+                  <p>
+                      <strong>Language:</strong> <span style="color:white">Node Js, Sqlite3, Python, HTML, CSS</span>
+                  </p>
+                  <hr style = "max-width: none;height:1px;border-color:#090986; ">
+                  <p>
+                      <strong>Time:</strong> <span style="color:white">July 2018</span>
+                  </p>
+                  <hr style = "max-width: none;height:1px;border-color:#090986; ">
+                  <p>
+                      <strong><i class="fa fa-github" aria-hidden="true"></i> Github:</strong> <a style="color:white"href="https://github.com/hyunsukr/SwiftEats">Swift Eats</a>
+                  </p>
+                  <hr style = "max-width: none;height:1px;border-color:#090986; ">
+                </div>
+          </div>
+      </div>
+    </div>
+    </section>
+
+    <section class="bg-primary" id="shinlab">
+        <div class="container text-left">
+            <div class="row">
+                <div class="col-8">
+                    <h2 class="text-white"><strong>Reserach Assistant at the Department of Neuroscience, University of Virginia</strong></h2>
+                    <p style="color:rgb(212, 209, 209)">
+                        I was able to integrate into the Shin Lab, lab in the Department of Neuroscience, University of Virginia. In this lab research I was able to experience many hands on expereince with lab techniques as well as learn
+                        novel lab techniques for molecular biologies. With the reserach I completed I was able to complete 2nd in Science Fair, and also we plan on developing a paper when the results are complete. If there are any questions feel free to email me.
+                        <br><br>Basic Skills include:
+                        <ul style="color:rgb(212, 209,209); margin-bottom:0rem;">
+                          <li>Creating Plasmid DNA</li>
+                          <li>DNA extraction techniques</li>
+                          <li>PCR</li>
+                          <li>Gel electrophoresis</li>
+                          <li>Mouse surgery</li>
+                        </ul>
+                    </p>
+                    <a  class="btn btn-light btn-xl js-scroll-trigger" href="#projects">Back to Projects</a>
+                    <a class="btn btn-light btn-xl js-scroll-trigger" href="#experience">My Experience?</a>
+    
+                </div>
+                <div class="col-4">
+                    <hr style = "max-width: none;height:1px;border-color:#090986; ">
+                    <p>
+                        <strong>Role:</strong> <span style="color:white">Research Assistant</span>
+                    </p>
+                    <hr style = "max-width: none;height:1px;border-color:#090986; ">
+                    <p>
+                        <strong>Time:</strong> <span style="color:white">September 2014 - December 2017</span>
+                    </p>
+                    <hr style = "max-width: none;height:1px;border-color:#090986; ">
+                    <p>
+                        <strong>Lab Link:</strong> <a style="color:white" href ="http://www.shinlabuva.com/">http://www.shinlabuva.com/</a>
+                    </p>
+                    <hr style = "max-width: none;height:1px;border-color:#090986; ">
+                  </div>
             </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Up to Date</h3>
-              <p class="text-muted mb-0">We update dependencies to keep things fresh.</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Made with Love</h3>
-              <p class="text-muted mb-0">You have to make your websites with love these days!</p>
-            </div>
-          </div>
         </div>
       </div>
-    </section>
+      </section>
 
-    <section class="p-0" id="portfolio">
-      <div class="container-fluid p-0">
-        <div class="row no-gutters popup-gallery">
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/1.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/1.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
+      <section id="experience">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 text-left">
+                <h2 class="section-heading text-center">Experience</h2>
+                <hr class="my-4">
+                <h3 style="text-align: left;color:#000">Technical Experience</h3>
+                <hr style = "max-width: none;height:1px;border-color:#090986; ">
+                <h4 style="text-align: left;color:rgb(83, 81, 81);"><strong><img src="./pictures/swift.png" style ="width:50px;height:50px"> <br>SWIFT<span style="font-size:75%">(Society for the Worldwide Interbank Financial Telecommunication)</span></h4>
+                <h5 style="text-align: left;color:rgb(83, 81, 81);">Database Developer Intern</h5>
+                <ul>
+                    <li><strong>Project:</strong> <span style="color:#666565">Developed a REST API for filtering and updating Security Violation logs. The project included making an interface with html/css front end with a Node js, Express js, Mongo db backend along with a Python and sqlite3 processor.</span></li>
+                    <li><strong>Business Value added:</strong> <span style="color:#666565">The API filters out Security Violations from k thousand line files to 100 lines. Made a database to contain all updates and reports of security violations so that no data is lost. Original time of completion (x hours or days) is now minutes</span></li>
+                    <li><strong>Location:</strong> <span style="color:#666565">Manassas, Virginia</span></li>
+                    <li><strong>Website:</strong><a href="https://www.swift.com"> https://www.swift.com</a></li>
+                </ul><br>
+                <h3 style="text-align: left;color:#000">Research Experience</h3>
+                <hr style = "max-width: none;height:1px;border-color:#090986; ">
+                <h4 style="text-align: left;color:rgb(83, 81, 81);"><strong><img src="./pictures/rotunda.png" style="width: 50px;height:50px"><br>Neuroscience</strong></h4>
+                <h5 style="text-align: left;color:rgb(83, 81, 81);">Reserach Assistant</h5>
+                <ul>
+                    <li><strong>Page:</strong><a href="https://www.hyunsuk-ryoo.com/shinlab"> https://www.hyunsuk-ryoo.com/shinlab</a></li>
+                    <li><strong>Location:</strong> <span style="color:#666565">University of Virginia, Department of Neuroscience</span></li>
+                    <li><strong>Website:</strong><a href="http://www.shinlabuva.com/"> http://www.shinlabuva.com/</a></li>
+                </ul><br>
+    
+                <h3 style="text-align: left;color:#000">Volunteer expereince</h3>
+                <hr style = "max-width: none;height:1px;border-color:#090986; ">
+                <h4 style="text-align: left;color:rgb(83, 81, 81);"><strong><img src="./pictures/madison.png" style="width:290px;height:50px"><br>Madison House</strong></h4>
+                <h5 style="text-align: left;color:rgb(83, 81, 81);">Volunteer</h5>
+                <ul>
+                    <li><strong>Tasks:</strong>
+                        <ul style='list-style-type:circle'>
+                            <li><span style="color:#666565">Provided care for patients at the Emily Couric Clinical Cancer Center</span></li>
+                            <li><span style="color:#666565">Prepared surgical supplies for operations at the University of Virginia Medical Center</span></li>
+                            <li><span style="color:#666565">Sales Assistant at the Auxiliary Center at University of Virginia Medical Center</span></li>
+                            <li><span style="color:#666565">Volunteer experience of over </span><strong>1,200 hours</strong></li>
+                        </ul> 
+                    </li>
+                    <li><strong>Location:</strong> <span style="color:#666565">Madison house, Charlottesville, Virginia</span></li>
+                    <li><strong>Website:</strong><a href="http://www.madisonhouse.org/"> http://www.madisonhouse.org/</a></li>
+                </ul><br>
+                <h3 style="text-align: left;color:#000">Extra Curricular Activities</h3>
+                <hr style = "max-width: none;height:1px;border-color:#090986; ">
+                <h4 style="text-align: left;color:rgb(83, 81, 81);"><strong><img src="./pictures/kseatrans.png" style="width:290px;height:75px"><br>KSEA Central Virginia Chapter</strong> <span style="font-size:75%">(Korean American Scientist and Engineering Association)</span></h4>
+                <h5 style="text-align: left;color:rgb(83, 81, 81);">Vice-President</h5>
+                <ul>
+                    <li><strong>Tasks:</strong>
+                        <ul style='list-style-type:circle'>
+                            <li><span style="color:#666565">Organize special speakers in the Engineering and Science field</span></li>
+                            <li><span style="color:#666565">Create networking events for the students and faculty at UVa</span></li>
+                            <li><span style="color:#666565">Create social events for people to interact and bond with one another</span></li>
+                            <li><span style="color:#666565">Communicate with other organizations to plan events for the organization</span></li>
+                            <li><span style="color:#666565">Create tech events for the members to get hands on experience with technologies</span></li>
+                        </ul> 
+                    </li>
+                    <li><strong>Location:</strong> <span style="color:#666565">University of Virginia</span></li>
+                    <li><strong>Website:</strong>
+                        <ul style='list-style-type:circle'>
+                            <li>UVa: <a href="http://www.uva-ksea.org/"> http://www.uva-ksea.org/</a></li>
+                            <li>Central Virginia <a href="http://cva.ksea.org/"> http://cva.ksea.org/</a></li>
+                        </ul>
+                </ul><br>
+                <h4 style="text-align: left;color:rgb(83, 81, 81);"><strong><img src="./pictures/ksalogo.png" style="width:250px;height:100px"><br>KSA </strong><span style="font-size:75%">(Korean Students Association)</span></h4>
+                <h5 style="text-align: left;color:rgb(83, 81, 81);">Outreach Chair</h5>
+                <ul>
+                    <li><strong>Tasks:</strong>
+                        <ul style='list-style-type:circle'>
+                            <li><span style="color:#666565">Communicate with other organizations to plan events for the organization</span></li>
+                            <li><span style="color:#666565">Help with creating culture showcases and expo for the greater UVa community</span></li>
+                        </ul> 
+                    </li>
+                    <li><strong>Location:</strong> <span style="color:#666565">University of Virginia</span></li>
+                </ul>
+                </ul>
               </div>
-            </a>
+            </div>
           </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/2.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/2.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/3.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/3.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/4.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/4.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/5.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/5.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/6.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/6.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-dark text-white">
-      <div class="container text-center">
-        <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-        <a class="btn btn-light btn-xl sr-button" href="http://startbootstrap.com/template-overviews/creative/">Download Now!</a>
-      </div>
-    </section>
-
-    <section id="contact">
+        </section>
+    <section class ="bg-dark text-white" id="contact">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading">Let's Get In Touch!</h2>
+            <h2 class="section-heading">Contact Me!</h2>
             <hr class="my-4">
-            <p class="mb-5">Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+            <p class="mb-5">If you have any opportunities or questions for me, please contact me!</p>
           </div>
         </div>
         <div class="row">
           <div class="col-lg-4 ml-auto text-center">
-            <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
-            <p>123-456-6789</p>
+              <i class="fa fa-map-marker fa-3x mb-3 sr-contact"></i>
+              <p>
+                <a href="http://www.virginia.edu/">University of Vriniga</a>
+            </p>
+            </div>
+          <div class="col-lg-4 ml-auto text-center">
+            <i class="fa fa-github fa-3x mb-3 sr-contact"></i>
+            <p>
+            <a href="https://github.com/hyunsukr/">Github</a>
+          </p>
           </div>
           <div class="col-lg-4 mr-auto text-center">
             <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
             <p>
-              <a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a>
+              <a href="mailto:hr2ee@virginia.edu">hr2ee@virginia.edu</a>
             </p>
           </div>
+          <div class="col-lg-4 mr-auto text-center">
+              <i class="fa fa-download fa-3x mb-3 sr-contact"></i>
+              <p>
+                <a href="./resume_ryoo.pdf">Resume/CV</a>
+              </p>
+            </div>
+            <div class="col-lg-4 mr-auto text-center">
+                <i class="fa fa-linkedin-square fa-3x mb-3 sr-contact"></i>
+                <p>
+                  <a href="http://www.linkedin.com/in/hyun-suk-ryoo">hyun-suk-ryoo</a>
+                </p>
+              </div>
+              <div class="col-lg-4 mr-auto text-center">
+                  <i class="fa fa-phone-square fa-3x mb-3 sr-contact"></i>
+                  <p style="color:#f05f40">
+                    612-963-1218
+                  </p>
+                </div>
         </div>
       </div>
     </section>
