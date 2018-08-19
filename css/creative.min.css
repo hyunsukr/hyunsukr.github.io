@@ -49,3 +49,7 @@ header.masthead h1{font-size:3rem}}@media (min-width:1200px)
 .fa:hover {
     color: #E57200;
 }
+.row {
+    margin-right: -0px;
+    margin-left: -0px;
+ }
