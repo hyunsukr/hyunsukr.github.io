@@ -49,6 +49,9 @@ header.masthead h1{font-size:3rem}}@media (min-width:1200px)
 .fa:hover {
     color: #E57200;
 }
+.fa-arrow-up:hover {
+  color: rgb(15, 0, 229);
+}
 .row {
     margin-right: -0px;
     margin-left: -0px;
@@ -206,4 +209,32 @@ header.masthead h1{font-size:3rem}}@media (min-width:1200px)
     background-color: #000080;
     color: white;
   }
-  
+  #scrollToTopButton {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    background:#E57200;
+    padding: 0;
+    border: 0;
+    width: 60px;
+    height: 60px;
+    box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.3);
+    font-size: xx-large;
+    outline: 0;
+    visibility: hidden;
+    transform: scale(0);
+    opacity: 0;
+    transition: 0.2s;
+}
+#scrollToTopButton.show {
+    visibility: visible;
+    transform: scale(1);
+    opacity: 1;
+}
+.abs-center-x {
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+}
