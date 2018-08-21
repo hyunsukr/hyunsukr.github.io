@@ -15,7 +15,7 @@ img::selection{color:#fff;background:0 0}
 img::-moz-selection{color:#fff;background:0 0}
 #mainNav{border-bottom:1px solid rgba(33,37,41,.1);background-color:#fff;font-family:'Open Sans','Helvetica Neue',Arial,sans-serif;-webkit-transition:all .2s;-moz-transition:all .2s;transition:all .2s
 }
-#mainNav .navbar-brand{right:0;font-weight:700;text-transform:uppercase;color:#2e2c2c;font-family:'Open Sans','Helvetica Neue',Arial,sans-serif}
+#mainNav .navbar-brand{font-weight:700;text-transform:uppercase;color:#2e2c2c;font-family:'Open Sans','Helvetica Neue',Arial,sans-serif}
 #mainNav .navbar-brand:focus,
 #mainNav .navbar-brand:hover{color:#2e2c2c}
 #mainNav .navbar-nav>li.nav-item>a.nav-link,#mainNav .navbar-nav>li.nav-item>a.nav-link:focus{font-size:.9rem;font-weight:700;text-transform:uppercase;color:#212529}
@@ -33,12 +33,12 @@ img::-moz-selection{color:#fff;background:0 0}
 #mainNav.navbar-shrink .navbar-brand{color:#2e2c2c}#mainNav.navbar-shrink .navbar-brand:focus,#mainNav.navbar-shrink .navbar-brand:hover{color:#000080}
 #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link,#mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link:focus{color:#212529}
 #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link:focus:hover,#mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link:hover{color:#E57200}}header.masthead{padding-top:10rem;padding-bottom:calc(10rem - 56px);background-image:url(../img/header.jpg);background-position:center center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover}
-header.masthead hr{right:0;margin-top:30px;margin-bottom:30px}
-header.masthead h1{right:0;font-size:2rem}
-header.masthead p{right:0;font-weight:300}@media (min-width:768px)
-{header.masthead p{right:0;font-size:1.15rem}}@media (min-width:992px)
+header.masthead hr{margin-top:30px;margin-bottom:30px}
+header.masthead h1{font-size:2rem}
+header.masthead p{font-weight:300}@media (min-width:768px)
+{header.masthead p{font-size:1.15rem}}@media (min-width:992px)
 {header.masthead{height:100vh;min-height:650px;padding-top:0;padding-bottom:0}
-header.masthead h1{right:0;font-size:3rem}}@media (min-width:1200px)
+header.masthead h1{font-size:3rem}}@media (min-width:1200px)
 {header.masthead h1{font-size:4rem}}
 .service-box{max-width:400px}
 .portfolio-box{position:relative;display:block;max-width:650px;margin:0 auto}
