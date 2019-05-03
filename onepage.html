@@ -190,17 +190,21 @@ body {
             <div class="col-md-6 text-center">
               <h5 style="text-align: center;"><strong>Computer Science</strong></h5>
               <hr style = "height:1px;border-color:rgb(99, 99, 99); ">
+              <button class = "hvr-back-pulse class_btn" onclick="showclass('cs4501ml')">Machine Learning (CS 4501 renamed to CS 4774)</button>
+                  <p id = "cs4501ml" class = "class" style="border-bottom: groove;display: none">
+                    <br>This course introduces fundamental concepts and methods to learn from data for computational data analysis, including pattern recognition, prediction, and visualization. The primary focus is on giving an introduction to machine learning techniques applying to various problems. 
+                  </p><br>
                   <button class = "hvr-back-pulse class_btn" onclick="showclass('cs4750')">Database Systems (CS 4750)</button>
                   <p id = "cs4750" class = "class" style="border-bottom: groove;display: none">
                     <br>Introduces the fundamental concepts for design and development of database systems. Emphasizes relational data model and conceptual schema design using ER model, practical issues in commercial database systems, database design using functional dependencies, and other data models. Develops a working relational database for a realistic application.
                   </p><br>
+                  <button class = "hvr-back-pulse class_btn" onclick="showclass('cs4710')">Artificial Intelligence (CS 4710)</button>
+                  <p id = "cs4710" class = "class" style="border-bottom: groove;display: none">
+                    <br>Introduces artificial intelligence. Covers fundamental concepts and techniques and surveys selected application areas. Core material includes state space search, logic, and resolution theorem proving. Application areas may include expert systems, natural language understanding, planning, machine learning, or machine perception. Provides exposure to AI implementation methods, emphasizing programming in Common LISP. 
+                  </p><br>
                   <button class = "hvr-back-pulse class_btn" onclick="showclass('cs4640')">Programming Languages for Web Applications (CS 4640)</button>
                   <p id = "cs4640" class = "class" style="border-bottom: groove;display: none">
                     <br>Presents programming languages and implementations used in developing web applications. Both client and server side languages are presented as well as database languages. In addition, frameworks that enable interactive web pages are discussed as well as formatting languages. Language features and efficiencies including scoping, parameter passing, object orientation, just in time compilation and dynamic binary translation are included. 
-                  </p><br>
-                  <button class = "hvr-back-pulse class_btn" onclick="showclass('cs4501ml')">Machine Learning (CS 4501)</button>
-                  <p id = "cs4501ml" class = "class" style="border-bottom: groove;display: none">
-                    <br>This course introduces fundamental concepts and methods to learn from data for computational data analysis, including pattern recognition, prediction, and visualization. The primary focus is on giving an introduction to machine learning techniques applying to various problems. 
                   </p><br>
                   <button class="hvr-back-pulse class_btn" onclick="showclass('cs4102')">Algorithms (CS 4102)</button>
                     <p id = "cs4102" class = "class" style="border-bottom: groove;display: none">
@@ -222,10 +226,6 @@ body {
                       <p id = "cs2102" class = "class" style="border-bottom: groove;display:none">
                           <br>Introduces discrete mathematics and proof techniques involving first order predicate logic and induction. Application areas include finite and infinite sets, elementary combinatorial problems, and graph theory. Development of tools and mechanisms for reasoning about discrete problems.
                       </p><br>
-                      <button class="hvr-back-pulse class_btn" onclick="showclass('stat1559')">Introduction Data Science with Python (STAT 1559)</button>
-                      <p id = "stat1559" class= "class" style="border-bottom: groove;display: none">
-                          <br>Introduces Data Science methodologies with Python with Anaconda. All methods are taught with real data mining techniques
-                      </p><br>
                       <button class="hvr-back-pulse class_btn" onclick="showclass('cs1113')">Introduction to Programming (CS 1113)</button>
                       <p id="cs1113" class ="class" style="border-bottom: groove;display: none">
                           <br>A first course in programming, software development, and computer science. Introduces computing fundamentals and an appreciation for computational thinking. No previous programming experience required.
@@ -236,6 +236,10 @@ body {
                   <div class="col-md-6 text-center">
                           <h5 style="text-align: center;"><strong>Statistics (Biostatisics)</strong></h5>
                           <hr style = "height:1px;border-color:rgb(99, 99, 99); ">
+                          <button class="hvr-back-pulse class_btn" onclick="showclass('stat5630')">Statistical Machine Learning (STAT 5630)</button><br>
+                          <p id = "stat5630" class = "class" style="border-bottom: groove;display:none">
+                              <br>Introduces various topics in machine learning, including regression, classification, resampling methods, linear model selection and regularization, tree-based methods, support vector machines, and unsupervised learning. The statistical software R is incorporated throughout.
+                          </p>
                           <button class="hvr-back-pulse class_btn" onclick="showclass('stat4310')">Data Visualization and Presentation (STAT 4310)</button><br>
                           <p id = "stat4310" class = "class" style="border-bottom: groove;display:none">
                               <br>Introduces methods for effectively presenting data both visually and in table form. Software used will include the open-source R and Tableau visualization software. Students will work together on team projects developing reports and presentations to be presented to the class.
