@@ -1,150 +1,665 @@
 <!DOCTYPE html>
-<html>
-    <head>
-            <link rel="icon" href="./pictures/logo/logo.png">
-            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html lang="en">
+  <script>
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+</script>
 
+<head>
+  <link rel="icon" href="./img/logo.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-        <title>Hyun Suk Ryoo &mdash; Home</title>
-    </head>
-    
-    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Molengo" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" >
-    <script src="bootstrap/js/bootstrap.min.js" ></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Hyun Suk Ryoo - Home</title>
 
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
 
-<style>
-        body, html {
-            height: 100%;
-            margin: 0;
-        }
-        
-        .bg {
-            /* The image used */
-            background-color:#fcf7e8;
-            
-            /* Full height */
-            height: 100%; 
-            
-            /* Center and scale the image nicely */
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        .navbar {
-  width: 100%;
-  background-color: transparent;
-  overflow: auto;
-  border: 2px solid #557A95;
-}
-.navbarlong a {
-  float: left;
-  padding: 12px;
-  color: #383737;
-  text-decoration:solid;
-  font-size: 17px;
-  width: 20%; /* Four links of equal widths */
-  text-align: center;
-}
-.navbarlong a:hover {
-  background-color: #c5c0c0;
-}
-@media screen and (max-width: 500px) {
-  .navbarlong a {
-    float: none;
-    display: block;
-    width: 100%;
-    text-align: left;
-  }
-}
-@media (min-width: 768px) {
-.navbar-brand.abs
-    {
-        position: absolute;
-        width: 100%;
-        left: 0;
-        text-align: center;
-    }
-}
+  <!-- Custom styles for this template -->
+  <link href="css/resume.min.css" rel="stylesheet">
 
-</style>    
-<body class="bg">
-        <nav class="navbar navbar-dark navbar-expand-md bg-faded justify-content-center" style="background-color: #557A95">
-                <a href="/index" class="navbar-brand d-flex w-50 mr-auto">Hyun Suk Ryoo</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
-                    <ul class="navbar-nav w-100 justify-content-center">
-                        <li class="nav-item active">
-                            <a class = "nav-link" href="index">About</a> 
-                        </li>
-                        <li class="nav-item">
-                             <a  class = "nav-link" href="project">Projects</a> 
-                        </li>
-                        <li class="nav-item">
-                             <a  class = "nav-link" href="education">Education</a> 
-                        </li>
-                        <li class ="nav-item">
-                            <a  class = "nav-link" href="experience">Experience</a>
-                        </li>
-                    </ul>
-                    <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
-                        <li class = "nav-item">
-                            <a class = "nav-link" href="./resume_ryoo.pdf">Resume</a></span>
-                        </li>
-                        <li class="nav-item">
-                                <a class = "nav-link" href="contact">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class = "nav-link" href="onepage">Single-Page Version</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-    <p style="padding-top:5%"></p>
-    <div class = "container">
-            <h1 style="font-family: Arial, Helvetica, sans-serif; text-align: center;color:#000"><strong>Hyun Suk Ryoo</strong></h1>
-            <h3 style="font-family: 'Molengo', Georgia, Times, serif; text-align: center;color:#000;">Programmer and Data Scientist</h3>
-            <hr style = "height:1px;border-color:rgb(99, 99, 99); "/>
-        </br>
+</head>
 
-    <div class="row">
-            <div class="col-md-8">
-                <h2><strong>About Me</strong></h2>
-                <p>
-                    Hello! My name is Max Ryoo, and I am currently studying Computer Science and Statistics (Biostatics Concentration) at the University of Virginia. 
-                    My graduation year is 2020, which means I will be entering my third Year at UVa in the fall. I am currently looking for internships for the positions of software development or database development!
+<body id="page-top">
 
-                </p>
-                <p>
-                    I was born in Busan, South Korea, and after living 19 years in the United States I finally became a citizen. I lived all over the states ranging from Nebraska to Virginia!
-                    Because I grew up in a Korean Household I am fluent in both English and Korean. 
-                </p>
-                <p>
-                    My future goal is to combine the areas of Computer Science and Statistics to implement automated systems for different areas. I hope you check out the other tabs to learn more about me! Thanks!
-                </p>
-            </div>
-            <div class="col-md-4">
-                <div class="card" style="background-color:transparent;border:10px solid rgba(105, 104, 102, 0.125)">
-                    <img class="card-img-top" src="./pictures/hyunsuk.jpg" alt="Hyunsuk Ryoo">
-                        <div class="card-body">
-                            <strong><i class="fa fa-map-marker" aria-hidden="true"></i> Location:</strong> Charlottesville, VA<br>
-                            <strong><a style="color:#000000" href="mailto:hr2ee@virginia.edu"><i class="fa fa-envelope-o"></i></a> Email:</strong> <a href="mailto:hr2ee@virginia.edu">hr2ee@virginia.edu</a><br>
-                            <strong><a style="color:#000000" href="https://github.com/hyunsukr"><i class="fa fa-github" aria-hidden="true"></i></a> Github:</strong> <a href="https://github.com/hyunsukr">hyunsukr</a><br>
-                            <strong><a style="color:#000000" href="http://www.linkedin.com/in/hyun-suk-ryoo"><i class="fa fa-linkedin-square"></i></a> Linked-in: </strong><a href="http://www.linkedin.com/in/hyun-suk-ryoo">hyun-suk-ryoo</a><br>
-                            <strong><a style="color:#000000" href="./resume_ryoo.pdf"><i class="fa fa-download" aria-hidden="true"></i></a> Resume/CV:</strong> <a href="./resume_ryoo.pdf">resume</a><br>
-                        </div>
-                 </div>
-            </div>
-        </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">
+      <span class="d-block d-lg-none">Max Ryoo</span>
+      <span class="d-none d-lg-block">
+        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+      </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#research">Research</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="/resume.pdf">Resume</a>
+        </li>
+      </ul>
     </div>
-<div class="page-footer font-small blue  small text-dark" role = "contentinfo" style="width:100%;;bottom: 0; padding-top: 1em; padding-bottom: 1em; margin-top: 10px;">
-    <div class="container" style = "text-align:center"> &copy; Hyun Suk Ryoo. All rights reserved. </div>
-</div>
+  </nav>
+
+  <div class="container-fluid p-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
+      <div class="w-100">
+        <h1 class="mb-0">Max
+          <span class="text-primary">Ryoo</span>
+        </h1>
+        <div class="subheading mb-5">2010 Stadium Rd. Charlottesville, Va 22903
+          <a href="mailto:hr2ee@virginia.edu">hr2ee@virginia.edu</a>
+        </div>
+        <p class="lead mb-5">Hello! My name is Max Ryoo, and I am currently studying Computer Science and Statistics (Biostatics Concentration) at the University of Virginia. My graduation year is 2020, which means I will be entering my fourth and last Year at UVa in the fall. I am currently looking for full time jobs/internships for the positions of Data Scientist or Software Engineer! </p>
+
+        <p class="lead mb-5"> I was born in Busan, South Korea, and after living 19 years in the United States I finally became a citizen. I lived all over the states ranging from Nebraska to Virginia! Because I grew up in a Korean Household I am fluent in both English and Korean.</p>
+          
+          <p class="lead mb-5">I also like to research the mechanisms behind different models and like to experiment with the area of model analsysis using different models and machine learning techniques.</p>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/hyun-suk-ryoo/">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/hyunsukr/">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:hr2ee@virginia.edu">
+            <i class="far fa-envelope"></i>          
+          </a>
+          <a href="/resume.pdf">
+            <i class="fas fa-file"></i>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
+      <div class="w-100">
+        <h2 class="mb-5" style="margin-bottom:0px !important">Experience</h2>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 style="display:inline" class="mb-0">Software Engineer Intern <img style="display:inline-block; width:45px; height:45px;" src="img/fannie.png"></h3>
+            <div class="subheading mb-3">Fannie Mae (Capital Markets Treasury CASH TMS L3 Team)</div>
+            <p>Developed an end to end Dashboard to track all payment wire records for Fannie Mae in the Cash TMS team. The dashboard keeps tracks an average of net $13 Trillion.Technolgies used: Spring, MSSQLServer, Oracle, Java, Maven, HTML/CSS</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">June 2019 - August 2019</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Data Scientist <img style="display:inline-block; width:35px; height:35px;" src="img/swift.png"></h3></h3>
+            <div class="subheading mb-3">SWIFT(Society for the Worldwide Interbank Financial Telecommunication) (Innovation Lab)</div>
+            <p>Incorporate ideas of Machine Learning and Data Science to filter previous project at SWIFT as a Database Intern.</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">August 2018 - May 2019</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Database Developer Intern <img style="display:inline-block; width:35px; height:35px;" src="img/swift.png"></h3></h3>
+            <div class="subheading mb-3">SWIFT(Society for the Worldwide Interbank Financial Telecommunication) (Database Development Team)</div>
+            <p>Developed a REST API for filtering and updating Security Violation logs. The project included making an interface with html/css front end with a Node js, Express js, Mongo db backend along with a Python and sqlite3 processor. The API filters out Security Violations from k thousand line files to 100 lines. Made a database to contain all updates and reports of security violations so that no data is lost. Original time of completion (x hours or days) is now minutes</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">June 2018 - August 2019</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
+          <div class="resume-content">
+            <h3 class="mb-0">Teaching Assistant (CS4750) <img style="display:inline-block; width:35px; height:35px;" src="img/rotunda.png"></h3></h3>
+            <div class="subheading mb-3">University of Virginia</div>
+            <p>Introduces the fundamental concepts for design and development of database systems. Emphasizes relational data model and conceptual schema design using ERmodel, practical issues in commercial database systems, database design using functional dependencies, and other data models. Develops a working relational database for a realistic application.</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">August 2018 - May 2019</span>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
+      <div class="w-100">
+        <h2 class="mb-5" style="margin-bottom:0px !important">Education</h2>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">University of Virginia</h3>
+            <div class="subheading mb-3">Bachelor of Arts</div>
+            <div>Computer Science</div>
+            <div>Statistics - Biostatics Concentration</div>
+            <br>
+            <div class="row">
+              <div class="col-md-6">
+                <div>Computer Science</div>
+                <ul style="list-style-type:none;">
+                    <li style="cursor: pointer;" data-toggle="modal" data-target="#cs4774"><strong>CS 4774/4501: </strong>Machine Learning</li>
+                    <div class="modal fade" id="cs4774" tabindex="-1" role="dialog" aria-labelledby="cs4774" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">CS 4774/4501 - Machine Learning</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                                This course introduces fundamental concepts and methods to learn from data for computational data analysis, including pattern recognition, prediction, and visualization. The primary focus is on giving an introduction to machine learning techniques applying to various problems.</div>                        
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+                    <li style="cursor: pointer;" data-toggle="modal" data-target="#cs4710"><strong>CS 4710: </strong>Artificial Intelligence</li>
+                     <!-- Modal -->
+                    <div class="modal fade" id="cs4710" tabindex="-1" role="dialog" aria-labelledby="cs4710" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">CS 4710 - Artifical Intelligence</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                                Introduces artificial intelligence. Covers fundamental concepts and techniques and surveys selected application areas. Core material includes state space search, logic, and resolution theorem proving. Application areas may include expert systems, natural language understanding, planning, machine learning, or machine perception. Provides exposure to AI implementation methods, emphasizing programming in Common LISP.
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    <li style="cursor: pointer;" data-toggle="modal" data-target="#cs4750"><strong>CS 4750: </strong>Database Systems</li>
+                    <div class="modal fade" id="cs4750" tabindex="-1" role="dialog" aria-labelledby="cs4750" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">CS 4750 - Database Systems</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                                Introduces the fundamental concepts for design and development of database systems. Emphasizes relational data model and conceptual schema design using ER model, practical issues in commercial database systems, database design using functional dependencies, and other data models. Develops a working relational database for a realistic application.                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    <li style="cursor: pointer;" data-toggle="modal" data-target="#cs4640"><strong>CS 4640: </strong>Programming Languages for Web Applications</li>
+                    <div class="modal fade" id="cs4640" tabindex="-1" role="dialog" aria-labelledby="cs4640" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">CS 4640 - Programming Languages for Web Applications</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                                Presents programming languages and implementations used in developing web applications. Both client and server side languages are presented as well as database languages. In addition, frameworks that enable interactive web pages are discussed as well as formatting languages. Language features and efficiencies including scoping, parameter passing, object orientation, just in time compilation and dynamic binary translation are included.                              </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    <li style="cursor: pointer;" data-toggle="modal" data-target="#cs4102"><strong>CS 4102: </strong>Algorithms</li>
+                    <div class="modal fade" id="cs4102" tabindex="-1" role="dialog" aria-labelledby="cs4102" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">CS 4102 - Algorithms</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                                Introduces the analysis of algorithms and the effects of data structures on them. Algorithms selected from areas such as sorting, searching, shortest paths, greedy algorithms, backtracking, divide-and-conquer, and dynamic programming. Data structures include heaps and search, splay, and spanning trees. Analysis techniques include asymtotic worst case, expected time, amortized analysis, and reductions between problems.</div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    <li style="cursor: pointer;" data-toggle="modal" data-target="#cs3330"><strong>CS 3330: </strong>Computer Architecture</li>
+                    <div class="modal fade" id="cs3330" tabindex="-1" role="dialog" aria-labelledby="cs3330" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">CS 3330 - Computer Architecture</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                                Includes the organization and architecture of computer systems hardware; instruction set architectures; addressing modes; register transfer notation; processor design and computer arithmetic; memory systems; hardware implementations of virtual memory, and input/output control and devices.
+                              </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    <li style="cursor: pointer;" data-toggle="modal" data-target="#cs2150"><strong>CS 2150: </strong>Program and Data Representations</li>
+                    <div class="modal fade" id="cs2150" tabindex="-1" role="dialog" aria-labelledby="cs2150" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">CS 2150 - Program and Data Representations</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                                Introduces programs and data representation at the machine level. Data structuring techniques and the representation of data structures during program execution. Operations and control structures and their representation during program execution. Representations of numbers, arithmetic operations, arrays, records, recursion, hashing, stacks, queues, trees, graphs, and related concepts.
+                              </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    
+                    <li style="cursor: pointer;" data-toggle="modal" data-target="#cs2110"><strong>CS 2110: </strong>Software Development Methods</li>
+                    <div class="modal fade" id="cs2110" tabindex="-1" role="dialog" aria-labelledby="cs2110" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">CS 2110 - Software Development Methods</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              A second course in computing with an emphasis on modern software development and principles central to computer science. Topics include software requirements, testing, object-oriented design, abstraction, encapsulation, recursion, and time-complexity.
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    <li style="cursor: pointer;" data-toggle="modal" data-target="#cs2102"><strong>CS 2102: </strong>Discrete Mathematics (CS 2102)</li>
+                    <div class="modal fade" id="cs2102" tabindex="-1" role="dialog" aria-labelledby="cs2102" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                          <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">CS 2102 - Discrete Mathematics</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            Introduces discrete mathematics and proof techniques involving first order predicate logic and induction. Application areas include finite and infinite sets, elementary combinatorial problems, and graph theory. Development of tools and mechanisms for reasoning about discrete problems.
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <li style="cursor: pointer;" data-toggle="modal" data-target="#cs1113"><strong>CS 1113: </strong>Introduction to Programming</li>
+                    <div class="modal fade" id="cs1113" tabindex="-1" role="dialog" aria-labelledby="cs1113" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                          <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">CS 1113 - Introduction toProgramming</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            A first course in programming, software development, and computer science. Introduces computing fundamentals and an appreciation for computational thinking.
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </ul>
+              </div>
+              <div class="col-md-6">
+                <div>Statistics - Biostatics Concentration</div>
+                <ul style="list-style-type:none;">
+                  <li style="cursor: pointer;" data-toggle="modal" data-target="#stat5630"><strong>STAT 5630: </strong>Statistical Machine Learning</li>
+                  <div class="modal fade" id="stat5630" tabindex="-1" role="dialog" aria-labelledby="stat5630" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">STAT 5630 - Statistical Machine Learning</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          Introduces various topics in machine learning, including regression, classification, resampling methods, linear model selection and regularization, tree-based methods, support vector machines, and unsupervised learning. The statistical software R is incorporated throughout.
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <li style="cursor: pointer;" data-toggle="modal" data-target="#stat4310"><strong>STAT 4310: </strong>Data Visualization and Presentation</li>
+                  <div class="modal fade" id="stat4310" tabindex="-1" role="dialog" aria-labelledby="stat4310" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">STAT 4310 - Data Visualization and Presentation</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          Introduces methods for effectively presenting data both visually and in table form. Software used will include the open-source R and Tableau visualization software. Students will work together on team projects developing reports and presentations to be presented to the class.
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <li style="cursor: pointer;" data-toggle="modal" data-target="#stat3250"><strong>STAT 3250: </strong>Data Analysis with Python</li>
+                  <div class="modal fade" id="stat3250" tabindex="-1" role="dialog" aria-labelledby="stat3250" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">STAT 3250 - Data Analysis with Python</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          This course provides an introduction to data analysis using the Python programming language. Topics include using the IPython development environment; data analysis packages NumPy and pandas; data loading, storage, cleaning, merging, transformation, and aggregation; data plotting and visualization and time series data.
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <li style="cursor: pointer;" data-toggle="modal" data-target="#stat3220"><strong>STAT 3220: </strong>Introduction to Regression Analysis</li>
+                  <div class="modal fade" id="stat3220" tabindex="-1" role="dialog" aria-labelledby="stat3220" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">STAT 3220 - Data Analysis with Python</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          This course provides a survey of regression analysis techniques, covering topics from simple regression, multiple regression, logistic regression, and analysis of variance. The primary focus is on model development and applications.
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <li style="cursor: pointer;" data-toggle="modal" data-target="#math3351"><strong>MATH 3351: </strong>Elementary Linear Algebra</li>
+                  <div class="modal fade" id="math3351" tabindex="-1" role="dialog" aria-labelledby="math3351" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">MATH 3351 - Elementary Linear Algebra</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          Includes matrices, elementary row operations, inverses, vector spaces and bases, inner products and Gram-Schmidt orthogonalization, orthogonal matrices, linear transformations and change of basis, eigenvalues, eigenvectors, and symmetric matrices.
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <li style="cursor: pointer;" data-toggle="modal" data-target="#math3100"><strong>MATH 3100: </strong>Introduction to Probability</li>
+                  <div class="modal fade" id="math3100" tabindex="-1" role="dialog" aria-labelledby="math3100" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">MATH 3100 - Introduction to Probability</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          Introduces fundamental concepts/techniques of probability/the theory of randomness. Focuses on problem solving/understanding key theoretical ideas. Topics include sample spaces combinatorial analysis/discrete and continuous random variables/classical distributions/expectation/Chebyshev's inequality/independence/central limit theorem/conditional probability/generating functions.
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <li style="cursor: pointer;" data-toggle="modal" data-target="#stat3080"><strong>STAT 3080: </strong>From Data to Knowledge</li>
+                  <div class="modal fade" id="stat3080" tabindex="-1" role="dialog" aria-labelledby="stat3080" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">STAT 3080 - From Data to Knowledge</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          Most elementary statistics courses start with a technique & present various surface level examples. This course will use relatively complicated data sets and approach them from multiple angles with elementary statistical techniques. Simulation techniques such as the bootstrap will also be used. Conceptual discussion in lectures is supplemented with hands-on practice in applied data-analysis tasks using R statistical software.
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <li style="cursor: pointer;" data-toggle="modal" data-target="#biol2200"><strong>BIOL 2200: </strong>Introduction to Biology (Organismal & Evolutionary Biology)</li>
+                  <div class="modal fade" id="biol2200" tabindex="-1" role="dialog" aria-labelledby="biol2200" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">BIOL 2200 - Introduction to Biology (Organismal & Evolutionary Biology)</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          BIOL 2200 is one of two semester courses that together provide an intensive introduction to biology for prospective Biology majors and pre-health (med, vet, dental) students. This course focuses on evolution, physiology and development.
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <li style="cursor: pointer;" data-toggle="modal" data-target="#biol2100"><strong>BIOL 2100: </strong>Introduction to Biology (Cell Biology & Genetics)</li>
+                  <div class="modal fade" id="biol2100" tabindex="-1" role="dialog" aria-labelledby="biol2100" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">BIOL 2100 - Introduction to Biology (Cell Biology & Genetics)</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          BIOL 2100 is one of two semester courses that together provide an intensive introduction to biology for prospective Biology majors and pre-health (med, vet, dental) students. This course focuses on the fundamentals of cell biology and genetics with an emphasis on classical and modern experimental approaches. 
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <li style="cursor: pointer;" data-toggle="modal" data-target="#stat2120"><strong>STAT 2120: </strong>Introduction to Statistical Analysis</li>
+                  <div class="modal fade" id="stat2120" tabindex="-1" role="dialog" aria-labelledby="stat2120" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">STAT 2120 - Introduction to Statistical Analysis</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          Introduction to the probability and statistical theory underlying the estimation of parameters and testing of statistical hypotheses, including those arising in the context of simple and multiple regression models. Students will use computers and statistical programs to analyze data. Examples and applications are drawn from economics, business, and other fields.
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <li style="cursor: pointer;" data-toggle="modal" data-target="#stat1559"><strong>STAT 1559: </strong>Introduction to Data Science with Python</li>
+                  <div class="modal fade" id="stat1559" tabindex="-1" role="dialog" aria-labelledby="stat1559" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">STAT 1559 - Introduction to Data Science with Python</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          Introduces Data Science methodologies with Python. All methods are taught with real data mining techniques
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">August 2016 - May 2020</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="research">
+      <div class="w-100">
+        <h2 class="mb-5" style="margin-bottom:0px !important">Research</h2>
+        <div class="subheading mb-3">Interests: Machine Learning, Model Analysis, Quantitative Methods</div>
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Data Engineer for Measure of Cognitive Ability Research</h3>
+            <div class="subheading mb-3">UVA & USC</div>
+            <p>Developed a Web-server/Web-application to maintain and process data from Measure of CognitiveAbility  (MOCA)  tests.   The  purpose  of  this  research  project  is  to  develop  a  measure  of  cognitiveability and its scale of cognitive ability.</p>
+            <p>Technologies Used: AWS, Wordpress, MySQL, Python, Scikit-learn, R, Tidyverse</p>
+            <p>Principal Investigator: Ji Hoon Ryoo</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">May 2018 - Present</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Undergraduate Research Assitant for Auditory Neurobiology Lab</h3>
+            <div class="subheading mb-3">UVA</div>
+            <p>Worked with classifying new protiens and DNA sequences that can be a lead cause of deafness in
+              old age hearing loss</p>
+            <p>Skills Used: Creating Plasmid DNA, DNA extraction techniques, PCR, Gel electrophoresis, Mouse surgery</p>
+            <p>Supervisor: Jung-bum Shin</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">September 2014 - December 2017</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
+      <div class="w-100">
+        <h2 class="mb-5" style="margin-bottom:0px !important">Skills</h2>
+
+        <div class="subheading mb-3">Programming Languages</div>
+        <p>Python, Java, C++, C, SAS, R, SQL, PHP, LATEX, x86, Docker</p>
+
+        <div class="subheading mb-3">Frameworks</div>
+        <p> Node Js, Express Js, Spring Framework, Angular</p>
+
+        <div class="subheading mb-3"> Libraries/Packages</div>
+        <p> Scikit-learn, Tensor Flow, Keras, Tidyverse, Maven, AWS, Tableau, npm</p>
+
+        <div class="subheading mb-3"> Database</div>
+        <p>Oracle, Microsoft SQL Server, MySQL, MongoDB, SQLite</p>
+         
+        <div class="subheading mb-3">IDE</div>
+        <p>Eclipse,  Intellij,  Anaconda,  Jupyter  Notebook,  Vim,  Emacs,  Visual  Studio  Code,  All Microsoft Office Suite</p>
+        
+        <div class="subheading mb-3">Spoken Languages</div>
+        <p>English, Korean</p>
+
+      </div>
+    </section>
+    <div class="text-center">
+      © Hyun Suk Ryoo. All rights reserved.
+    </div>
+
+    <hr class="m-0">
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/resume.min.js"></script>
+
 </body>
+
 </html>
