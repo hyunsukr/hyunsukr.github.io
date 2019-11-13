@@ -1,0 +1,8 @@
+[{
+    "location": {
+        "names": ["Bondi Beach", "Coogee Beach","Cronulla Beach","Manly Beach", "Maroubra Beach"],
+        "latitude": [-33.890542,-33.923036, -34.028249,-33.80010128657071,-33.950198],
+        "longitude": [151.274856, 151.259052,  151.157507, 151.28747820854187, 151.259302 ],
+        "order": [4,5,3,2,1]
+    }
+}]
