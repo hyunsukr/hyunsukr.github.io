@@ -5,7 +5,16 @@ var locations = [
     ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
     ['Maroubra Beach', -33.950198, 151.259302, 1]
 ];
-
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var myObj = JSON.parse(this.responseText);
+    console.log(myObj)
+  }
+};
+xmlhttp.open("GET", "location.json", true);
+xmlhttp.send();
+console.log(myObj["location"]["names"][1]);
 var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 10,
     center: new google.maps.LatLng(-33.92, 151.25),
@@ -27,12 +36,3 @@ for (i = 0; i < locations.length; i++) {
     })(marker, i));
 }
 
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function() {
-  if (this.readyState == 4 && this.status == 200) {
-    var myObj = JSON.parse(this.responseText);
-    console.log(myObj)
-  }
-};
-xmlhttp.open("GET", "location.json", true);
-xmlhttp.send();
