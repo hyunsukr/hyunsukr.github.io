@@ -10,11 +10,12 @@ xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     var myObj = JSON.parse(this.responseText);
     console.log(myObj)
+    console.log(myObj["location"]["names"][1]);
   }
 };
 xmlhttp.open("GET", "location.json", true);
 xmlhttp.send();
-console.log(myObj["location"]["names"][1]);
+
 var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 10,
     center: new google.maps.LatLng(-33.92, 151.25),
