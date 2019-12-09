@@ -1,3 +1,0 @@
-irmovq $2, %rax
-irmovq $8, %rbx
-rmmovq %rbx, 160(%rax)

@@ -1,5 +1,0 @@
-halt.yo
-basic.yo
-irrr7.yo
-irrr7b.yo
-rrmovq.yo

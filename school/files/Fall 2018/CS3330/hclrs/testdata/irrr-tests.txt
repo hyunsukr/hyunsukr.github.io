@@ -1,8 +1,0 @@
-halt.yo
-nophalt.yo
-irmovq.yo
-basic.yo
-irmovq-norcxrax.yo
-rrmovq.yo
-prog8.yo
-jmp.yo

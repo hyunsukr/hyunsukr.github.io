@@ -1,5 +1,0 @@
-    irmovq $256, %rsp
-    call a
-    addq %rsp, %rsp
-a:
-    halt
