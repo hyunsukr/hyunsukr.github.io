@@ -76,17 +76,17 @@ def main():
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item px-lg-4">
-                <a class="nav-link text-uppercase text-expanded" href="home.html">Home
+                <a class="nav-link text-uppercase text-expanded" href=" """ + resource_location + """index.html">Home
                     </a>
           </li>
           <li class="nav-item active px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="about.html">About</a>
+            <a class="nav-link text-uppercase text-expanded" href=" """ + resource_location + """about.html">About</a>
           </li>
           <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="products.html">Products</a>
+            <a class="nav-link text-uppercase text-expanded" href=" """ + resource_location + """products.html">Products</a>
           </li>
           <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="store.html">Store</a>
+            <a class="nav-link text-uppercase text-expanded" href=" """ + resource_location + """store.html">Store</a>
           </li>
         </ul>
       </div>
@@ -97,7 +97,7 @@ def main():
     <div class="container">
         <br>
       <div class="about-heading-content">
-        <div class="row">
+        <div class="row"> 
           <div class="col-xl-9 col-lg-10 mx-auto">
             <div class="bg-faded rounded p-5">
               <h2 class="section-heading mb-4">
