@@ -1,0 +1,173 @@
+---
+title: "Homework 1" 
+author: "Max Ryoo (hr2ee)"
+fontsize: 12pt
+geometry: margin=1in
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, highlight=FALSE)
+```
+
+## Problem 1 
+### Part a
+```{r}
+vector_1 <- c('a', 'a', 'a', 'a')
+print(vector_1)
+```
+I've concatentated 'a' four times.
+
+### Part b
+```{r}
+vector_2 <- seq(2,50,2)
+vector_2b <- seq(55,100,5)
+vector_2f <- c(vector_2, vector_2b)
+print(vector_2f)
+
+```
+I made a sequence from 2 to 50 incrementing by 2. I also made a vector from 55 to 100 incrementing by 5. I concated the two vectors and printed it.
+
+### Part c
+```{r}
+vector_3 <- rep(1:4, c(4,4,3,2))
+print(vector_3)
+```
+I used the rep function to make '1' output four times, '2' output 4 times, '3' output 3 times, '4' output 2 times
+
+### Part d
+```{r}
+vector_4 <- rep(7:4, each=3)
+print(vector_4)
+```
+I used the rep function and made each element repeat 3 times to get the output.
+
+### Part e
+```{r}
+vector_5 <- c(1:5, 4:1)
+print(vector_5)
+```
+I contacted 1-5 and then 4-1 into one vector using the c() function
+### Part f
+```{r}
+vector_6 <- seq(1:10)
+print(vector_6)
+```
+I used the sequence from 1 to 10 and stored it in vector 5
+
+### Part g
+```{r}
+vector_6 <- 1/(1:10)
+print(vector_6)
+```
+I made a vector containing the sequence of 1/(1..10). I made each number in the sequence of 1:10 a denominator for division of 1.
+
+### Part h
+```{r}
+vector_7 <- (1:6)^3
+print(vector_7)
+```
+While making vector 7, I cubed (^3) each element in the sequence 1-6. I stored all the values in the vector
+
+### Part i
+```{r}
+vector_8 <- seq(1964,2003, 3)
+print(vector_8)
+```
+Made a sequence from 1964 - 2003 with spacing of 3. I set this sequence as vector_8
+
+### Part j
+```{r}
+vector_9 <- seq(1000,0,-25)
+print(vector_9)
+```
+Made a sequence from 1000 - 0 with increment of (-25). This sequence is set as vector_9
+
+## Problem 2
+### Part a
+```{r}
+depart_800 <- c(26, 35, 24, 31, 34)
+depart_830 <- c(22, 23, 36, 32, 25)
+print(depart_800)
+print(depart_830)
+```
+I made a vector for 800 and 830 starting with Monday going to Friday.
+
+### Part b
+```{r}
+names(depart_800) <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+names(depart_830) <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+print(depart_800)
+print(depart_830)
+```
+Added names of each index with the names function from the first reference in References.
+
+### Part c
+```{r}
+diffoftimes <- depart_830 < depart_800
+print(diffoftimes)
+```
+I made a vector called diffoftimes that compared whether departing at 830 took less time than 800. The truth values of this equality was stored in diffoftimes.
+
+### Part d
+```{r}
+diff_800 <- depart_800 - 27
+diff_830 <- depart_830 - 27
+print(diff_800)
+print(diff_830)
+```
+I made a vector called diff_800 that took the difference of time it actually took and 27 mintues (Budget time). This was stored in for Monday - Friday. The same process took place in constructing diff_830. Actual - Budget = value for Monday - Friday.
+
+### Part e
+```{r}
+avg_diff_800 <- mean(diff_800)
+avg_diff_830 <- mean(diff_830)
+print(avg_diff_800)
+print(avg_diff_830)
+```
+The average for difference in time for 8:00 Departure was 3 minutes. The avergae of for difference in time for 8:30 Departure was 0.6 minutes. I did this by getting the mean of the difference of time vector for 800 and 830, and stored them in avg_diff_800 and avg_diff_830 respectivly. 
+
+### Part f 
+```{r}
+max_delay_800 <- max(diff_800)
+max_delay_830 <- max(diff_830)
+print(max_delay_800)
+print(max_delay_830)
+```
+The max delay for 8:00 was 8 minutes, while the max delay for 8:30 was 9 minutes. I calculated this by getting the max of diff_800 and diff_830 vector and storing it in a variable. 
+
+### Part g
+```{r}
+fastest_800 <- min(depart_800)
+fastest_day_800 <- names(which(depart_800 == fastest_800))
+print(fastest_day_800)
+```
+In the first week she arrived the fastest on Wednesday. I found this by getting the minimum of depart_800 and getting the name of the entry that was the minuimum of depart_800 through the name function.
+
+### Part h
+```{r}
+dayslessthan30 <- names(which(depart_830 <= 30))
+print(dayslessthan30)
+```
+The days that took less than 30 minutes to commute for the second week were "Monday", "Tuesday", and "Friday". I found this by getting which indicies were less than or equal to 30 minutes. I then proceeded to only take the names of the indicies. 
+
+### Part i
+```{r}
+dayslessthan30_depart830 <- depart_830[which(depart_830 <= 30)]
+diffofearly <- 27 - dayslessthan30_depart830
+print(diffofearly)
+```
+On the days she arrived less than 30 minutes for the second week. She arrived 5 minutes earlier on monday, 4 minutes earlier on tuesday, and 2 minutes earlier on friday. I found this by first getting the indicies that were less than 30 from depart 830. then I subtracted the budget time of 27 to see how much less time it took. 
+
+### Part j
+```{r}
+above27_800 <- depart_800 <= 27
+above27_830 <- depart_830 <= 27
+similar <- above27_800 == above27_830
+dayssimilar <- names(similar[which(similar == 'TRUE')])
+print(dayssimilar)
+```
+I first took the truth values of whether each entry for depart 800 was faster than 27min. I did this for depart_830 as well. I then went through both list and for each day I found which days were similar. If the two days were similar I put the names of the days into a vector called dayssimliar, which yeilded "Monday" and "Thursday"
+
+## References:
+Introduction to R (in class file)

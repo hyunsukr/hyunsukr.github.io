@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Basic JS: loop</title>
+</head>
+<body>
+  
+  
+  <script>
+  
+    for (var i=0; i<10; i++)
+      console.log(i);
+    
+    var j = 0;
+    while (j < 10) {
+      console.log(j);
+      j++;
+    }
+    
+    i = 1;    // what if we don't reassign value to i here
+    var msg = '';
+    do {
+       msg += i + ' x 5 = ' + (i * 5) + '<br/>';
+       i++;
+    } while (i < 1);
+    document.write(msg);
+    
+    
+    
+    
+  </script>
+</body>
+</html>

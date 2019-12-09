@@ -1,0 +1,10 @@
+rrmovq.yo
+prog8.yo
+jmp.yo
+prog1.yo
+prog2.yo
+prog3.yo
+prog4.yo
+opq.yo
+cmovXX.yo
+rmmovq-trivial.yo

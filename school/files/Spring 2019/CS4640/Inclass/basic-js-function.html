@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Basic JS: function</title>
+</head>
+<body>
+  
+  <!-- <div id="msg" onmouseover="updateMessage()" onmouseout="resetMessage()">Hello World!</div> -->  
+  <div id="msg" onmouseover="updateMessage(); updateMessageWithDefault('afternoon')" onmouseout="resetMessage()">Hello World!</div>
+  
+  
+  <br/>
+  <div id="greeting"></div>
+  
+  <script>
+  
+   // basic function
+   var txt = "Welcome";
+   function updateMessage() {
+      var displayMsg = document.getElementById("msg");
+      
+      //displayMsg.textContent = txt;
+      displayMsg.innerHTML = txt;   // alternative way to update
+   }  
+   
+// can call a function as soon as this line is reached
+// thus, the function is not triggered by the event
+// (try removing function call onmouseover event)
+   // updateMessage();     
+   
+   
+   function resetMessage() {
+      document.getElementById("msg").innerHTML = "Hello World!";
+      updateMessageWithDefault('');
+   }
+   
+   
+   // function with default value (ES6)
+   function updateMessageWithDefault(time="morning") {
+	  var greeting = '';
+      if (time.length > 0)
+         greeting = "Good " + time;
+      document.getElementById("greeting").innerHTML = greeting;
+   }
+     
+   
+   // function expression
+   function area(width, height) {
+      return width * height;
+   }
+   var size = area(3, 4);
+   console.log('size = area(3, 4),' + size);
+     
+   // a function with no name is called an anonymous function
+   var area2 = function(width, height) {
+      return width * height; 
+   };
+   var size2 = area2(3, 4);
+   console.log('size2 call an anomymous function through variable area2, ' + size2);   
+   
+   // immediately invoked function expression
+   var area3 = (function() {
+	  var width = 3; 
+	  var height = 2;
+	  return width * height; 
+   }());     // () call the function immediately 
+   console.log('area3, call an anomymous function immediately, ' + area3);
+
+   // notice if there is no (), the function is not called 
+   var area4 = (function() {
+	  var width = 3; 
+	  var height = 2;
+	  return width * height; 
+   });     
+   console.log('area4, assign anomymous function to a variable, ' + area4);
+
+  </script>
+</body>
+</html>

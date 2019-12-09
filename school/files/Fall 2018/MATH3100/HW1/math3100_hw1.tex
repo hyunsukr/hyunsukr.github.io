@@ -1,0 +1,412 @@
+%---------change this every homework
+\def\yourid{Hyun Suk Ryoo}
+\def\collabs{}
+% -----------------------------------------------------
+\def\duedate{9/6/18 12:30PM}
+\def\duelocation{via Collab}
+\def\prof{hr2ee}
+\def\course{{Math 3100 (Introduction to Probability)}}%------
+%-------------------------------------
+%-------------------------------------
+
+\documentclass[10pt]{report}
+\usepackage[colorlinks,urlcolor=blue]{hyperref}
+\usepackage[osf]{mathpazo}
+\usepackage{amsmath,amsfonts,graphicx}
+\usepackage{latexsym}
+\usepackage[shortlabels]{enumitem}
+\usepackage[top=1in,bottom=1.4in,left=1.5in,right=1.5in,centering]{geometry}
+\usepackage{color}
+\definecolor{mdb}{rgb}{0.3,0.02,0.02} 
+\definecolor{cit}{rgb}{0.05,0.2,0.45} 
+\pagestyle{myheadings}
+\markboth{\yourid}{\yourid}
+\usepackage{clrscode}
+\usepackage{url}
+
+\newenvironment{proof}{\par\noindent{\it Proof.}\hspace*{1em}}{$\Box$\bigskip}
+\newcommand{\handout}{
+   \renewcommand{\thepage}{}
+   \noindent
+   \begin{center}
+      \vbox{
+    \hbox to \columnwidth {\sc{\course} --- \prof \hfill}
+    \vspace{-2mm}
+    \hbox to \columnwidth {\sc due \MakeLowercase{\duedate} \duelocation \hfill {\LARGE\color{mdb}\yourid}}
+      }
+   \end{center}
+      Homework \# 1
+   \vspace*{2mm}
+}
+\newcommand{\solution}[1]{\medskip\noindent\textbf{Solution:}#1}
+\newcommand{\bit}[1]{\{0,1\}^{ #1 }}
+%\dontprintsemicolon
+%\linesnumbered
+\newtheorem{problem}{\sc\color{cit}section}
+\newtheorem{practice}{\sc\color{cit}practice}
+\newtheorem{lemma}{Lemma}
+\newtheorem{definition}{Definition}
+
+\def\therefore{\boldsymbol{\text{ }
+\leavevmode
+\lower0.4ex\hbox{$\cdot$}
+\kern-.5em\raise0.7ex\hbox{$\cdot$}
+\kern-0.6em\lower0.4ex\hbox{$\cdot$}
+\thinspace\text{ }}}
+
+\begin{document}
+\thispagestyle{empty}
+\handout
+%----Begin your modifications here
+
+\setcounter{chapter}{1}
+\section{\sc\color{cit}Equally Likely Outcomes}
+\setcounter{subsection}{1}
+\subsection{}
+ \begin{enumerate}[(a)]
+        \item The total number of words is $10 $ words.\ \\ The total number of words that has at least $4$ letters is $7$. \ \\ Therefore, the chance that the words has at least $4$ letters is $\mathbf{\frac{7}{10}}$
+        \item Assuming that the vowels must be distinct... \ \\ There are $4 $ words that have at least two vowels. \ \\ There are $10$  total number of words. \ \\ Therefore, the chance that the word has at least $2 $ vowels is $\mathbf{\frac{4}{10}}$
+        \item Assuming that the vowels must be distinct... \ \\ There are $4 $ words that have at least $4 $ letters and at least $2 $ vowels. \ \\ There are 10 total number of words. \ \\ Therefore, the chance that the word has at least $2 $ vowels and at least $4 $ letters is $\mathbf{\frac{4}{10}} $. 
+    \end{enumerate}
+\subsection{}
+ \begin{enumerate}[(a)]
+ \item The ticket is placed back into the hat so the number of possibilities does not change and is n. \ \\ The chance of drawing $1 $ for the first ticket is $\frac{1}{n} $ and the chance of drawing $2 $ for the second ticket is $\frac{1}{n	} $. \ \\Therefore, the chance for the frist ticket drawn being $1 $ and the second ticket being $2 $ is $\frac{1}{n} * \frac{1}{n} = \mathbf{\frac{1}{n^2}} $
+ \item In order for the two tickets to be consecutive integers, the first ticket drawn cannot be $n $. This is because $n $ is the highest ticket in the set. \ \\ The probability of not choosing $n $ for the first ticket is $\frac{n-1}{n} $. \ \\ For the following to be a consecutive integer there will only be one choice, which the probability will be $\frac{1}{n} $. \ \\ Therefore, $\frac{n-1}{n} * \frac{1}{n} = \mathbf{\frac{n-1}{n^2}} $
+ \item 
+ \begin{proof}\ \\
+ Because the outcomes in the set are all equally likely we can use the following formula...
+    \begin{align*}
+    P(A) &= \frac{\#(A)}{\#(\Omega)} \\
+    & \textnormal{If the first number chosen is } 1 \textnormal{, then there are }  n-1 \textnormal{ possibilities to satisfy the parameter. }\\ & \textnormal{If the first number chosen is } 2 \textnormal{, then there are }n-2 \textnormal{ possibilities to satisfy the parameter. } \\ & \textnormal{...} \\ & \textnormal{ If the number chosen is } n-1 \textnormal{, then there is } 1 \textnormal{ possibilities to satisfy the parameter} \\ & \textnormal{ If the number chosen is } n \textnormal{, then there is } 0 \textnormal{ possibilities to satisfy the parameter} \\
+    &= \frac{(n-1) + (n-2) ... + 1 + 0}{\#(\Omega)} \\
+    & = \frac{\frac{1}{2}n(n-1)}{\#(\Omega)}   \hspace{1cm} \textnormal{Using the formula in Appendix 2 on Sums (Pg 516)}\\
+    &=  \frac{\frac{1}{2}n(n-1)}{n^2} \\
+    &= \frac{n(n-1)}{2} * \frac{1}{n^2} \\
+    &= \frac{n-1}{2n} \\
+    &= \frac{1}{2} \bigg (\frac{n-1}{n}\bigg )\\
+    &= \frac{1}{2} \bigg (1 - \frac{1}{n} \bigg ) \\
+      P(A) &= \frac{1}{2} \bigg (1 - \frac{1}{n} \bigg ) 
+    \end{align*}
+    \end{proof}
+    \item \begin{enumerate}
+   	\item The ticket is not placed into the hat so the total number of possibilities changes every trial. \ \\
+   	The chance of drawing 1 for the first ticket is $\frac{1}{n} $ \ \\
+   	The chance of drawing 2 for the second ticket is $\frac{1}{n-1} $\ \\ Therefore, the chance for the first ticket drawn being $1 $ and the second ticket being $ 2$ is $\frac{1}{n} * \frac{1}{n-1} = \mathbf{\frac{1}{n(n -1)}} $. 
+   	\item In order for the two tickets to be consecutive integers, the first ticket drawn cannot be $n$. This is because $n $ is the highest ticket in the set. \ \\ The probability of not choosing $n $for the first ticket is $\frac{n-1}{n}$. \ \\For the following to be a consecutive integer there will only be one choice, which the probability will be $\frac{1}{n-1} $. \ \\Therefore, $\frac{n-1}{n} * \frac{1}{n-1} = \mathbf{\frac{1}{n}} $.
+   	\item 
+   	Because the outcomes in the set are all equally likely we can use the following formula...
+   	\begin{proof}
+    \begin{align*}
+    P(A) &= \frac{\#(A)}{\#(\Omega)} \\
+    & \textnormal{If the first number chosen is } 1 \textnormal{, then there are }  n-1 \textnormal{ possibilities to satisfy the parameter. }\\ & \textnormal{If the first number chosen is } 2 \textnormal{, then there are }n-2 \textnormal{ possibilities to satisfy the parameter. } \\ & \textnormal{...} \\ & \textnormal{ If the number chosen is } n-1 \textnormal{, then there is } 1 \textnormal{ possibilities to satisfy the parameter} \\ & \textnormal{ If the number chosen is } n \textnormal{, then there is } 0 \textnormal{ possibilities to satisfy the parameter} \\
+    &= \frac{(n-1) + (n-2) ... + 1 + 0}{\#(\Omega)} \\
+    & = \frac{\frac{1}{2}n(n-1)}{\#(\Omega)}   \hspace{1cm} \textnormal{Using the formula in Appendix 2 on Sums (Pg 516)}\\
+    & \Omega \textnormal{ will be } n(n-1) \textnormal{ due to the following chart (without replacement)...} \\
+    & \begin{tabular}{ |c|c|c|c|c|c| }
+    \hline
+ 	\textnormal{First Card} & n = 1 & n = 2 & \textnormal{...} & n = n-1 & n = n \\ 
+	 \hline
+	 n = 1 & \textnormal{N/A} & 1,2 & \textnormal{...} & 1,n-1 & 1,n \\ 
+	 \hline
+	 n = 2 & 2,1 & \textnormal{N/A} & \textnormal{...} & 2,n-1 & 2,n \\ 
+	 \hline
+	 ... & ... & ... & ... & ... & ... \\ 
+	 \hline
+	n = n - 1 & n-1,1 & n-1,2 & \textnormal{...} & \textnormal{N/A} & n-1,n \\ 
+	\hline
+	n = n & n,1 & n,2 & \textnormal{...} & n,n-1 & \textnormal{N/A} \\
+	\hline
+     \end{tabular} \\
+     & \textnormal{Therefore, the total possibilities of this problem without replacement is} n * (n-1) \\
+    &=  \frac{\frac{1}{2}n(n-1)}{n(n-1)} \\
+    &= \frac{1}{2} \\
+      P(A) &=\mathbf{ \frac{1}{2}}
+    \end{align*}
+    \end{proof}
+    \end{enumerate}
+\end{enumerate}
+\setcounter{subsection}{4}
+\subsection{}
+ \begin{enumerate}[(a)]
+ \item There are $52 * 51 = \mathbf{2652} $ possibilities of an ordered pair.
+ \item \begin{proof}
+ \begin{center}
+ Table for all possible outcomes... \\
+ \footnotesize{ S.C = Second Card }
+ \footnotesize{ C = Clover }
+ \footnotesize{ S = Spade}
+ \footnotesize{ H = Heart}
+ \footnotesize{ D = Diamond} 
+ \footnotesize{ A = Ace } \\ 
+ \ \\
+ \begin{tabular}{ |c|c|c|c|c|c| }
+ \hline
+First Card &  $S.C = 1C$ & $S.C = 1S$ & ... & $S.C = AH$ & $S.C = AD$ \\
+\hline
+$1C$ & N/A & $1C, 1S$ & ... & $1C, AH$ & $1C, AD$  \\
+\hline
+$1S$ & $1S, 1C $ & N/A & ... & $1S, AH$ & $1S, AD $ \\
+\hline
+... & ... & ... & ... & ... & ... \\
+\hline
+$AH$ & $AH, 1C$ & $AH, 1S$ & ... & N/A & $AH, AD $ \\
+\hline
+$AD$ & $AD, 1C$ & $AD, 1S$ & ... & $AD, AH$ & N/A \\
+\hline
+ \end{tabular}
+ \end{center}
+ The total possible outcomes is $2652 $ and there are $51 * 4 $ possibilities of the first card being an Ace card. \\
+     \begin{align*}
+ P(A) &= \frac{\#(A)}{\#(\Omega} \\
+ &= \frac{51*4}{2652} \\
+ & = \frac{1}{13} \\
+ \therefore  P(A) &= \mathbf{\frac{1}{13}}
+ \end{align*} 
+ \end{proof}
+ \item The probability of the Ace card being the first drawn card is the same as the probability of the Ace card being drawn second. Therefore we can use the same table as the for $1.1.5.b $. Because of symmetry we are able to conclude that the probability of the second being an ace is $\mathbf{\frac{1}{13}} $ \\
+ \begin{proof}
+ \begin{center}
+ Table for all possible outcomes... \\
+ \footnotesize{ S.C = Second Card }
+ \footnotesize{ C = Clover }
+ \footnotesize{ S = Spade}
+ \footnotesize{ H = Heart}
+ \footnotesize{ D = Diamond} 
+ \footnotesize{ A = Ace } \\ 
+ \ \\
+ \begin{tabular}{ |c|c|c|c|c|c| }
+ \hline
+First Card &  $S.C = 1C$ & $S.C = 1S$ & ... & $S.C = AH$ & $S.C = AD$ \\
+\hline
+$1C$ & N/A & $1C, 1S$ & ... & $1C, AH$ & $1C, AD$  \\
+\hline
+$1S$ & $1S, 1C $ & N/A & ... & $1S, AH$ & $1S, AD $ \\
+\hline
+... & ... & ... & ... & ... & ... \\
+\hline
+$AH$ & $AH, 1C$ & $AH, 1S$ & ... & N/A & $AH, AD $ \\
+\hline
+$AD$ & $AD, 1C$ & $AD, 1S$ & ... & $AD, AH$ & N/A \\
+\hline
+ \end{tabular}
+ \end{center}
+ The total possible outcomes is $2652 $ and there are $51 * 4 $ possibilities of the second card being an Ace card. \\
+     \begin{align*}
+ P(A) &= \frac{\#(A)}{\#(\Omega} \\
+ &= \frac{51*4}{2652} \\
+ & = \frac{1}{13} \\
+ \therefore  P(A) &= \mathbf{\frac{1}{13}}
+ \end{align*} 
+ \end{proof}
+ \item The possibilities of both cards being Aces is the following...
+ \begin{center}
+ $1C,1S $ \\
+ $1C, 1H $\\
+ $1C, 1D $ \\
+ $1S, 1C $ \\
+ $1S, 1H $ \\
+ $1S, 1D $ \\
+ $1H, 1C $ \\
+ $1H, 1S $ \\
+ $1H, 1D $ \\
+ $1D, 1C $ \\
+ $1D, 1S $ \\
+ $1D, 1H $ \\
+ Total of $12 $ possibilities out of $2652 $ total possibilities. \\
+$ \therefore P(A) = \frac{12}{2652} = \mathbf{\frac{1}{221}} $
+ \end{center}
+ \item As show in the following table...
+ \begin{center}
+ Table for all possible outcomes... \\
+ \footnotesize{ S.C = Second Card }
+ \footnotesize{ C = Clover }
+ \footnotesize{ S = Spade}
+ \footnotesize{ H = Heart}
+ \footnotesize{ D = Diamond} 
+ \footnotesize{ A = Ace } \\ 
+ \ \\
+ \begin{tabular}{ |c|c|c|c|c|c| }
+ \hline
+First Card &  $S.C = 1C$ & $S.C = 1S$ & ... & $S.C = AH$ & $S.C = AD$ \\
+\hline
+$1C$ & N/A & $1C, 1S$ & ... & $1C, AH$ & $1C, AD$  \\
+\hline
+$1S$ & $1S, 1C $ & N/A & ... & $1S, AH$ & $1S, AD $ \\
+\hline
+... & ... & ... & ... & ... & ... \\
+\hline
+$AH$ & $AH, 1C$ & $AH, 1S$ & ... & N/A & $AH, AD $ \\
+\hline
+$AD$ & $AD, 1C$ & $AD, 1S$ & ... & $AD, AH$ & N/A \\
+\hline
+ \end{tabular}
+ \end{center}
+ There are $4 $ possibilities where there exist and ace for all combinations where the first card is \textbf{NOT} an Ace. However, for combinations that the first card is an Ace, there are 51 combinations. \\
+ There are four ace cards as the first card chosen, which means $4 * 51 = 204 $ possibilities.\\
+ There are $48$ other cards (not ace), which have $4 $ possibilities each of containing an ace card as its second card choice. $48 * 4 = 192 $
+ \begin{align*}
+ 4*51 &= 204 \\
+ 48*4 &= 192 \\
+ P(A) &= \frac{\#(A)}{\#(\Omega} \\
+ &= \frac{204+192}{2652} \\
+ &= \frac{33}{221} \\
+ \therefore P(A) & = \frac{33}{221} \\
+ \end{align*}
+ \end{enumerate}
+ \subsection{}
+ \begin{enumerate}[(a)]
+ \item There are $52 * 52 = \mathbf{2704} $ possibilities of an ordered pair. 
+ \item \begin{proof}
+ \begin{center}
+ Table for all possible outcomes... \\
+ \footnotesize{ S.C = Second Card }
+ \footnotesize{ C = Clover }
+ \footnotesize{ S = Spade}
+ \footnotesize{ H = Heart}
+ \footnotesize{ D = Diamond} 
+ \footnotesize{ A = Ace } \\ 
+ \ \\
+ \begin{tabular}{ |c|c|c|c|c|c| }
+ \hline
+First Card &  $S.C = 1C$ & $S.C = 1S$ & ... & $S.C = AH$ & $S.C = AD$ \\
+\hline
+$1C$ & $1C,1C$ & $1C, 1S$ & ... & $1C, AH$ & $1C, AD$  \\
+\hline
+$1S$ & $1S, 1C $ & $1S,1S$ & ... & $1S, AH$ & $1S, AD $ \\
+\hline
+... & ... & ... & ... & ... & ... \\
+\hline
+$AH$ & $AH, 1C$ & $AH, 1S$ & ... & $AH, AD$ & $AH, AD $ \\
+\hline
+$AD$ & $AD, 1C$ & $AD, 1S$ & ... & $AD, AH$ & $AD,AD $ \\
+\hline
+ \end{tabular}
+ \end{center}
+ The total possible outcomes is $2704 $ and there are $52 * 4 $ possibilities of the first card being an Ace card. \\
+     \begin{align*}
+ P(A) &= \frac{\#(A)}{\#(\Omega} \\
+ &= \frac{52*4}{2704} \\
+ & = \frac{1}{13} \\
+ \therefore  P(A) &= \mathbf{\frac{1}{13}}
+ \end{align*} 
+ \end{proof}
+ \item The probability of the Ace card being the first drawn card is the same as the probability of the Ace card being drawn second. Therefore we can use the same table as the for $1.1.6.b $. Because of symmetry we are able to conclude that the probability of the second being an ace is $\mathbf{\frac{1}{13}} $ \\
+ \begin{proof}
+ \begin{center}
+ Table for all possible outcomes... \\
+ \footnotesize{ S.C = Second Card }
+ \footnotesize{ C = Clover }
+ \footnotesize{ S = Spade}
+ \footnotesize{ H = Heart}
+ \footnotesize{ D = Diamond} 
+ \footnotesize{ A = Ace } \\ 
+ \ \\
+ \begin{tabular}{ |c|c|c|c|c|c| }
+ \hline
+First Card &  $S.C = 1C$ & $S.C = 1S$ & ... & $S.C = AH$ & $S.C = AD$ \\
+\hline
+$1C$ & $1C,1C$ & $1C, 1S$ & ... & $1C, AH$ & $1C, AD$  \\
+\hline
+$1S$ & $1S, 1C $ & $1S,1S$ & ... & $1S, AH$ & $1S, AD $ \\
+\hline
+... & ... & ... & ... & ... & ... \\
+\hline
+$AH$ & $AH, 1C$ & $AH, 1S$ & ... & $AH, AD$ & $AH, AD $ \\
+\hline
+$AD$ & $AD, 1C$ & $AD, 1S$ & ... & $AD, AH$ & $AD,AD $ \\
+\hline
+ \end{tabular}
+ \end{center}
+ The total possible outcomes is $2704 $ and there are $52 * 4 $ possibilities of the second card being an Ace card. \\
+     \begin{align*}
+ P(A) &= \frac{\#(A)}{\#(\Omega} \\
+ &= \frac{52*4}{2704} \\
+ & = \frac{1}{13} \\
+ \therefore  P(A) &= \mathbf{\frac{1}{13}}
+ \end{align*} 
+ \end{proof}
+  \item The possibilities of both cards being Aces is the following...
+ \begin{center}
+ $1C, 1C$ \\
+ $1C, 1S $ \\
+ $1C, 1H $ \\
+ $1C, 1D $ \\
+ $1S, 1C $ \\
+ $1S, 1S $ \\
+ $1S, 1H $ \\
+ $1S, 1D $ \\
+ $1H, 1C $ \\
+ $1H, 1S $ \\
+ $1H, 1H $ \\
+ $1H, 1D $ \\
+ $1D, 1C $ \\
+ $1D, 1S $ \\
+ $1D, 1H $ \\
+ $1D, 1D $ \\
+ Total of $16 $ possibilities out of $2704 $ total possibilities. \\
+$ \therefore P(A) = \frac{16}{2704} = \mathbf{\frac{1}{169}} $
+ \end{center}
+ \item As show in the following table...
+ \begin{center}
+ Table for all possible outcomes... \\
+ \footnotesize{ S.C = Second Card }
+ \footnotesize{ C = Clover }
+ \footnotesize{ S = Spade}
+ \footnotesize{ H = Heart}
+ \footnotesize{ D = Diamond} 
+ \footnotesize{ A = Ace } \\ 
+ \ \\
+ \begin{tabular}{ |c|c|c|c|c|c| }
+ \hline
+First Card &  $S.C = 1C$ & $S.C = 1S$ & ... & $S.C = AH$ & $S.C = AD$ \\
+\hline
+$1C$ & $1C, 1C$ & $1C, 1S$ & ... & $1C, AH$ & $1C, AD$  \\
+\hline
+$1S$ & $1S, 1C $ & $1S, 1S$ & ... & $1S, AH$ & $1S, AD $ \\
+\hline
+... & ... & ... & ... & ... & ... \\
+\hline
+$AH$ & $AH, 1C$ & $AH, 1S$ & ... & $AH, AH$ & $AH, AD $ \\
+\hline
+$AD$ & $AD, 1C$ & $AD, 1S$ & ... & $AD, AH$ & $AD, AD$ \\
+\hline
+ \end{tabular}
+ \end{center}
+ There are $4 $ possibilities where there exist and ace for all combinations where the first card is \textbf{NOT} an Ace. However, for combinations that the first card is an Ace, there are 52 combinations. \\
+ There are four ace cards as the first card chosen, which means $4 * 52 = 208 $ possibilities.\\
+ There are $48$ other cards (not ace), which have $4 $ possibilities each of containing an ace card as its second card choice. $48 * 4 = 192 $
+ \begin{align*}
+ 4*52 &= 208 \\
+ 48*4 &= 192 \\
+ P(A) &= \frac{\#(A)}{\#(\Omega} \\
+ &= \frac{208+192}{2704} \\
+ &= \frac{25}{169} \\
+ \therefore P(A) & = \frac{25}{169} \\
+ \end{align*}
+ \end{enumerate}
+\setcounter{section}{2}
+\section{\sc\color{cit}Distributions}
+\setcounter{subsection}{3}
+\subsection{}
+ \begin{enumerate}[(a)]
+ \item Yes, this can be a subset. $\{0\} $ is a subset of $\{0,1,2\} $ \ \\
+ $\{0\} \in \Omega $
+ \item  Yes, this can be a subset. $\{1\} $ is a subset of $\{0,1,2\} $\ \\ $\{1\} \in \Omega $
+ \item No. This is because the outcome space we have, $\Omega $ is configured by the total number of heads in $2 $ tosses. This outcome space doesn't really have ordering involved. $\{1\} $ means that there is a total of one head that was flipped, but it doesn't explain whether it was the first toss or the second toss that showed heads. Therefore, we have no way of telling if the first coin was head and the second coin was tails.
+ \item Yes, this can be a subset. $\{1,2\} $ is a subset of $\{0,1,2\} $ \ \\
+ $\{1,2\} \in \Omega $
+\end{enumerate}
+\subsection{}
+ \begin{enumerate}[(a)]
+ \item $\{HHH, HHT, HTH, HTT\} $ is the subset where the event is that the first toss is a head.
+ \item $\{HTH, HTT, TTT, TTH\} $ is the subset where the event is that the second toss is a tail.
+ \item $\{HTT, HTH, HHT, HHH\} $ is the subset where the event is that the first toss is a head.
+ \item $\{HHH, HHT, HTH, THH\} $ is the subset where the event is that there are at least two heads.
+ \item $\{THT, HTT, TTH\} $ is the subset where the event is that there are exactly two tails. 
+ \item $\{HHT, HHH, TTH, TTT\} $ is the subset where the event is that the first two coins are tossed the same way.
+\end{enumerate}
+
+
+
+
+\end{document}

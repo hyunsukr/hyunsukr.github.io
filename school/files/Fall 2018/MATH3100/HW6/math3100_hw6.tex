@@ -1,0 +1,295 @@
+%---------change this every homework
+\def\yourid{Hyun Suk Ryoo}
+\def\collabs{}
+% -----------------------------------------------------
+\def\duedate{10/14/18 11:59PM}
+\def\duelocation{via Collab}
+\def\prof{hr2ee}
+\def\course{{Math 3100 (Introduction to Probability)}}%------
+%-------------------------------------
+%-------------------------------------
+
+\documentclass[10pt]{report}
+\usepackage[colorlinks,urlcolor=blue]{hyperref}
+\usepackage[osf]{mathpazo}
+\usepackage{amsmath,amsfonts,graphicx}
+\usepackage{latexsym}
+\usepackage[shortlabels]{enumitem}
+\usepackage[top=1in,bottom=1.4in,left=1.5in,right=1.5in,centering]{geometry}
+\usepackage{color}
+\definecolor{mdb}{rgb}{0.3,0.02,0.02} 
+\definecolor{cit}{rgb}{0.05,0.2,0.45} 
+\pagestyle{myheadings}
+\markboth{\yourid}{\yourid}
+\usepackage{clrscode}
+\usepackage{url}
+
+\newenvironment{proof}{\par\noindent{\it Proof.}\hspace*{1em}}{$\Box$\bigskip}
+\newcommand{\handout}{
+   \renewcommand{\thepage}{}
+   \noindent
+   \begin{center}
+      \vbox{
+    \hbox to \columnwidth {\sc{\course} --- \prof \hfill}
+    \vspace{-2mm}
+    \hbox to \columnwidth {\sc due \MakeLowercase{\duedate} \duelocation \hfill {\LARGE\color{mdb}\yourid}}
+      }
+   \end{center}
+      Homework \# 6
+   \vspace*{2mm}
+}
+\newcommand{\solution}[1]{\medskip\noindent\textbf{Solution:}#1}
+\newcommand{\bit}[1]{\{0,1\}^{ #1 }}
+%\dontprintsemicolon
+%\linesnumbered
+\newtheorem{problem}{\sc\color{cit}section}
+\newtheorem{practice}{\sc\color{cit}practice}
+\newtheorem{lemma}{Lemma}
+\newtheorem{definition}{Definition}
+
+\def\therefore{\boldsymbol{\text{ }
+\leavevmode
+\lower0.4ex\hbox{$\cdot$}
+\kern-.5em\raise0.7ex\hbox{$\cdot$}
+\kern-0.6em\lower0.4ex\hbox{$\cdot$}
+\thinspace\text{ }}}
+
+\begin{document}
+\thispagestyle{empty}
+\handout
+%----Begin your modifications here
+
+\setcounter{chapter}{3} 
+\setcounter{section}{0}
+\section{\sc\color{cit}Random Variables Introduction}
+\setcounter{subsection}{12}
+\subsection{}
+ \begin{enumerate}[(a)]
+       \item \begin{proof}
+       Let us think of each $k$ separately. \\
+       When $k=2 $ we have $1 - \frac{2}{2n} = \frac{2n-2}{2n} $ \\
+       When $k = 3 $ we have $1 - \frac{4}{2n} = \frac{2n-4}{2n}$ \\
+       ... \\
+      When $k = k $ we have $\frac{2n-2(k-1)}{2n} $ \\
+      $\therefore $ the equation becomes $ \frac{2n-2}{2n} *  \frac{2n-4}{2n} * .. \frac{2n-2(k-1)}{2n}  $
+       \end{proof}
+    \end{enumerate}
+    \setcounter{subsection}{14}
+ \section{\sc\color{cit}Expectations}
+      \setcounter{subsection}{6}
+    \subsection{}
+ \begin{enumerate}[(a)]
+ \item For this problem we can take a look at the expectation of an indicator. $E(I_A) = P(A) $. We are given that the probability that the switch is closed is $p_i $. We can then say that $E(I_i) = P(i) = p_i $. We can say that $X = \sum_{i=1}^{n}  [I_i]$. Therefore, $E(x) = E(\sum_{i=1}^{n}  [I_i]) = \sum_{i=1}^{n} [E(I_i)] = \mathbf{\sum_{i=1} ^ {n} [P_i]}$
+ \end{enumerate}
+ \subsection{}
+ \begin{enumerate}[(a)]
+ \item \ \\
+ \begin{center}
+ We are given the following conditions... \\
+ $E(X^2) = 3 $ \\
+ $E(Y^2) = 4 $ \\
+ $E(XY) = 2 $ \\
+ We must find $E[(X+Y)^2] $ \\
+ $E[(X+Y) ^ 2]$
+ $E[(X^2 + 2XY + Y^2 ] $ \\
+ Using addition rule for expectation...\\
+ $E(X^2) + E(XY) + E(XY) + E(Y^2)$ \\
+ $3 + 2 + 2 + 4 = \mathbf{11}$
+ \end{center}
+ \end{enumerate}
+  \setcounter{subsection}{10}
+    \subsection{}
+ \begin{enumerate}[(a)]
+ \item Let us assume that $p_i $ is the probability of ticket $i$ being the winning ticket. This $p_i = 0.1 $ because $\frac{100}{1000} $. Let us say that $X = X_1 + X_2 + X_3 $, which means that $X $ is the total number of prize tickets in $3 $ tickets if we assume that $X $ gets $1 $ for prize and $0 $ for no prize. For the addition rule for expectation and expectation of an indicator we can see that $E(X) = \sum_{i=1}^{n} P_i = 3*0.1 = 0.3 $ \\
+ Using Markov we can see the probability of winning at least one. \\
+ $P(X \geq 1 ) \leq \frac{E(x)}{1}  = 0.3 $ \\
+We can also look at the actual probability. Winning at least one is the complimentary of winning none, which is shown by ...\\
+\begin{center}
+$ 1 - P(x = 0) $ \\
+$ 1 - \frac{900 * 899 * 898}{1000 * 999 * 998}$ \\
+$ 0.271 $
+\end{center}
+The upper bound for the probability of winning at least one prize is $0.3 $, while the actual is $0.271 $. The probabilities are close due to the large denominator. Winning is actually pretty hard. 
+ \end{enumerate}
+   \setcounter{subsection}{13}
+ \subsection{}
+ \begin{enumerate}[(a)]
+ \item Let us say that $I_{A_i} $ is an indicator of event $A_i $ happening. $A_i $ is the event that at least one person needs to get off the elevator at floor $i$. 
+ \begin{align*}
+ E(X) &= E \bigg[ \sum_{i=1}^{10} {I_{A_i}} \bigg] \\
+ &=  \sum_{i=1}^{10} {E[I_{A_i}}] \\
+ &= \sum_{i=1}^{10} {1-\bigg(\frac{9}{10}\bigg)^{12}} \\
+ &= 10* \bigg[1-\bigg(\frac{9}{10}\bigg)^{12}\bigg] \\
+ &= 7.176 \\
+ \end{align*}
+ \end{enumerate}
+  \section{\sc\color{cit}Standard Deviation and Normal Approximation}
+   \setcounter{subsection}{1}
+ \subsection{}
+ \begin{enumerate}[(a)]
+ \item Let us see what combinations are possible...
+ \begin{center}
+ TTT \\
+ TTH \\
+ THT \\
+ HTT \\
+ THH \\
+ HHT \\
+ HTH \\
+ HHH \\
+ \ \\
+  There are a total of $8$ possibilities.  \\ 
+  \ \\
+  $P($no head$)= \frac{1}{8} $ \\
+  $P($one head $) = \frac{3}{8} $ \\
+  $P($ two head $) = \frac{3}{8}$ \\
+  $P($ three head $) = \frac{1}{8}$ \\
+ \end{center}
+ \begin{align*}
+ \mu &= E(Y^2) \\
+ &= 0*\frac{1}{8} + 1*\frac{3}{8} + 4*\frac{3}{8} + 9*\frac{1}{8} \\
+ &= 3 \\
+ \sigma^2 &= E(X^2) - \mu ^2 \\
+ &= \bigg[0*\frac{1}{8} + 1*\frac{3}{8} + 16*\frac{3}{8} + 81*\frac{1}{8}\bigg] - 9 \\
+ &= 7.5
+ \end{align*}
+ \end{enumerate}
+  \subsection{}
+ \begin{enumerate}[(a)]
+ \item \begin{align*}
+ E(2X + 3Y) &= 2E(X) + 3E(Y) \\
+ &= 2*1 + 3*1  \\
+ &= 5
+ \end{align*}
+ \item \begin{align*}
+ Var(2X + 3Y) &= 2Var(X) + 3Var(Y) \\
+ &= 4*2 + 9*2\\
+ &= 26 \\
+ \end{align*}
+ \item \begin{align*}
+ E(XYZ) &= E(X)E(Y)E(Z) \\
+ &= 1
+ \end{align*}
+ \item \begin{align*}
+ Var(XYZ) &= Var(XY) * Var(Z) \\
+ Var(XY) &= Var(X)Var(Y) + Var(X)E(Y)^2 + Var(Y)E(X)^2\\
+ &= 4 + 2 + 2  \\
+ &= 8 \\
+ Var(XYZ) &= Var(XY)Var(Z) + Var(XY)E(Z)^2 + Var(Z)E(XY)^2 \\
+ &= 8*2 + 8*1 + 2 * 1 \\
+ &= 26 \\
+ \end{align*}
+ \end{enumerate}
+    \setcounter{subsection}{7}
+ \subsection{}
+ \begin{enumerate}[(a)]
+ \item Let us say that $I_{A_1} $ is the indicator that event $A_1 $ happens, $I_{A_2} $ is the indicator that event $A_2 $ happens, and that $I_{A_3} $ is the indicator that event $A_3 $ happens. Then $N = I_{A_1} + I_{A_2} + I_{A_3} $
+ \item Due to the expectation of an indicator we have that $E(I_A) = P(A) $ \begin{align*}
+ E(N) &= E(I_{A_1} + I_{A_2} + I_{A_3}) \\
+ &= E(I_{A_1}) + E(I_{A_2}) + E(I_{A_3}) \\
+ &= \frac{1}{5} + \frac{1}{4} + \frac{1}{3} \\
+ &= \mathbf{\frac{47}{60}}
+ \end{align*}
+ \item Let us take into consideration that $A_1, A_2, A_3 $ are all disjoint.
+  \begin{center}
+ \begin{align*}
+ Var(N) &=E(N^2) - [E(N)]^2 \\
+ &=E(( I_{A_1} + I_{A_2} + I_{A_3})^2) - [E( I_{A_1} + I_{A_2} + I_{A_3})]^2 \\
+ &= E(( I_{A_1} + I_{A_2} + I_{A_3})^2) - \bigg[\frac{47}{60}\bigg]^2 \\
+ &= E(( I_{A_1} + I_{A_2} + I_{A_3})^2) - \frac{2209}{3600} \\
+ &=E({I_{A_1}}^2 +{ I_{A_2}}^2 + {I_{A_3}}^2 + 2I_{A_1}I_{A_2} + 2I_{A_2}I_{A_3} + 2I_{A_1}I_{A_3}) - \frac{2209}{3600} \\
+ \end{align*}
+ However, $A_1, A_2, A_3 $ are disjoint which means that the combination terms are not allowed...The equation thus becomes 
+ \begin{align*}
+ &=E({I_{A_1}} +{ I_{A_2}} + {I_{A_3}}) - \frac{2209}{3600}  \\
+ &= \frac{47}{60} - \frac{2209}{3600} \\
+ &= \mathbf{\frac{611}{3600}}
+ \end{align*}
+  \end{center}
+  \item Let us look at the condition where they are independent. 
+  \begin{center}
+  The addition rule for variances for independent is ...
+  $Var(X+Y) = Var(X) + Var(Y) $
+  \begin{align*}
+  Var(N) &= Var(I_{A_1} + I_{A_2} + I_{A_3}) \\
+  &= Var(I_{A_1}) +Var( I_{A_2}) + Var(I_{A_3}) \\
+  & = \frac{1}{5}\bigg(1-\frac{1}{5}\bigg) + \frac{1}{4}\bigg(1-\frac{3}{4}\bigg) + \frac{1}{3}\bigg(1-\frac{1}{3}\bigg) \\
+  &= \frac{4}{25} + \frac{3}{16} + \frac{2}{9} \\
+  &= \frac{2051}{3600}\\
+  \end{align*}
+  \end{center}
+  \item Let us look at the condition of $A_1 \subset A_2 \subset A_3 $
+    \begin{center}
+ \begin{align*}
+ Var(N) &=E(N^2) - [E(N)]^2 \\
+ &=E(( I_{A_1} + I_{A_2} + I_{A_3})^2) - [E( I_{A_1} + I_{A_2} + I_{A_3})]^2 \\
+ &= E(( I_{A_1} + I_{A_2} + I_{A_3})^2) - \bigg[\frac{47}{60}\bigg]^2 \\
+ &= E(( I_{A_1} + I_{A_2} + I_{A_3})^2) - \frac{2209}{3600} \\
+ &=E({I_{A_1}}^2 +{ I_{A_2}}^2 + {I_{A_3}}^2 + 2I_{A_1}I_{A_2} + 2I_{A_1}I_{A_3} + 2I_{A_2}I_{A_3}) - \frac{2209}{3600} \\
+ \end{align*}
+ \end{center}
+ However, this time we know that $A_1 $ is a subset of $A_2 $, which is a subset of $A_3 $, this means that $I_{A_1} I_{A_2} = I_{A_1} $ and $I_{A_1}I_{A_2} = I_{A_1} $ as well as $I_{A_2}I_{A_3} = I_{A_2} $. 
+ \begin{align*}
+ &= E({I_{A_1}}^2 +{ I_{A_2}}^2 + {I_{A_3}}^2 + 2I_{A_1}I_{A_2} + 2I_{A_1}I_{A_3} + 2I_{A_1}I_{A_3}) - \frac{2209}{3600}  \\
+ &=E({I_{A_1}}^2 +{ I_{A_2}}^2 + {I_{A_3}}^2 + 2I_{A_1} + 2I_{A_1} + 2I_{A_2}) - \frac{2209}{3600}  \\
+ &= E(5I_{A_1} + 3I_{A_2} + I_{A_3})  - \frac{2209}{3600}\\
+ &= 5*\frac{1}{5} + 3*\frac{1}{4} + \frac{1}{3} - \frac{2209}{3600}\\
+ &=\frac{25}{12} - \frac{2209}{3600} \\
+ &= \mathbf{\frac{5291}{3600}} 
+ \end{align*}
+ \end{enumerate}
+ \setcounter{chapter}{6} 
+\setcounter{section}{0}
+\section{\sc\color{cit}Conditional Distributions: Discrete Case}
+\setcounter{subsection}{1}
+\subsection{}
+ \begin{enumerate}[(a)]
+ \item We can find the probabilities and distribution of G due to the $p=0.5 $. We can also use binomial distribution to calculate the individual probabilities.\\ $P(k $ successes in $n$ trials $) = \binom{n}{k} p^k q^{n-k} $, which for this case is ... \\
+ $P(k $ successes in $n$ trials $) = \binom{n}{k} p^n $
+\begin{center}
+The distribution of G 
+ \begin{tabular}{|c|c|c|c|c|c|}
+ \hline
+ $T=$ & $0$ & $1$ & $2$ & $3$ & $4$ \\
+ \hline
+ $G = 0$, which is $P(G=0 | T= x) $ & $1$ & $\frac{1}{2}$ &$ \bigg(\frac{1}{2}\bigg) ^ 2 $ & $ \bigg(\frac{1}{2}\bigg) ^ 3 $ & $ \bigg(\frac{1}{2}\bigg) ^ 4 $ \\
+ \hline
+ $G = 1$, which is $P(G=1 | T= x) $ & $0$ & $\frac{1}{2}$ &$ 2\bigg(\frac{1}{2}\bigg) ^ 2 $ & $ 3\bigg(\frac{1}{2}\bigg) ^ 3 $ & $ 4\bigg(\frac{1}{2}\bigg) ^ 4 $ \\
+ \hline
+ $G = 2$, which is $P(G=2 | T= x) $ & $0$ & $0$ &$ \bigg(\frac{1}{2}\bigg) ^ 2 $ & $ 3\bigg(\frac{1}{2}\bigg) ^ 3 $ & $6 \bigg(\frac{1}{2}\bigg) ^ 4 $ \\
+ \hline
+ $G = 3$, which is $P(G=3 | T= x) $ & $0$ & $0$ &$ 0$ & $ \bigg(\frac{1}{2}\bigg) ^ 3 $ & $ 4\bigg(\frac{1}{2}\bigg) ^ 4 $ \\
+ \hline
+ $G = 4$, which is $P(G=4 | T= x) $ & $0$ & $0$ &$ 0$ & $0$ & $ \bigg(\frac{1}{2}\bigg) ^ 4 $ \\
+ \hline
+ \end{tabular}
+ \end{center}
+ \end{enumerate}
+ \section{\sc\color{cit}Conditional Expectation: Discrete Case}
+\setcounter{subsection}{3}
+\subsection{}
+ \begin{enumerate}[(a)]
+ \item \begin{align*}
+ E(Y) &= E(E(Y|X)) \\
+ &= E\bigg(\sum_{y=1}^{x} \frac{y}{x}\bigg) \\
+ &= E \bigg(\frac{1}{x} * (1 + 2 + ... + X) \bigg) \\
+ &= E\bigg(\frac{1+X}{2} \bigg) \\
+ & =\frac{E(x)}{2} + \frac{1}{2}  \\
+ &= \frac{n+1}{2} * \frac{1}{2} + \frac{1}{2}  \\
+ & = \frac{n+3}{4} \\
+ \end{align*}
+ \item \begin{align*}
+ E(Y^2) &= E(E(Y^2|X)) \\
+ &= E\bigg(\sum_{y=1}^{x} Y^2 *\frac{1}{X} \bigg) \\
+ &= E\bigg(\frac{x(x+1)(2x+1)}{6} * \frac{1}{x} \bigg) \\
+ &= E\bigg(\frac{2x^2 + 3x + 1}{6} \bigg) \\
+ &= \frac{1}{6} *( 2E(X^2) + 3E(x) + 1) \\
+ &= \frac{1}{6} * ( \frac{2n^2 + 3n + 1}{3} + 3\frac{n+1}{2} + 1) \\
+ &= \frac{4n^2+ 15n + 17}{36} \\
+ \end{align*}
+ \item \begin{align*}
+ P(X+Y=2) &= P(Y=1|X=1) P(X=1) \\
+ &= \frac{1}{n}
+ \end{align*}
+ \end{enumerate}
+\end{document}

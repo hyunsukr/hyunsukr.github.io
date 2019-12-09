@@ -1,0 +1,170 @@
+/*<!-- Sumin Kim (sk5gz)
+     Max Ryoo (hr2ee)
+     Sujin Park (sjp7yf) -->*/
+
+
+header{
+  margin-top:1%;
+  margin-left:1%;
+  margin-right:2%;
+  outline:#ffadc0 dotted 2px;
+}
+.navbar-brand{
+  /*font-family: 'Sacramento', cursive;*/
+  font-family: 'Raleway Dots', cursive;
+  letter-spacing: 5px;
+  font-size: 50px;
+  margin-top:-17px;
+  margin-bottom:-17px;
+  padding-left:1%;
+}
+#collapsibleNavbar{
+  font-family: 'Raleway Dots', cursive;
+  font-size: 20px;
+}
+#collapsibleNavbar a{
+  color: #ffffff;
+  font-weight:bold;
+}
+.dropdown-menu{
+  background-color:#000000;
+}
+.dropdown-menu a:hover{
+  background-color:#c1c1c1;
+}
+.carousel-inner img {
+  margin-top:4%;
+  width: 100%;
+}
+.row{
+  padding-top:5%;
+  padding-bottom:2%;
+  font-family: 'Fredericka the Great', cursive;
+}
+.greeting{
+  font-family: 'Fredericka the Great', cursive;
+  text-align: center;
+}
+.category1{
+  background-color:#faeaed;
+  padding:10% 7% 6% 8%;
+  margin-bottom:2%;
+}
+.category2{
+  background-color:#f5ccd4;
+  padding:10% 7% 6% 8%;
+  margin-bottom:2%;
+}
+.category3{
+  background-color:#f4e7e3;
+  padding:10% 7% 6% 8%;
+  margin-bottom:2%;
+}
+.categoryproducts {
+  background-color:#f4e7e3;
+  padding:10% 7% 6% 8%;
+  height: 90%;
+  margin-bottom:2%;
+}
+
+.categoryproducts:hover{
+  background-color:#f5ccd4;
+  cursor:pointer;
+}
+
+.login {
+  /*background-image: linear-gradient(to bottom, #ffb7ca, #ffc4d4, #ffd1de, #fedfe8, #faeaed);*/
+  background-image: linear-gradient(to bottom, #ffafcc, #ffc1d8, #ffc9dd, #ffd8e6, #ffe8f0);
+  position: absolute;
+  width: 30%;
+  /* Center form on page horizontally & vertically */
+  top: 50%;
+  left: 50%;
+  border-radius: 15px;
+  padding:30px;
+  overflow-wrap: break-word;
+  transform: translate(-50%, -50%);
+}
+.user {
+  /*background-image: linear-gradient(to bottom, #ffb7ca, #ffc4d4, #ffd1de, #fedfe8, #faeaed);*/
+  background-image: linear-gradient(to bottom, #ffafcc, #ffc1d8, #ffc9dd, #ffd8e6, #ffe8f0);
+  border-radius: 15px;
+  padding:20px;
+  overflow-wrap: break-word;
+}
+
+.rec {
+  background-image: linear-gradient(to bottom, #ffafcc, #ffc1d8, #ffc9dd, #ffd8e6, #ffe8f0);
+  position: absolute;
+  width: 80%;
+  /* Center form on page horizontally & vertically */
+  top: 50%;
+  left: 50%;
+  border-radius: 15px;
+  padding:30px;
+  overflow-wrap: break-word;
+  transform: translate(-50%, -50%);
+}
+
+.login-button {
+  background: #b5e0ff;
+  border-radius: 10px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+.login-button:hover{
+  text-decoration: none;
+  color:#999999;
+}
+.form-group{
+  font-family: 'Raleway Dots', cursive;
+  font-weight:bold;
+}
+.error {
+  font-style:italic;
+  color: #fff;
+}
+#link {
+  color:black;
+}
+.btn-outline-search{
+  border-color:#FABFEC;
+  background-color:#faeaed;
+  width: 20%;
+  font-family:'Raleway Dots', cursive;
+  font-weight:bold;
+}
+.btn-outline-search:hover{
+  background-color:#FABFEC;
+  border-color:#f4e7e3;
+  color:#FFF;
+}
+.btn-outline-expand{
+  border-color:#FABFEC;
+  background-color:#faeaed;
+}
+.btn-outline-expand:hover{
+  background-color:#FABFEC;
+  border-color:#f4e7e3;
+  color:#FFF;
+}
+.itempicbox {
+  padding-top:5%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height:4%;
+  opacity: 1 !important;
+}
+.itempic {
+  max-width: 100%;
+  max-height: 100%;
+}
+.itemdescription {
+  width:100%;
+  height:100%;
+  background-color:#f4e7e3;
+}
+.aboutpic{
+  padding-bottom:10%;
+}

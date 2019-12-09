@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Basic JS: decision</title>
+</head>
+<body>  
+  
+  <script>
+  
+    var a = 3;
+    var b = 3;
+    var c = '3';
+    
+    console.log('a == b is ' + (a == b) );
+    console.log('a === b is ' + (a === b) );
+    console.log('a == c is ' + (a == c) );
+    console.log('a === c is ' + (a === c) );
+    console.log('a != b is ' + (a != b) );
+    console.log('a !== c is ' + (a !== c) );
+    
+    console.log('a == b && a == c is ' + (a == b && a == c) );
+    console.log('a === b && a === c is ' + (a === b && a === c) );
+    console.log('a == b || a == c is ' + (a == b || a == c) );
+    console.log('a === b || a === c is ' + (a === b || a === c) );
+    console.log('! (a === b || a === c) is ' + !(a === b || a === c) );
+    
+    
+    if ((a === b || a === c)) { 
+       document.write('(a === b || a === c) is ' + (a === b || a === c) );
+    }
+    
+    var color = 'blue';
+    switch (color) {
+       case 'Blue':     // notice case sensitive
+    	   document.write('<br/>blue is my favorite color');
+    	   break;
+       case 'green': 
+    	   document.write('<br/>I like green');
+    	   break;
+       case 'pink': 
+    	   document.write('<br/>pink is too girly for me');
+    	   break;
+       default: 
+    	   document.write('<br/>any color is fine');
+           break;
+    }
+    
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+Year,Fatalities,State,Resident Population,Licensed Drivers
+1994,930,Virgniia,6537,4601
+1995,900,Virgniia,6601,4629
+1996,877,Virgniia,6665,4692
+1997,984,Virgniia,6733,4901
+1998,935,Virgniia,6789,4668
+1999,878,Virgniia,6873,4729
+2000,929,Virgniia,7106,4837
+2001,935,Virgniia,7198,4921
+2002,914,Virgniia,7287,5158
+2003,943,Virgniia,7367,5046
+2004,922,Virgniia,7476,5113
+2005,947,Virgniia,7577,5178
+2006,962,Virgniia,7674,5211
+2007,1027,Virgniia,7751,5260
+2008,825,Virgniia,7833,5301
+2009,758,Virgniia,7926,5348
+2010,740,Virgniia,8026,5402
+2011,764,Virgniia,8110,5467
+2012,776,Virgniia,8192,5538
+2013,740,Virgniia,8263,5603
+2014,703,Virgniia,8317,5769
+2015,754,Virgniia,8368,5820
+2016,760,Virgniia,8412,5912
+1994,69,District of Columbia,565,362
+1995,58,District of Columbia,551,339
+1996,62,District of Columbia,538,333
+1997,60,District of Columbia,529,356
+1998,54,District of Columbia,521,350
+1999,41,District of Columbia,519,349
+2000,48,District of Columbia,572,348
+2001,68,District of Columbia,575,328
+2002,47,District of Columbia,573,309
+2003,67,District of Columbia,569,313
+2004,43,District of Columbia,568,349
+2005,48,District of Columbia,567,330
+2006,37,District of Columbia,571,358
+2007,44,District of Columbia,574,396
+2008,34,District of Columbia,580,374
+2009,29,District of Columbia,592,376
+2010,24,District of Columbia,605,385
+2011,27,District of Columbia,620,395
+2012,15,District of Columbia,635,401
+2013,20,District of Columbia,649,406
+2014,23,District of Columbia,659,420
+2015,23,District of Columbia,670,456
+2016,27,District of Columbia,681,490
+1994,651,Maryland,4985,3308
+1995,671,Maryland,5024,3344
+1996,608,Maryland,5057,3377
+1997,611,Maryland,5093,3347
+1998,606,Maryland,5130,3178
+1999,590,Maryland,5172,3195
+2000,588,Maryland,5311,3382
+2001,659,Maryland,5375,3452
+2002,661,Maryland,5440,3523
+2003,650,Maryland,5496,3552
+2004,643,Maryland,5547,3594
+2005,614,Maryland,5592,3710
+2006,652,Maryland,5627,3694
+2007,614,Maryland,5653,3738
+2008,591,Maryland,5685,3787
+2009,549,Maryland,5730,3905
+2010,496,Maryland,5789,3918
+2011,485,Maryland,5844,3857
+2012,511,Maryland,5890,4102
+2013,465,Maryland,5931,4140
+2014,442,Maryland,5967,4143
+2015,520,Maryland,5995,4186
+2016,505,Maryland,6016,4265
+1994,356,West Virginia,1818,1298
+1995,376,West Virginia,1821,1305
+1996,348,West Virginia,1819,1274
+1997,381,West Virginia,1816,1285
+1998,354,West Virginia,1812,1281
+1999,395,West Virginia,1807,1274
+2000,411,West Virginia,1807,1347
+2001,376,West Virginia,1801,1317
+2002,439,West Virginia,1805,1325
+2003,394,West Virginia,1812,1272
+2004,410,West Virginia,1816,1292
+2005,374,West Virginia,1820,1328
+2006,410,West Virginia,1828,1335
+2007,432,West Virginia,1834,1359
+2008,378,West Virginia,1840,1361
+2009,357,West Virginia,1848,1329
+2010,315,West Virginia,1854,1206
+2011,338,West Virginia,1855,1199
+2012,339,West Virginia,1857,1242
+2013,332,West Virginia,1853,1177
+2014,272,West Virginia,1849,1172
+2015,268,West Virginia,1841,1167
+2016,269,West Virginia,1831,1159
+1994,1431,North Carolina,7061,4840
+1995,1448,North Carolina,7185,5028
+1996,1494,North Carolina,7308,5187
+1997,1483,North Carolina,7429,5399
+1998,1596,North Carolina,7546,5534
+1999,1505,North Carolina,7651,5491
+2000,1557,North Carolina,8082,5690
+2001,1530,North Carolina,8210,5885
+2002,1576,North Carolina,8326,5943
+2003,1553,North Carolina,8423,6015
+2004,1573,North Carolina,8553,6122
+2005,1547,North Carolina,8705,6228
+2006,1554,North Carolina,8917,6316
+2007,1676,North Carolina,9118,6384
+2008,1428,North Carolina,9309,6457
+2009,1313,North Carolina,9450,6504
+2010,1320,North Carolina,9559,6537
+2011,1230,North Carolina,9651,6569
+2012,1299,North Carolina,9746,6678
+2013,1290,North Carolina,9842,6823
+2014,1284,North Carolina,9934,7025
+2015,1379,North Carolina,10035,7161
+2016,1450,North Carolina,10147,7267

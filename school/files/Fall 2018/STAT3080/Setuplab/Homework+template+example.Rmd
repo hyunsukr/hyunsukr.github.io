@@ -1,0 +1,35 @@
+---
+title: "Homework Example" 
+author: "Gretchen Martinet"
+fontsize: 12pt
+geometry: margin=1in
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, highlight=FALSE)
+```
+
+## Problem 1 
+```{r}
+15 + 10
+```
+I've added 15 and 10.
+
+## Problem 2
+### Part a
+```{r}
+15 - 10
+```
+I've subtracted 10 from 15.
+
+### Part b
+```{r}
+15 - 5 - 5
+# Reference 2 (if that's where I found this code)
+```
+I've now done it a different way.
+
+## References
+1. <https://www.mathsisfun.com/numbers/addition.html>
+2. <https://www.mathsisfun.com/numbers/subtraction.html> 

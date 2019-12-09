@@ -1,0 +1,126 @@
+<!-- Sumin Kim (sk5gz)
+     Max Ryoo (hr2ee)
+     Sujin Park (sjp7yf) -->
+     
+<!-- 1. create HTML5 doctype -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel ="stylesheet" href ="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Infant|Gilda+Display|Raleway+Dots|Love+Ya+Like+A+Sister|Reenie+Beanie|Fredericka+the+Great|Shadows+Into+Light+Two|Major+Mono+Display|Bilbo|Architects+Daughter|Sacramento|Marck+Script|Thasadith|Open+Sans+Condensed:300" rel="stylesheet">
+    <title>Web PL Project</title>
+
+  </head>
+  <script>
+    function showingredients() { // displays ingredient info when + button is clicked
+      var x = document.getElementById("ingredients");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      }
+      else {
+        x.style.display = "none";
+      }
+    }
+
+    function showdescription() { // displays description info when + button is clicked
+      var x = document.getElementById("description");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      }
+      else {
+        x.style.display = "none";
+      }
+    }
+    var upvote = (params) => document.getElementById(params).innerHTML = "Thank you for the upvote!";
+    var downvote = (params) => document.getElementById(params).innerHTML = "Thank you for the downvote!";
+  </script>
+
+  <!-- Background image and title/menu bar -->
+  <body background="image/brush.jpg">
+    <header>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark" style="background-color:transparent !important">
+        <a class="navbar-brand" href="index.html" style="text-shadow: 0 0 10px #ff0fa2 , 0 0 10px #ffadc0 , 0 0 10px #ffadc0 , 0 0 10px #ff0fa2;">DeCo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="products.html">Products</a>
+              </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown01">
+                <a class="dropdown-item" href="#">Skin Type</a>
+                <a class="dropdown-item" href="#">Age Group</a>
+                <a class="dropdown-item" href="#">Most Popular</a>
+             </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="log-in.html">Log in</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <br>
+
+    <!-- Item description -->
+    <div class="container itemdescription">
+        <br>
+        <h3 style="text-align: center;padding-top:5px;font-family: 'Fredericka the Great', cursive;">Powder Kiss Lipstick</h3>
+        <div class="row">
+            <div class="col-md-6 ">
+                <img class="itempic" src="image/mac.jpg" style="width:100%" alt="mac1"/>
+            </div>
+            <div class="col-md-6">
+                <strong>Rating: </strong> <div id="rating">4.3/5</div><br>
+                <strong>Price: </strong> $19.00 <br>
+                <strong>Popular Age Group: </strong> 20-30 <br>
+                <strong>Company: </strong> MAC <br>
+                <strong>Recommended Skin Type: </strong> Any <br>
+                <strong>Good Ingredients for you: </strong> None <br>
+                <strong>Bad Ingredients for you: </strong> Dimethicone <br>
+                Would you recommend this item? 
+                <!-- Thumbs up -->
+                <button class="btn-outline-expand" style="background:transparent;border: transparent;" onclick="upvote('upvote')"><i class="fa fa-thumbs-up"></i></button>
+                <!-- Thumbs down -->
+                <button class="btn-outline-expand" style="background:transparent;border: transparent;" onclick="downvote('upvote')"><i class="fa fa-thumbs-down"></i></button>
+                <!-- clear button -->
+                <button id= "clearbtn" class="btn-outline-expand" style="background:transparent;border: transparent;"><i class="fa fa-times"></i></button>
+                <br>
+                <div id = "upvote"></div>
+                <!-- + button -->
+                Item Description:  <button class="btn-outline-expand" style="background:transparent;border: transparent;" onclick="showdescription()"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                <!-- Displayed info when + button is clicked -->
+                <div id="description" style="display:none">Matte, totally reinvented. Delivering a romantic blur of soft-focus colour, this weightless moisture-matte lipstick was developed to replicate a backstage technique: blending out edges of matte lipstick for a hazy effect. Its groundbreaking formula contains moisture-coated powder pigments that condition and hydrate lips. The result is the zero-shine look of a matte lipstick with the cushiony, lightweight feel of a balm. Fall for this all-new soft-touch, misty matte kiss of colour.</div>
+                <br>
+
+                Ingredients:  <button class="btn-outline-expand" style="background:transparent;border: transparent;" onclick="showingredients()"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                <!-- Displayed info when + button is clicked -->
+                <div id="ingredients" style="display:none">Dimethicone , Tridecyl Trimellitate , Polyethylene , Phenyl Trimethicone , Dimethicone Crosspolymer , Hdi/Trimethylol Hexyllactone Crosspolymer , Zeolite , Kaolin , Alumina , Silica , Silica Dimethyl Silylate , Polysilicone-11 , Caprylyl Glycol , Polyhydroxystearic Acid , Flavor (Aroma) , Sodium Saccharin , Tocopherol , [+/- Mica , Titanium Dioxide (Ci 77891) , Iron Oxides (Ci 77491) , Iron Oxides (Ci 77492) , Iron Oxides (Ci 77499) , Bismuth Oxychloride (Ci 77163) , Blue 1 Lake (Ci 42090) , Carmine (Ci 75470) , Orange 5 Lake (Ci 45370) , Red 6 (Ci 15850) , Red 21 (Ci 45380) , Red 28 (Ci 45410) , Red 30 (Ci 73360) , Red 6 Lake (Ci 15850) , Red 7 Lake (Ci 15850) , Red 22 Lake (Ci 45380) , Red 28 Lake (Ci 45410) , Red 30 Lake (Ci 73360) , Red 33 Lake (Ci 17200) , Yellow 5 Lake (Ci 19140) , Yellow 6 Lake (Ci 15985)]</div>
+                <br>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+      document.getElementById("clearbtn").addEventListener("click", function() {
+        document.getElementById("upvote").innerHTML = "";
+      });
+    </script>
+
+  </body>
+</html>

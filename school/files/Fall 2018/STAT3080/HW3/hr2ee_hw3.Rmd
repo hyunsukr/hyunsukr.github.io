@@ -1,0 +1,154 @@
+---
+title: "Homework 3" 
+author: "Max Ryoo (hr2ee)"
+fontsize: 12pt
+geometry: margin=1in
+output: pdf_document
+
+---
+library(ggplot2)
+library(car)
+library(gcookbook)
+library(MASS)
+library(Hmisc)
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, highlight=FALSE)
+```
+
+## Problem 1
+### A
+```{r}
+setwd("/Users/maxryoo/Documents/Fall 2018/STAT3080/HW3")
+nym2002 <- read.table("nym2002.txt", header=TRUE)
+print(nym2002[1:5,])
+```
+I set my working directory as above which contains the file to be read in. I used the read.table to read in the file and stored it into a dataframe called nym2002. I proceeded to print out the first 5 rows of the dataframe.
+
+### B
+```{r}
+num_finishers <- nrow(nym2002)
+print(num_finishers)
+```
+I used the nrow function to determine the number of finishers in the dataframe. I then stored it in num_finishers and printed the result.
+
+### C
+```{r}
+youngest <- min(nym2002$age)
+oldest <- max(nym2002$age)
+print(youngest)
+print(oldest)
+```
+I used the min and max function on the age column of the nym2002 dataframe. I then stored it into youngest and oldest respectivly, which I printed to be 25 and 71 years of age.
+
+### D 
+```{r}
+fastest <- nym2002[which(nym2002$time == min(nym2002$time)),]$age
+slowest <- nym2002[which(nym2002$time == max(nym2002$time)),]$age
+print(c("slowest: ", slowest ," fastest: ", fastest))
+```
+I used the which function to find which entires had the min and max times. I then looked at that index and took only the age column. The slowest runner was 58 years old and the fastest was 40 years old.
+
+### E
+```{r}
+us_finisher <- nym2002[which(nchar(as.character(nym2002$home)) ==2),]
+num_us <- nrow(us_finisher)
+print(num_us)
+```
+I first took the home column and made it into a vector. I then used the nchar function to see the length of the characters since countries have 3 instead of 2. I then picked the entries that are states or us territories. I then took the number of rows and printed the result of 38.
+
+### F
+```{r}
+oldest <- nym2002[which(nym2002$time == max(nym2002$time)),]$age
+best_time_older <- min(nym2002[which(nym2002$age > oldest), ]$time)
+old_position <- nym2002[which(nym2002$time == best_time_older), ]$place
+print(old_position)
+```
+I first found the age of the slowest runner. I then found the fastest time from the people who were older than her (best_time_older). I searched for that time in the original nym2002 and subsetted the place, which I printed and saw was 15229.
+
+### G
+```{r}
+position_fastest <- nym2002[which(nym2002$time == min(nym2002$time)),]$place
+print(position_fastest)
+```
+I found which entry has the minimum time. I then subsetted the place for the position, which I printed and found to be 200.
+
+### H
+```{r}
+countries <- nym2002[which(nchar(as.character(nym2002$home)) == 3),]
+unqiue_countries<- c(as.character(unique(countries$home)), "US")
+print(length(unqiue_countries))
+```
+I first got all entries that have countries as a home in the dataset (countries are three characters). I then made it into a vector using as.character function for the countries and added "US" for the states. I then printed the unique countries.
+
+## Problem 2
+### A
+```{r}
+library(ggplot2)
+library(car)
+library(gcookbook)
+library(MASS)
+library(Hmisc)
+crash <- read.csv("state crashes.csv")
+crash_plot <- ggplot(crash, aes(x=Licensed.drivers,
+y=Fatal.crashes)) + geom_point(shape=23)
+print(crash_plot)
+```
+I read in the csv and made a scatter plot through ggplot2. I made the shape a diamond with no fill in. 
+
+### B
+```{r}
+crash_plot <- ggplot(crash, aes(x=Licensed.drivers, y=Fatal.crashes,
+colour=as.character(Hand.held.ban)))
+crash_handheld <- crash_plot + geom_point(
+shape=23) + scale_colour_manual("Hand.held.ban",
+values=c("1"="green","2"="orange", "3"="brown"))
+print(crash_handheld)
+```
+I made the crash_plot display by colours and changed the settings in the sacle_colour_manual function. I had to change the Hand.held.ban column into characters to show correctly for the scale_colour_manual function.
+
+### C
+```{r}
+smooth_crash <- crash_handheld + geom_point(
+) + geom_smooth(se=F)
+print(smooth_crash)
+```
+I added a smooth line to crash_handheld plot with the function geom_smooth. I added se=F to get rid of the confidence interval.
+
+### D
+```{r}
+smooth_crash_reg <- crash_handheld+ geom_point() + geom_smooth(method=lm, se=F)
+print(smooth_crash_reg)
+```
+I first loaded the crash_handheld plot. I then added the layer of geom_smooth. I added se=F to get rid of the confidence interval. I added method=lm for the regression linear model. I then printed the result.
+
+### E
+```{r}
+smooth_crash1 <- crash_handheld + geom_point(
+) + geom_smooth(aes(fill=as.character(Hand.held.ban)
+),method=lm,alpha=0.2) + scale_fill_manual("Hand.held.ban",
+values=c("1"="green","2"="orange", "3"="brown"))
+print(smooth_crash1)
+```
+I first loaded the previous graphs. I added alpha=0.2 for the transparency of the confidence interval. I then set the fill of those confidence intervals with scale_fill_manual with the same parameters as the scale_colour_manual previously used. I also added aes parameter of fills to add another fill color to the original graph.
+
+### F
+```{r}
+all_lm <- smooth_crash1 + geom_smooth(method = 'lm',
+aes(colour = NA), colour = 'blue', se=F)
+print(all_lm)
+```
+I first loaded the smooth_crash1 plot from the previous problem. I proceeded to get the linaer model where there was no colour differentiation of Hand.held.ban. I got rid of the confidence as well. I then stored that in all_lm and printed the plot.
+
+### G
+You can conclude that the more licensed drivers there are the more fata crashes there were. The relationship seemed to have a strong linear relationship. However, this is no link to causation. Also we can conclude that if a handheld device was given then there occured more fatal crashses. 
+
+## References
+1. <https://stats.stackexchange.com/questions/5253/
+how-do-i-get-the-number-of-rows-of-a-data-frame-in-r>
+2. <https://stackoverflow.com/questions/40003028
+/extracting-unique-values-from-data-frame-using-r>
+3. <http://sape.inf.usi.ch/quick-reference/ggplot2/shape
+4. <https://stackoverflow.com/questions/
+38788357/change-bar-plot-colour-in-geom-bar-with-ggplot2-in-r>
+5. <https://stackoverflow.com/questions/16562859/
+ggplot2-colour-geom-point-by-factor-but-geom-smooth-based-on-all-data>

@@ -1,0 +1,34 @@
+---
+title: "Project Part 1" 
+author: "Your name - Blank for Part 1"
+fontsize: 12pt
+geometry: margin=1in
+urlcolor: black
+output: pdf_document
+header-includes:
+- \usepackage{setspace}
+- \onehalfspacing
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, highlight=FALSE)
+```
+
+```{r, echo=FALSE}
+# For Part 1, use this chunk for reading in the data with a path that identifies you.
+```
+
+## Part 1
+### Data collection
+  The data set that will be covered is titled "NCHS - Death rates and life expectancy at birth". This data set was collected by the reseracher from data.gov under the health section. The metadata was updated in August 20, 2018. This dataset from the U.S Department of Health & Human Services highlights the difference in age-adjusted death rates and life expectancy at birth by race and sex from the 1900 until 
+  The data was collected from the U.S Department of Health & Human services, which collected their samples from 1900 to 2015. The columns are deperated into 5 columns of year, race, sex, Average Life Expectancy (Years), and Age-adjusted Death Rate. 
+
+
+This dataset of U.S. mortality trends since 1900 highlights the differences in age-adjusted death rates and life expectancy at birth by race and sex. Age-adjusted death rates (deaths per 100,000) after 1998 are calculated based on the 2000 U.S. standard population. Populations used for computing death rates for 2011–2015 are postcensal estimates based on the 2010 census, estimated as of July 1, 2010. Rates for census years are based on populations enumerated in the corresponding censuses. Rates for noncensus years between 2000 and 2010 are revised using updated intercensal population estimates and may differ from rates previously published. Data on age-adjusted death rates prior to 1999 are taken from historical data (see References below). Life expectancy data are available up to 2014. Due to changes in categories of race used in publications, data are not available for the black population consistently before 1968, and not at all before 1960. More information on historical data on age-adjusted death rates is available at 
+```{r}
+## R code
+```
+
+
+## References
+1. Your resources go here. Links should be surrounded by <>.

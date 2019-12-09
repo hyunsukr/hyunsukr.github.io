@@ -1,0 +1,14 @@
+data data;
+infile '/folders/myshortcuts/SAS/final/data.csv' dlm=',' firstobs=2;
+input Hour	TempFeel	Humidity	Count;
+run;
+
+data data2;
+set data;
+squared = Hour*Hour;
+cube = Hour*Hour*Hour;
+run;
+
+proc reg data=data2;
+model Count = Hour squared cube TempFeel Humidity;
+run;

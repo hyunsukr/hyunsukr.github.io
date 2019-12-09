@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Basic JS: array</title>
+</head>
+<body>
+  
+  
+  <script>
+  
+  
+    // Array 
+    // - store a collection of things
+    // - may contain multiple data types
+    var emptyarray = [];
+    alert(emptyarray);
+    
+    var colors = ['red', 'blue', 'green'];
+    alert(colors);
+//    alert(colors[1]);
+
+    var colors2 = new Array('red', 'yellow', 'purple');
+    alert(colors2);
+//    alert(colors2[1]);
+    
+    console.log('colors = ' + colors);
+    console.log('colors2 = ' + colors2);
+    
+    colors[3] = 'black';
+    console.log('colors = ' + colors);
+    
+    colors.push('pink');
+    console.log('colors = ' + colors);
+
+    console.log('there are ' + colors.length + ' items in colors array');
+    colors[colors.length] = 'orange';
+    console.log('colors = ' + colors);
+    
+    colors.push(99);    
+    console.log('colors = ' + colors);
+    
+    console.log('reverse array = ' + colors.reverse());
+    console.log('sorted array = ' + colors.sort());
+    
+  </script>
+</body>
+</html>

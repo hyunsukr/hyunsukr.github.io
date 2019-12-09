@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    
+    <meta name="author" content="define author of the page -- your name">
+    <meta name="description" content="define a description of this page">
+    <meta name="keywords" content="define, keywords, for, search, engines">
+        
+    <title>Example home page</title>
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <div class="container">
+    <!-- 4.1 add <header> element to semantically structure the web page -->
+
+      <!-- 3.1 add <h1> element including the heading of the page, probably logo or the top level header -->
+      <h1 style="text-align: center;">
+        <!-- 9. add <a>, clicking your name (or logo) will open the specified page -->
+        <a href="index.html">Max Ryoo</a>
+      </h1>
+
+      <!-- 4.2 add <h3> element contaiing tagline or some important phase -->
+      <h3 style="text-align: center;">Software engineer and researcher</h3>
+
+      <!-- 10.1 add <nav> to organize your navigation menu at the top of the page -->
+      <nav>
+          <!-- 10.2 add <a> to link the menu option to the html page. 
+               To display a small pop-up with hint-like message when hovering over the menu option, 
+               include the title attribute -->
+          <a href="index.html" title="may or may not need, depending on design">Home</a>
+          <a href="software.html" title="software or tool you have involved or created">Software</a>
+          <a href="research.html" title="research you have involved">Research</a>
+          <a href="activity.html" title="activities you have involved">Activity</a>
+          <a href="contact.html" title="either email or form">Contact me</a>
+        </nav>
+  </div>
+
+    <br><br><br><br>
+    <!-- 5.1 add <section> element containing a group of content -->
+    <div class="container">
+      <!-- 5.2 add <h2> element containing a specific phrase about the page -->
+      
+      <!-- 3.2 add <p> element including a brief intro or a few sentences about your page or tagline -->
+          <p style="padding-left:20px">Brief intro, a few sentences about your web page/site or tagline</p>
+    </div>
+  
+  
+    <!-- highlight / showcase -->
+    <!-- 6.1 add <section> element to structure some of your hightlight/showcase -->
+      <br><br><br>
+    <section>
+      <div>
+      
+        <!-- 6.2 add <section> element to organize each highlight -->
+        <section class=center>
+          
+          <!-- 12.1 add <a> such that clicking this highlight opens an associated page -->
+          <a href="highlight1.html">
+          
+            <!-- 6.5 add <img> element displaying the hightlight image -->
+            <img src="https://ctsi.mcw.edu/images/cloud_computing.jpg" alt="image showing highlight1">
+            
+            <!-- 6.3 add <h3> containing the title of the highlight -->
+            <h3>Cloud Computing Integration</h3>
+            
+          </a>
+          
+          <!-- 6.4 add <p> describing this hightlight -->
+          <p>brief description about this project (probably phases or 2-3 sentences)</p>
+        </section>
+        
+        
+        <!-- 6.6 add <section> element to organize each highlight -->
+        <section class=center>
+        
+          <!-- 12.2 add <a> such that clicking this highlight opens an associated page -->
+          <a href="highlight2.html">
+          
+            <!-- 6.9 add <img> element displaying the hightlight image -->
+            <img style='height: 100%; width: 100%; object-fit: contain' src="https://www.researchgate.net/profile/Xabier_Urra/publication/275050653/figure/fig1/AS:283414642085888@1444582724049/Neuroimaging-methods-A-CTP-maps-and-DWI-lesions-in-a-patient-with-a-supratentorial.png" alt="image showing highlight2">
+            
+            <!-- 6.7 add <h3> containing the title of the highlight -->
+            <h3>Neuroimaging/ Computation Neurobiology</h3>
+            
+          </a>
+          
+          <!-- 6.8 add <p> describing this hightlight -->
+          <p>brief description about this project (probably phases or 2-3 sentences)</p>
+        </section>
+        
+        <!-- 6.10 add <section> element to organize each highlight -->
+        <section class=center>
+        
+          <!-- 12.3 add <a> such that clicking this highlight opens an associated page -->
+          <a href="highlight3.html">
+          
+            <!-- 6.13 add <img> element displaying the hightlight image -->
+            <img src="https://www.mpibpc.mpg.de/14976608/header_image-1533884806.jpg?t=eyJ3aWR0aCI6ODQ4LCJvYmpfaWQiOjE0OTc2NjA4fQ==--68b047527781b94e7ab53cada0afab5486989241" alt="image showing highlight3">
+            
+            <!-- 6.11 add <h3> containing the title of the highlight -->
+            <h3>Computational Biology</h3>
+            
+          </a>
+          
+          <!-- 6.12 add <p> describing this hightlight -->
+          <p>brief description about this project (probably phases or 2-3 sentences)</p>
+        </section>
+      
+      </div>
+    </section>
+        
+
+    <!-- 7.1 add <footer> element at the bottom of the page -->
+      <br><br>
+    <footer style="padding-bottom: 30px">
+
+      <!-- 7.2 add <small> element including your copyright such that 
+           the copyright will be semantically rendered in small print -->
+      <small style="width:20%">&copy; Hyun Suk Ryoo</small>
+
+      <!-- 11 add <nav> to organize your navigation menu at the bottom of the page.
+           To increase usability, use the same navigation menu 
+           (consistent, no extra learning time, increase retention, minimize chance of human errors -->
+      <nav style="width:50%; display:inline-block;float:right;background: #1a4166">
+        <a href="index.html" title="may or may not need, depending on design">Home</a>
+        <a href="software.html" title="software or tool you have involved or created">Software</a>
+        <a href="research.html" title="research you have involved">Research</a>
+        <a href="activity.html" title="activities you have involved">Activity</a>
+        <a href="contact.html" title="either email or form">Contact me</a>
+        </ul>
+      </nav>
+
+    </footer>
+
+  </body>
+</html>
+
+<!-- 8. create more html files that will be part of your website; e.g., software.html, 
+        research.html, activity.html, contact.html -->
