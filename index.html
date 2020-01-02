@@ -16,6 +16,8 @@ $('#myModal').on('shown.bs.modal', function () {
   <title>Hyun Suk Ryoo - Home</title>
 
   <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom fonts for this template -->
@@ -33,6 +35,9 @@ $('#myModal').on('shown.bs.modal', function () {
 
   <!-- Plugin JavaScript -->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+
   
 
 
@@ -127,224 +132,260 @@ $('#myModal').on('shown.bs.modal', function () {
     <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
       <div class="w-100">
         <h2 class="mb-5" style="margin-bottom:0px !important">Experience</h2>
-        <!-- Start time -->
-        <ul class="timeline">
-          <!-- TWT -->
-          <li>
-            <div class="timeline-badge"> <img style="width:45px; height:45px;" src="img/twt.png"></div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4 class="mb-0">Software Developer</h4>
-              </div>
-              <div class="timeline-body">
-                <h4 class="timeline-title">THINKING WITH TOOLS, LLC</h4>
-              </div>
-              <div class="resume-date">
-                <span class="text-primary">December 2019 - Present</span>
-              </div>
-              <small class="text-muted" style="cursor: pointer;" data-toggle="modal" data-target="#twt">Learn More <i class="fas fa-info-circle"></i></small>
+        <!-- Timeline -->
+        <section class="cd-timeline js-cd-timeline">
+          <div class="container max-width-lg cd-timeline__container">
+
+            <!-- twt card -->
+            <div class="cd-timeline__block">
+              <div class="cd-timeline__img">
+                <img style="width:45px; height:45px;" src="img/twt.png">
+              </div> 
+              
+              <div class="cd-timeline__content">
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="mb-0">Software Developer</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <h4 class="timeline-title">THINKING WITH TOOLS, LLC</h4>
+                  </div>
+                  <div class="resume-date">
+                    <span class="text-primary">December 2019 - Present</span>
+                  </div>
+                  <small class="text-muted" style="cursor: pointer;" data-toggle="modal" data-target="#twt">Learn More <i class="fas fa-info-circle"></i></small>
+                </div>
+              </div> 
             </div>
-          </li>
-          <div class="modal fade" id="twt" tabindex="-1" role="dialog" aria-labelledby="twt" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                  <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Software Developer @ Thinking With Tools, LLC</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
+
+            <!-- Fannie card -->
+            <div class="cd-timeline__block">
+              <div class="cd-timeline__img">
+                <img style="width:45px; height:45px;" src="img/fannie.png">
+              </div> 
+
+              <div class="cd-timeline__content">
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="mb-0">SOFTWARE ENGINEER INTERN</h4>
                   </div>
-                  <div class="modal-body">
-                    <div class="resume-date">
-                      <span class="text-primary">December 2019 - Present</span>
-                    </div>
-                    <br>
-                    <p>Started developing as a Software Developer at Thinking With Tools, LLC. </p> 
-                    <small><p>Technologies Used: Angular, ColdFusion, html, css.</p></small>
+                  <div class="timeline-body">
+                    <h4 class="timeline-title">Fannie Mae</h4>
                   </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <div class="resume-date">
+                    <span class="text-primary">June 2019 - August 2019 <br> <small>(3 Months)</small></span>
                   </div>
+                  <small class="text-muted" style="cursor: pointer;" data-toggle="modal" data-target="#fanniemae">Learn More <i class="fas fa-info-circle"></i></small>
                 </div>
-              </div>
+              </div> 
             </div>
-            <!-- Fannie -->
-          <li class="timeline-inverted">
-            <div class="timeline-badge"> <img style="width:45px; height:45px;" src="img/fannie.png"></div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4 class="mb-0">SOFTWARE ENGINEER INTERN</h4>
-              </div>
-              <div class="timeline-body">
-                <h4 class="timeline-title">FANNIE MAE</h4>
-              </div>
-              <div class="resume-date">
-                <span class="text-primary">June 2019 - August 2019 <br> <small>(3 Months)</small></span>
-              </div>
-              <small class="text-muted" style="cursor: pointer;" data-toggle="modal" data-target="#fanniemae">Learn More <i class="fas fa-info-circle"></i></small>
+
+            <!-- DS card -->
+            <div class="cd-timeline__block">
+              <div class="cd-timeline__img">
+                <img style="width:45px; height:45px;" src="img/swift.png">
+              </div> 
+
+              <div class="cd-timeline__content">
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="mb-0">Data Scientist</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <h4 class="timeline-title">SWIFT</h4>
+                    <small>(Society for the Worldwide Interbank Financial Telecommunication)</small>
+                  </div>
+                  <div class="resume-date">
+                    <span class="text-primary">August 2018 - May 2019 <br> <small>(10 Months)</small></span>
+                  </div>
+                  <small class="text-muted" style="cursor: pointer;" data-toggle="modal" data-target="#dsswift">Learn More <i class="fas fa-info-circle"></i></small>
+                </div>
+              </div> 
             </div>
-          </li>
-          <div class="modal fade" id="fanniemae" tabindex="-1" role="dialog" aria-labelledby="fanniemae" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                  <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Software Engineer Intern @ Fannie Mae</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
+
+            <!-- TA -->
+            <div class="cd-timeline__block">
+              <div class="cd-timeline__img">
+                <img style="width:45px; height:45px;" src="img/rotunda.png">
+              </div> 
+
+              <div class="cd-timeline__content">
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="mb-0">Teaching Assistant (CS4750)</h4>
                   </div>
-                  <div class="modal-body">
-                    <div class="resume-date">
-                      <span class="text-primary">June 2019 - August 2019</span>
-                    </div>
-                    <br>
-                    Team:  Capital Markets Treasury CASH TMS L3
-                    <br>
-                    <br>
-                    <p>Developed a end to end Dashboard that tracks all Fannie Mae wire payments. The dashboard is integrated into the Capital Markets Treasury CASH TMS L3 Team. The dashboard keeps tracks an average of net $13 Trillion wire transactions a year. The dashboard makes it easier for employees to track problematic wires and see transactions easier on a day to day basis. </p>
-                    <p>Developed a REST API for Calendar Date Services and ID Services. The goal of the project was to redevelop a legacy program to that other programs using the service could make easier calls.  </p>
-                    <p>Automated the Deployment Processes of Applications to one click deployment. The project was done by automating the migration of packages to the correct location for applications to start without any manual movement of systems and packages. </p>
-                    <small><p>Technolgies used: Spring, MS SQL Server, Oracle, Java, Python, Maven, HTML/CSS, JavaScript</p></small>
+                  <div class="timeline-body">
+                    <h4 class="timeline-title">UVA</h4>
+                    <small>(Computer Science Department)</small>
                   </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <div class="resume-date">
+                    <span class="text-primary">August 2018 - December 2019<br> <small>(3 Semesters || 1 Year 4 Months)</small></span>
                   </div>
+                  <small class="text-muted" style="cursor: pointer;" data-toggle="modal" data-target="#tacs4750">Learn More <i class="fas fa-info-circle"></i></small>
                 </div>
-              </div>
+              </div> 
             </div>
-            <!-- Data Science SWIFT -->
-            <li>
-              <div class="timeline-badge"> <img style="width:45px; height:45px;" src="img/swift.png"></div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4 class="mb-0">Data Scientist</h4>
-                </div>
-                <div class="timeline-body">
-                  <h4 class="timeline-title">SWIFT</h4>
-                  <small>(Society for the Worldwide Interbank Financial Telecommunication)</small>
-                </div>
-                <div class="resume-date">
-                  <span class="text-primary">August 2018 - May 2019 <br> <small>(10 Months)</small></span>
-                </div>
-                <small class="text-muted" style="cursor: pointer;" data-toggle="modal" data-target="#dsswift">Learn More <i class="fas fa-info-circle"></i></small>
-              </div>
-            </li>
-            <div class="modal fade" id="dsswift" tabindex="-1" role="dialog" aria-labelledby="fanniemae" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                  <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Data Scientist @ Swift</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="resume-date">
-                      <span class="text-primary">August 2018 - May 2019</span>
-                    </div>
-                    <br>
-                    Team:  Innovation Lab
-                    <br>
-                    <br>
-                    <p>Incorporate ideas of Machine Learning and Data Science to filter previous project at SWIFT as a Database Intern.</p>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- TA CS 4750 -->
-            <li class="timeline-inverted">
-              <div class="timeline-badge"> <img style="width:45px; height:45px;" src="img/rotunda.png"></div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4 class="mb-0">Teaching Assistant (CS4750) </h4>
-                </div>
-                <div class="timeline-body">
-                  <h4 class="timeline-title">UVA</h4>
-                  <small>(Computer Science Department)</small>
-                </div>
-                <div class="resume-date">
-                  <span class="text-primary">August 2018 - December 2019<br> <small>(3 Semesters || 1 Year 4 Months)</small></span>
-                </div>
-                <small class="text-muted" style="cursor: pointer;" data-toggle="modal" data-target="#tacs4750">Learn More <i class="fas fa-info-circle"></i></small>
-              </div>
-            </li>
-            <div class="modal fade" id="tacs4750" tabindex="-1" role="dialog" aria-labelledby="fanniemae" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Teaching Assistant for CS 4750 (Database)</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      <div class="resume-date">
-                        <span class="text-primary">August 2018 - December 2019</span>
-                      </div>
-                      <br>
-                      Department: Computer Science
-                      <br>
-                      Professors: Nada Basit, Upsorn Praphamontripong
-                      <br>
-                      <br>
-                      <p>CS 4750: Database Systems introduces the fundamental concepts for design and development of database systems. Emphasizes relational data model and conceptual schema design using ERmodel, practical issues in commercial database systems, database design using functional dependencies, and other data models. Develops a working relational database for a realistic application.</p>
-                      <p><small>Technologies Used: MySQL, PhpMyAdmin, PHP</p></small>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-      
+
             <!-- DB intern swift -->
-            <li>
-              <div class="timeline-badge"> <img style="width:45px; height:45px;" src="img/swift.png"></div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4 class="mb-0">Database Developer Intern</h4>
-                </div>
-                <div class="timeline-body">
-                  <h4 class="timeline-title">SWIFT</h4>
-                  <small>(Society for the Worldwide Interbank Financial Telecommunication)</small>
-                </div>
-                <div class="resume-date">
-                  <span class="text-primary">June 2018 - August 2018 <br> <small>(3 Months)</small></span>
-                </div>
-                <small class="text-muted" style="cursor: pointer;" data-toggle="modal" data-target="#dbswift">Learn More <i class="fas fa-info-circle"></i></small>
-              </div>
-            </li>
-            <div class="modal fade" id="dbswift" tabindex="-1" role="dialog" aria-labelledby="fanniemae" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Database Developer Intern @ Swift</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      <div class="resume-date">
-                        <span class="text-primary">June 2019 - August 2019</span>
-                      </div>
-                      <br>
-                      Team:  Capital Markets Treasury CASH TMS L3
-                      <br>
-                      <br>
-                      <p>Developed a REST API for filtering and updating Security Violation logs. <br><br>The project included making an interface with html/css front end with a Node js, Express js, Mongo db backend along with a Python and sqlite3 processor. <br><br>The API filters out Security Violations from k thousand line files to 100 lines. Made a database to contain all updates and reports of security violations so that no data is lost. Original time of completion (x hours or days) is now minutes</p>
-                      <p><small>Technologies Used: Node js, Express js, MongoDB, SQLite3, Python, HTML/CSS, Docker </p></small>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
+            <div class="cd-timeline__block">
+              <div class="cd-timeline__img">
+                <img style="width:45px; height:45px;" src="img/swift.png">
+              </div> 
+
+              <div class="cd-timeline__content">
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="mb-0">Database Developer Intern</h4>
                   </div>
+                  <div class="timeline-body">
+                    <h4 class="timeline-title">SWIFT</h4>
+                    <small>(Society for the Worldwide Interbank Financial Telecommunication)</small>
+                  </div>
+                  <div class="resume-date">
+                    <span class="text-primary">June 2018 - August 2018 <br> <small>(3 Months)</small></span>
+                  </div>
+                  <small class="text-muted" style="cursor: pointer;" data-toggle="modal" data-target="#dbswift">Learn More <i class="fas fa-info-circle"></i></small>
                 </div>
+              </div> 
+            </div>
+          </div>
+        </section> <!-- cd-timeline -->
+        <script src="assets/js/main.js"></script>
+        <!-- twt modal -->
+        <div class="modal fade" id="twt" tabindex="-1" role="dialog" aria-labelledby="twt" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Software Developer @ Thinking With Tools, LLC</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
               </div>
-          </ul>
-        <!--End Time -->
+              <div class="modal-body">
+                <div class="resume-date">
+                  <span class="text-primary">December 2019 - Present</span>
+                </div>
+                <br>
+                <p>Started developing as a Software Developer at Thinking With Tools, LLC. </p> 
+                <small><p>Technologies Used: Angular, ColdFusion, html, css.</p></small>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- fannie modal -->
+        <div class="modal fade" id="fanniemae" tabindex="-1" role="dialog" aria-labelledby="fanniemae" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Software Engineer Intern @ Fannie Mae</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="resume-date">
+                  <span class="text-primary">June 2019 - August 2019</span>
+                </div>
+                <br>
+                Team:  Capital Markets Treasury CASH TMS L3
+                <br>
+                <br>
+                <p>Developed a end to end Dashboard that tracks all Fannie Mae wire payments. The dashboard is integrated into the Capital Markets Treasury CASH TMS L3 Team. The dashboard keeps tracks an average of net $13 Trillion wire transactions a year. The dashboard makes it easier for employees to track problematic wires and see transactions easier on a day to day basis. </p>
+                <p>Developed a REST API for Calendar Date Services and ID Services. The goal of the project was to redevelop a legacy program to that other programs using the service could make easier calls.  </p>
+                <p>Automated the Deployment Processes of Applications to one click deployment. The project was done by automating the migration of packages to the correct location for applications to start without any manual movement of systems and packages. </p>
+                <small><p>Technolgies used: Spring, MS SQL Server, Oracle, Java, Python, Maven, HTML/CSS, JavaScript</p></small>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- dsswift modal -->
+        <div class="modal fade" id="dsswift" tabindex="-1" role="dialog" aria-labelledby="fanniemae" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Data Scientist @ Swift</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="resume-date">
+                  <span class="text-primary">August 2018 - May 2019</span>
+                </div>
+                <br>
+                Team:  Innovation Lab
+                <br>
+                <br>
+                <p>Incorporate ideas of Machine Learning and Data Science to filter previous project at SWIFT as a Database Intern.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- db modal -->
+        <div class="modal fade" id="tacs4750" tabindex="-1" role="dialog" aria-labelledby="fanniemae" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Teaching Assistant for CS 4750 (Database)</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="resume-date">
+                  <span class="text-primary">August 2018 - December 2019</span>
+                </div>
+                <br>
+                Department: Computer Science
+                <br>
+                Professors: Nada Basit, Upsorn Praphamontripong
+                <br>
+                <br>
+                <p>CS 4750: Database Systems introduces the fundamental concepts for design and development of database systems. Emphasizes relational data model and conceptual schema design using ERmodel, practical issues in commercial database systems, database design using functional dependencies, and other data models. Develops a working relational database for a realistic application.</p>
+                <p><small>Technologies Used: MySQL, PhpMyAdmin, PHP</p></small>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- intern modal -->
+        <div class="modal fade" id="dbswift" tabindex="-1" role="dialog" aria-labelledby="fanniemae" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Database Developer Intern @ Swift</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="resume-date">
+                  <span class="text-primary">June 2019 - August 2019</span>
+                </div>
+                <br>
+                Team:  Capital Markets Treasury CASH TMS L3
+                <br>
+                <br>
+                <p>Developed a REST API for filtering and updating Security Violation logs. <br><br>The project included making an interface with html/css front end with a Node js, Express js, Mongo db backend along with a Python and sqlite3 processor. <br><br>The API filters out Security Violations from k thousand line files to 100 lines. Made a database to contain all updates and reports of security violations so that no data is lost. Original time of completion (x hours or days) is now minutes</p>
+                <p><small>Technologies Used: Node js, Express js, MongoDB, SQLite3, Python, HTML/CSS, Docker </p></small>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
     </section>
