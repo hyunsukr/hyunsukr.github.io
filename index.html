@@ -36,7 +36,14 @@ $('#myModal').on('shown.bs.modal', function () {
   <!-- Plugin JavaScript -->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+        AOS.init();
+        AOS.refreshHard();  //optional
+    });
+</script>
 
   
 
@@ -86,7 +93,7 @@ $('#myModal').on('shown.bs.modal', function () {
 
   <div class="container-fluid p-0">
 
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about" data-aos="fade-in">
       <div class="w-100">
         <h1 class="mb-0">Hyun Suk (Max)
           <span class="text-primary">Ryoo</span>
@@ -392,7 +399,7 @@ $('#myModal').on('shown.bs.modal', function () {
 
     <hr class="m-0">
 
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education" data-aos="fade-in" data-aos-duration="4000" data-aos-easing="ease-in-out">
       <div class="w-100">
         <h2 class="mb-5" style="margin-bottom:0px !important">Education</h2>
 
@@ -841,7 +848,7 @@ $('#myModal').on('shown.bs.modal', function () {
 
     <hr class="m-0">
 
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="research">
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="research" data-aos="fade-in" data-aos-duration="4000">
       <div class="w-100">
         <h2 class="mb-5" style="margin-bottom:0px !important">Research</h2>
         <div class="subheading mb-3">Interests: Machine Learning, Model Analysis, Quantitative Methods</div>
@@ -892,7 +899,7 @@ $('#myModal').on('shown.bs.modal', function () {
 
     <hr class="m-0">
 
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills" data-aos="fade-in" data-aos-duration="4000">
       <div class="w-100">
         <h2 class="mb-5" style="margin-bottom:0px !important">Skills</h2>
 
