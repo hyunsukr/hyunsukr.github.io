@@ -37,6 +37,8 @@
 
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
+  <script src="js/filter.js"></script>
+
 </head>
 
 <body class="main">
@@ -148,8 +150,9 @@
             <div class="col-sm-8">
                 <div class="card">
                     <h4>All Posts</h4>
+                    <input type="text" id="searchparam" class="search" onkeyup="filterPosts()" placeholder="Search for titles or keywords" title="Type in a name">
                     <div class="table-responsive keywords" style="padding:1em">
-                        <table class="table table-bordered table-hover">
+                        <table class="table table-bordered table-hover" id="blogposts">
                             <thead>
                             <tr>
                                 <th class="col-5">Title</th>

@@ -2,9 +2,15 @@
     background-color: #f8f9fa;
 }
 
+.search{
+    margin: 0 auto;
+    width:50%;
+    border-radius: 2em;
+}
+
 .navbar {
     background-color: rgb(164, 194, 218);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 0px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 .navbar a{
