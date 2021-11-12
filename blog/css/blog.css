@@ -10,6 +10,13 @@
 .navbar a{
     color:black;
 }
+
+.info-block {
+    text-align: left;
+    padding-left:2em;
+    padding-right:2em;
+}
+
 .card {
     margin-top:1em;
     padding:0em;

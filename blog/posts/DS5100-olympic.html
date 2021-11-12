@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="icon" href="../img/logo.png">
+  <link rel="icon" href="../../img/logo.png">
 
 
   <title>Hyun Suk Ryoo - Blog</title>
@@ -77,7 +77,7 @@
         </div>
       </nav>
     <br>
-    <div class="container-fluid">
+    <div class="container-fluid" data-aos="zoom-in">
         <div class="row">
             <div class="col-sm-4">
                 <div class="card">
@@ -96,8 +96,8 @@
                         </div>
                         <div class="col-sm-6">
                             <p>
-                                Areas <br>
-                                4
+                                Categories <br>
+                                3
                             </p>
                         </div> 
                     </div>
@@ -131,9 +131,8 @@
                           <p>Categories</p>
                           <ul>
                               <li><a href="../categories/regression.html">Regression</a></li>
-                              <li>Web Scrapping</li>
-                              <li>Data Science</li>
-                              <li>Course Work</li>
+                              <li><a href="../categories/webscrapping.html">Web Scrapping</a></li>
+                              <li><a href="../categories/datascience.html">Data Science</a></li>
                           </ul>
                       </div>
                       <div class="col-md-6">
@@ -148,8 +147,54 @@
             <div class="col-sm-8">
                 <div class="card">
                     <h4>Analysis of Olympic Data with GDP</h4>
-
-                    <p>INSERT INFO ABOUT POST</p>
+                    <div class="keywords">
+                      <button style="pointer-events: none;">
+                        Web Scrapping
+                      </button>
+                      <button style="pointer-events: none;">
+                        Linear Regression
+                      </button>
+                      <button style="pointer-events: none;">
+                        Data Science
+                      </button>
+                      <button style="pointer-events: none;">
+                        DS 5100
+                      </button>
+                    </div>
+                    <p>Github Link : <a href="https://github.com/hyunsukr/DS5100-Final">Github</a></p>
+                    <div class='container'>
+                      <p class="info-block">
+                        <strong><u>Summary</u></strong><br>
+                        This project was done for the class <i>Programming for Data Science</i> (DS5100). In the github repository info
+                        there are many componenets that were utilized for this project. The main componenets are broken down as such.
+                        <ol class="info-block" style="margin-left: 2em;">
+                          <li>Data Pull</li>
+                          <li>Data Cleaning / Processing</li>
+                          <li>Analysis of Results</li>
+                          <li>Presentation of Results</li>
+                        </ol>
+                      </p>
+                      <p class="info-block">
+                        <strong><u>Data Pull</u></strong><br>
+                        The data utilized for this project was all scrapped from public online sources. The <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">Beautiful Soup package </a>
+                        was used as well as other packages such as Pandas, Numpy, Pbar, Requests, ..etc. <br>
+                        Three major data sources were scrapped for this project. 
+                        <ol class="info-block" style="margin-left: 2em;">
+                          <li><a href="https://olympics.com/en/" target="_blank">Olympic Details</a></li>
+                          <li><a href="https://www.worldometers.info/gdp/gdp-by-country/">Recent GDP</a></li>
+                          <li><a href="https://countryeconomy.com/gdp" target="_blank">Historical GDP</a></li>
+                        </ol>
+                      </p>
+                      <p class="info-block">
+                        Upon scrapping these three datasets data cleaning and operations were done for all the datasets to generate
+                        one dataframe (csv) for further analysis. All datasets collected can be found in the <a href="https://github.com/hyunsukr/DS5100-Final/tree/main/data" target="_blank">data folder</a>
+                        of the repo for this project.
+                        <br><br>
+                        ... <br>
+                        <br>
+                        More Information to come
+                      </p>
+                    </div>
 
                     <h6>Similar Posts</h6>
                     <div class="table-responsive keywords" style="padding:1em">
@@ -191,6 +236,42 @@
             </div>
         </div>
     </div>
+    <footer class="footer bg-light">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-4">
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/hyun-suk-ryoo/">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://github.com/hyunsukr/">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="mailto:hr2ee@virginia.edu">
+                  <i class="far fa-envelope"></i>          
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="/resume/resume.pdf">
+                  <i class="fas fa-file"></i>
+                </a>
+              </li>
+            </ul>
+            <br>
+            <span class="copyright">Copyright &copy; Hyun Suk Ryoo</span>
+          </div>
+          <div class="col-md-4">
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- Bootstrap core JavaScript -->
     <script src="../../vendor/jquery/jquery.min.js"></script>
@@ -203,14 +284,14 @@
     <!-- Custom scripts for this template -->
     <script src="../../js/agency.min.js"></script>
 
-    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
-    <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             AOS.init();
             AOS.refreshHard();  //optional
         });
-    </script> -->
+    </script>
 
 </body>
 

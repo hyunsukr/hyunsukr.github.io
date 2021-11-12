@@ -49,11 +49,11 @@
           </a>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item">
+            <li class="nav-item active">
               <a class="nav-link" href="../main.html">Home</a>
             </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="./archive.html">Archive<span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+                <a class="nav-link" href="../archive/archive.html">Archive</a>
               </li>
             <li class="nav-item">
               <a class="nav-link" href="../categories/all-categories.html">Categories</a>
@@ -126,74 +126,101 @@
                     <br>
                 </div>
                 <div class="card">
-                  <div class="row" style="text-align: left;margin-left:0.5em">
-                      <div class="col-md-6">
-                          <p>Categories</p>
-                          <ul>
-                              <li><a href="../categories/regression.html">Regression</a></li>
-                              <li><a href="../categories/webscrapping.html">Web Scrapping</a></li>
-                              <li><a href="../categories/datascience.html">Data Science</a></li>
-                          </ul>
-                      </div>
-                      <div class="col-md-6">
-                          <p>Time</p>
-                          <ul>
-                              <li><a href="fall-2021.html">Fall 2021</a></li>
-                          </ul>
-                      </div>
-                  </div>
-              </div>
+                    <div class="row" style="text-align: left;margin-left:0.5em">
+                        <div class="col-md-6">
+                            <p>Categories</p>
+                            <ul>
+                                <li><a href="../categories/regression.html">Regression</a></li>
+                                <li><a href="../categories/webscrapping.html">Web Scrapping</a></li>
+                                <li><a href="../categories/datascience.html">Data Science</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <p>Time</p>
+                            <ul>
+                                <li><a href="../archive/fall-2021.html">Fall 2021</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-sm-8">
                 <div class="card">
-                    <h4>Archive</h4>
-                    <ul style="text-align: left;list-style-type:none">
-                        <li>
-                            <a href="fall-2021.html"><i class="fas fa-folder-open"></i> Fall 2021</a>
-                        </li>
-                    </ul>
-                    <h6><a href="../main.html">All Posts</a></h6>
+                    <h4>Category - Web Scrapping</h4>
+                    <div class="table-responsive keywords" style="padding:1em">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th class="col-5">Title</th>
+                                <th class="col-5">Key Words</th>
+                                <th class="col-2">Date</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr onclick="window.location='../posts/DS5100-olympic.html';">
+                                    <td class="col-5">Analysis of Olympic Data with GDP</td>
+                                    <td class="col-5">
+                                        <button>
+                                            Web Scrapping
+                                        </button>
+                                        <button>
+                                            Linear Regression
+                                        </button>
+                                        <button>
+                                            Data Science
+                                        </button>
+                                        <button>
+                                            DS 5100
+                                        </button>
+                                    </td>
+                                    <td class="col-2">Fall 2021</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                      </div>
+                      <h6><a href="../main.html">All Posts</a></h6>
 
                 </div>
             </div>
         </div>
     </div>
     <footer class="footer bg-light">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-4">
-          </div>
-          <div class="col-md-4">
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="https://www.linkedin.com/in/hyun-suk-ryoo/">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://github.com/hyunsukr/">
-                  <i class="fab fa-github"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="mailto:hr2ee@virginia.edu">
-                  <i class="far fa-envelope"></i>          
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="/resume/resume.pdf">
-                  <i class="fas fa-file"></i>
-                </a>
-              </li>
-            </ul>
-            <br>
-            <span class="copyright">Copyright &copy; Hyun Suk Ryoo</span>
-          </div>
-          <div class="col-md-4">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a href="https://www.linkedin.com/in/hyun-suk-ryoo/">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://github.com/hyunsukr/">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="mailto:hr2ee@virginia.edu">
+                    <i class="far fa-envelope"></i>          
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="/resume/resume.pdf">
+                    <i class="fas fa-file"></i>
+                  </a>
+                </li>
+              </ul>
+              <br>
+              <span class="copyright">Copyright &copy; Hyun Suk Ryoo</span>
+            </div>
+            <div class="col-md-4">
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+
     <!-- Bootstrap core JavaScript -->
     <script src="../../vendor/jquery/jquery.min.js"></script>
     <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
