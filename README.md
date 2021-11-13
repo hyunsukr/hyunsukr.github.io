@@ -1,68 +1,76 @@
-# [Start Bootstrap - Agency](https://startbootstrap.com/template-overviews/agency/)
+![alt text](assets/banner.png)
 
-[Agency](https://startbootstrap.com/template-overviews/agency/) is a one page agency education theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features several content sections, a responsive education grid with hover effects, full page education item modals, a responsive timeline, and a working PHP contact form.
 
-## Preview
+## Hyun Suk (Max) Ryoo - @hyunsukr
 
-[![Agency Preview](https://startbootstrap.com/assets/img/screenshots/themes/agency.png)](https://blackrockdigital.github.io/startbootstrap-agency/)
+Hi there 👋 I'm Max Ryoo! 
 
-**[View Live Preview](https://blackrockdigital.github.io/startbootstrap-agency/)**
+I graduated 🎓 from the University of Virginia with a Bachelors in Computer Science and Statistics. Currently I'm also purising 🧑🏼‍🎓 a Masters of Data Science at the University of Virginia as well.  🔶 WaHooWa 🔷!
 
-## Status
+Currently I'm a Software Engineer at Capital One Bank and primarily do backend / full stack development. 
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-agency/master/LICENSE)
-[![npm version](https://img.shields.io/npm/v/startbootstrap-agency.svg)](https://www.npmjs.com/package/startbootstrap-agency)
-[![Build Status](https://travis-ci.org/BlackrockDigital/startbootstrap-agency.svg?branch=master)](https://travis-ci.org/BlackrockDigital/startbootstrap-agency)
-[![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-agency/status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-agency)
-[![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-agency/dev-status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-agency?type=dev)
+This repo is for my personal website and blog! Check out my personal [profile website](https://hyunsuk-ryoo.com/) as well as my new [blog](https://hyunsuk-ryoo.com/blog/main).
 
-## Download and Installation
 
-To begin using this template, choose one of the following options to get started:
-* [Download the latest release on Start Bootstrap](https://startbootstrap.com/template-overviews/agency/)
-* Install via npm: `npm i startbootstrap-agency`
-* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-agency.git`
-* [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-agency)
+## 🛠️ Skills 
+### Cerfificates
+![](https://img.shields.io/static/v1?message=AWS%20Solutions%20Architect%20Associate%20-%20SAA-CO2&logo=amazon-aws&labelColor=5c5c5c&color=2bbc8a&logoColor=white&label=%20)
 
-## Usage
+### Front-End
+![](https://img.shields.io/static/v1?message=Angular&logo=Angular&labelColor=5c5c5c&color=2bbc8a&logoColor=white&label=%20) ![](https://img.shields.io/static/v1?message=React&logo=React&labelColor=5c5c5c&color=2bbc8a&logoColor=white&label=%20) ![](https://img.shields.io/static/v1?message=Javascript&logo=javascript&labelColor=5c5c5c&color=2bbc8a&logoColor=white&label=%20) ![](https://img.shields.io/static/v1?message=Node%20JS%20/%20Express%20JS&logo=node.js&labelColor=5c5c5c&color=2bbc8a&logoColor=white&label=%20) ![](https://img.shields.io/static/v1?message=Spring&logo=spring&labelColor=5c5c5c&color=2bbc8a&logoColor=white&label=%20) ![](https://img.shields.io/static/v1?message=Ionic&logo=angular&labelColor=5c5c5c&color=2bbc8a&logoColor=white&label=%20) ![](https://img.shields.io/static/v1?message=Flask&logo=flask&labelColor=5c5c5c&color=2bbc8a&logoColor=white&label=%20) ![](https://img.shields.io/static/v1?message=HTML&logo=html5&labelColor=5c5c5c&color=2bbc8a&logoColor=white&label=%20)![](https://img.shields.io/static/v1?message=CSS&logo=css3&labelColor=5c5c5c&color=2bbc8a&logoColor=white&label=%20) ![](https://img.shields.io/static/v1?message=Typescript&logo=typescript&labelColor=5c5c5c&color=2bbc8a&logoColor=white&label=%20)
 
-### Basic Usage
+### Back-End
+![](https://img.shields.io/static/v1?message=Scala&logo=scala&labelColor=5c5c5c&color=2bbc8a&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=Python&logo=python&labelColor=5c5c5c&color=2bbc8a&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=Java&logo=java&labelColor=5c5c5c&color=2bbc8a&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=R&logo=r&labelColor=5c5c5c&color=2bbc8a&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=c%2B%2B&logo=c%2B%2B&labelColor=5c5c5c&color=2bbc8a&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=SQL&logo=postgresql&labelColor=5c5c5c&color=2bbc8a&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=PHP&logo=php&labelColor=5c5c5c&color=2bbc8a&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=Javascript&logo=javascript&labelColor=5c5c5c&color=2bbc8a&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=AWS&logo=amazon-aws&labelColor=5c5c5c&color=2bbc8a&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=Gremlin&color=grey&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=ColdFusion&color=grey&logoColor=white&label=%20)
 
-After downloading, simply edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
 
-### Advanced Usage
+### Dev Ops
+![](https://img.shields.io/static/v1?message=Docker&logo=Docker&labelColor=5c5c5c&color=2bbc8a&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=EC2&color=grey&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=ECS&color=grey&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=CloudFront&color=grey&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=S3&color=grey&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=Lambda&color=grey&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=Route53&color=grey&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=IAM&color=grey&logoColor=white&label=%20)
 
-After installation, run `npm install` and then run `npm start` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.
+### Libraries / Packages
+![](https://img.shields.io/static/v1?message=Spark&color=grey&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=Hadoop&color=grey&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=PySpark&color=grey&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=Scikit-learn&color=grey&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=TensorFlow&color=grey&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=Keras&color=grey&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=Tidyverse&color=grey&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=Numpy/Pandas&color=grey&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=npm&color=grey&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=Maven&color=grey&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=Tableau&color=grey&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=SAS&color=grey&logoColor=white&label=%20)
 
-#### Gulp Tasks
+### Database
+![](https://img.shields.io/static/v1?message=Neptune&color=grey&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=DyanmoDB&color=grey&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=PostgreSQL&logo=postgresql&labelColor=5c5c5c&color=2bbc8a&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=MongoDB&logo=mongodb&labelColor=5c5c5c&color=2bbc8a&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=Microsoft%20SQL%20Server&logo=microsoft-sql-server&labelColor=5c5c5c&color=2bbc8a&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=MySQL&logo=mysql&labelColor=5c5c5c&color=2bbc8a&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=SQLite&logo=sqlite&labelColor=5c5c5c&color=2bbc8a&logoColor=white&label=%20)
+![](https://img.shields.io/static/v1?message=Oracle&color=grey&logoColor=white&label=%20)
 
-- `gulp` the default task that builds everything
-- `gulp watch` browserSync opens the project in your default browser and live reloads when changes are made
-- `gulp css` compiles SCSS files into CSS and minifies the compiled CSS
-- `gulp js` minifies the themes JS file
-- `gulp vendor` copies dependencies from node_modules to the vendor directory
+---
+<br>
 
-You must have npm installed globally in order to use this build environment.
+![Max's GitHub stats](https://github-readme-stats-hy9whvnro-hyunsukr.vercel.app/api?username=hyunsukr&theme=dark&show_icons=true&count_private=true)
 
-## Bugs and Issues
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-agency/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/agency/).
-
-## About
-
-Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
-
-* https://startbootstrap.com
-* https://twitter.com/SBootstrap
-
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
-
-* http://davidmiller.io
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
-
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
-
-## Copyright and License
-
-Copyright 2013-2019 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE) license.
+[![Top Langs](https://github-readme-stats-hy9whvnro-hyunsukr.vercel.app/api/top-langs/?username=hyunsukr&layout=compact&theme=dark&langs_count=10)](https://github.com/hyunsukr/github-readme-stats)
