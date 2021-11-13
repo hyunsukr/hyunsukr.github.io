@@ -170,13 +170,12 @@
                         there are many componenets that were utilized for this project. The main componenets are broken down as such.
                         <ol class="info-block" style="margin-left: 2em;">
                           <li>Data Pull</li>
-                          <li>Data Cleaning / Processing</li>
                           <li>Analysis of Results</li>
                           <li>Presentation of Results</li>
                         </ol>
                       </p>
                       <p class="info-block">
-                        <strong><u>Data Pull</u></strong><br>
+                        <strong><u>Data Pull Cleaning / Processing</u></strong><br>
                         The data utilized for this project was all scrapped from public online sources. The <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">Beautiful Soup package </a>
                         was used as well as other packages such as Pandas, Numpy, Pbar, Requests, ..etc. <br>
                         Three major data sources were scrapped for this project. 
@@ -190,13 +189,109 @@
                         Upon scrapping these three datasets data cleaning and operations were done for all the datasets to generate
                         one dataframe (csv) for further analysis. All datasets collected can be found in the <a href="https://github.com/hyunsukr/DS5100-Final/tree/main/data" target="_blank">data folder</a>
                         of the repo for this project.
-                        <br><br>
-                        ... <br>
                         <br>
-                        More Information to come
+                        <table class="table table-bordered table-hover" style="text-align: left;">
+                          <thead>
+                            <tr>
+                              <th>Column Name</th>
+                              <th>Type</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Country Name</td>
+                              <td>String</td>
+                            </tr>
+                            <tr>
+                              <td>Gold</td>
+                              <td>Integer</td>
+                            </tr>
+                            <tr>
+                              <td>Silver</td>
+                              <td>Integer</td>
+                            </tr>
+                            <tr>
+                              <td>Bronze</td>
+                              <td>Integer</td>
+                            </tr>
+                            <tr>
+                              <td>Total</td>
+                              <td>Integer</td>
+                            </tr>
+                            <tr>
+                              <td>Country Name Simplified</td>
+                              <td>String</td>
+                            </tr>
+                            <tr>
+                              <td>GDP</td>
+                              <td>String</td>
+                            </tr>
+                            <tr>
+                              <td>GDP Abbreviated</td>
+                              <td>String</td>
+                            </tr>
+                            <tr>
+                              <td>GDP Growth</td>
+                              <td>Double</td>
+                            </tr>
+                            <tr>
+                              <td>Population</td>
+                              <td>String</td>
+                            </tr>
+                            <tr>
+                              <td>GDP Per Capita</td>
+                              <td>String</td>
+                            </tr>
+                            <tr>
+                              <td>NOC</td>
+                              <td>String</td>
+                            </tr>
+                            <tr>
+                              <td>Discipline</td>
+                              <td>Integer</td>
+                            </tr>
+                            <tr>
+                              <td>Continents</td>
+                              <td>String</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </p>
+                      <p class="info-block">
+                        The methods / code for the webscrapping portion of the data pull can be found in the Web_Scrapper
+                        class found in <a href="https://github.com/hyunsukr/DS5100-Final/blob/main/src/utils/webscrapper.py">webscrapper.py</a>
+                        <br>
+                        <br>
+                        The methods / code for the data cleaning / processing can be found in the Cleaner class found in 
+                        <a href="https://github.com/hyunsukr/DS5100-Final/blob/main/src/utils/cleaner.py">cleaner.py</a>
+                      </p>
+                      <p class="info-block">
+                        <strong><u>Analysis of Results</u></strong><br>
+                        Before running any model preliminary exploratory data analysis was conducted with the cleaned dataset. A full report of EDA can be found in the
+                        <a href="https://github.com/hyunsukr/DS5100-Final/blob/main/analysis/jupyter_notebooks/eda.ipynb">EDA Notebook</a>.
+                        <br> <br>
+                        First a correlation plot was created for the numerical values of the dataset. 
+                        <img src="https://raw.githubusercontent.com/hyunsukr/DS5100-Final/main/analysis/resources/correlation_plot_cont.png" alt="snsplot" style="width: 100%;"/>
+                        <br>
+                        Some of the main columns for the dataset are Gold, Silver, Bronze, Total medal count, and continent. Barcharts were created to see the relationship of
+                        medal counts for each continent. The creation of barcharts were visualizations to quickly see how each continent performed in the 2020 Tokyo Olympics.
+
+                        <div class="row">
+                          <div class="col-sm-6" style="text-align: center;">
+                            Average Medal Count by Continent by Medal Type
+                            <img src="https://raw.githubusercontent.com/hyunsukr/DS5100-Final/main/analysis/resources/medal_summary_by_cont.png" alt="bar1" style="width: 100%;"/>
+                          </div>
+                          <div class="col-sm-6" style="text-align: center;">
+                            Total Medal Count by Continent by Medal Type
+                            <img src="https://raw.githubusercontent.com/hyunsukr/DS5100-Final/main/analysis/resources/medal_summary_by_cont_total.png" alt="bar2" style="width: 100%;"/>
+                          </div>
+                        </div>
+                      </p>
+                      <p class="info-block">
+                        ... <br><br>
+                        More Information to come.
                       </p>
                     </div>
-
                     <h6>Similar Posts</h6>
                     <div class="table-responsive keywords" style="padding:1em">
                         <table class="table table-bordered table-hover">
