@@ -1,5 +1,10 @@
 .main {
-    background-color: #f8f9fa;
+    /* background-color: #f8f9fa; */
+    background-color: rgb(108, 126, 145,0.7);
+}
+
+.copyright {
+    color:white
 }
 
 .search{
@@ -34,7 +39,7 @@
     padding-top:2em;
     background-color: white;
     text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 10px 36px 0px, rgba(0, 0, 0, 0.2) 0px 0px 0px 1px;
 }
 
 .card a {
