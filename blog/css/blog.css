@@ -99,7 +99,7 @@
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
     transform: translatey(0px);
     animation: float 5s ease-in-out infinite;
-    border: 5px #20232c solid;
+    border: 3px #20232c solid;
 }
 
 .no-round {
