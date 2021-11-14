@@ -86,15 +86,15 @@
       </a>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="../main.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../archive/archive.html">Archive</a>
+            <a class="nav-link" href="./archive.html">Archive</a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="all-categories.html"
-              ><span class="sr-only">(current)</span>Categories</a
+          <li class="nav-item">
+            <a class="nav-link" href="../categories/all-categories.html"
+              >Categories</a
             >
           </li>
           <li class="nav-item">
@@ -206,13 +206,49 @@
         </div>
         <div class="col-sm-8">
           <div class="card">
-            <h4>Categories</h4>
-            <ul style="text-align: left">
-              <li><a href="machinelearning.html">Machine Learning</a></li>
-              <li><a href="regression.html">Regression</a></li>
-              <li><a href="webscrapping.html">Web Scrapping</a></li>
-              <li><a href="datascience.html">Data Science</a></li>
-            </ul>
+            <h4>Archive - Spring 2019</h4>
+            <div class="table-responsive keywords" style="padding: 1em">
+              <table class="table table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th class="col-5">Title</th>
+                    <th class="col-5">Key Words</th>
+                    <th class="col-2">Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    onclick="window.location='../posts/cs4501-bikeshare.html';"
+                  >
+                    <td class="col-5">
+                      Machine Learning Research on Capital Bike Share data
+                      <img
+                        src="../assets/logos/capital-bikeshare-logo.png"
+                        style="height: 1em"
+                      />
+                    </td>
+                    <td class="col-5">
+                      <button style="pointer-events: none">
+                        Machine Learning
+                      </button>
+                      <button style="pointer-events: none">Softmax</button>
+                      <button style="pointer-events: none">
+                        Random Forest
+                      </button>
+                      <button style="pointer-events: none">
+                        K Nearest Neighbords (KNN)
+                      </button>
+                      <button style="pointer-events: none">
+                        Ensemble Voting
+                      </button>
+                      <button style="pointer-events: none">Data Science</button>
+                      <button style="pointer-events: none">CS 4501</button>
+                    </td>
+                    <td class="col-2">Spring 2019</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <h6><a href="../main.html">All Posts</a></h6>
           </div>
         </div>
