@@ -38,6 +38,11 @@
   <script src="../jquery/1.11.0-jquery.min.js"></script>
   <script src="../js/left-nav.js"></script>
 
+  <!-- Editor -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 
 </head>
 
@@ -155,94 +160,140 @@
         </div>
         <div class="col-sm-8">
           <div class="card">
-            <h4>Machine Learning Research on Capital Bike Share data</h4>
+            <h4>Artificial Scheduling</h4>
+            <h6>Class Schedule as a Constraint Satisfaction Problem with backtracking</h6>
             <div class="keywords">
               <button style="pointer-events: none;">
                 Machine Learning
               </button>
               <button style="pointer-events: none;">
-                Softmax
+                Aritifical Intelligence
               </button>
               <button style="pointer-events: none;">
-                Random Forest
+                Backtracking
               </button>
               <button style="pointer-events: none;">
-                K Nearest Neighbords (KNN)
+                Constraint Satisfaction Problem (CSP)
               </button>
               <button style="pointer-events: none;">
-                Ensemble Voting
+                Web Scrapping
               </button>
               <button style="pointer-events: none;">
                 Data Science
               </button>
               <button style="pointer-events: none;">
-                CS 4501
+                CS 4710
               </button>
             </div>
-            <p><i class="far fa-clock"></i> ~ 5 min read <i class="far fa-calendar-alt"></i> Spring 2019</p>
+            <p><i class="far fa-clock"></i> ~ 10 min read <i class="far fa-calendar-alt"></i> Fall 2019</p>
             <div class='container'>
-              <img src="../assets/logos/capital-bikeshare-logo.png" alt="tokyo" style="height: 10em;" />
+              <img src="../assets/logos/schedule-logo.png" alt="logo-ai" style="height: 10em;" />
               <p class="info-block">
                 <strong><u>Summary</u></strong><br>
-                This research project was done for the class <i>Machine Learning</i> (CS4501). The purpose of the project 
-                was to conduct various machine learning algorithms with fine tuning to predict the busiest and slowest hours of operations
-                to maximize the comapnies profit. <br><br>
-                <strong><u>Technologies Used</u></strong><br>
-                <ul class="info-block" style="margin-left: 2em;">
-                    <li>Sklearn</li>
-                    <li>Softmax</li>
-                    <li>Random Forest</li>
-                    <li>KNN</li>
-                    <li>Ensemble Voting</li>
-                </ul>
+                This research project was done for the class <i>Artifical Intelligence</i> (CS4710). 
+                The outcome of the research project was to propose a solution based on <i>Constraint Satisfaction Problem</i> (CSP) 
+                to fit the most amount of classes possible (with an upper-bound of 15 credits) in an optimal manner. 
+                <br><br>
               </p>
               <p class="info-block">
-                <strong><u>Abstract</u></strong><br>
-                The number of people using electric bikes instead of riding the bus or car has been increasing due to the fact that they
-                are eco-friendly and efficient. For this reason, more companies are starting the electric bike rental business and trying to
-                put out more electric bike to accomodate for the increase the number of users. In order to maximize the profit of the
-                electric bike rental companies, our group wanted to predict the busiest and least busy hours of people riding bikes
-                in order for the companies to determine when to put out more bikes and when to take them back to be recharged.
-                Additionally, we wanted to use the prediction model for other bike users for them to see the hours with the lowest bike
-                traffic so that they can enjoy their bike rides in a more efficient manner. <br><br>
-                In order to determine the busiest and least busy hours, we took the data for number of bike users in a given
-                hour in the NOVA/DC area and classified them into three classes based on the count percentile: 0 being the least busy, 1
-                being the middle, and 2 being the busiest. 0 would be the time when there is a minimal amount of traffic. 1 would be
-                regular with normal amount of traffic. 2 would be the time when there is heavy traffic and many electric bike users
-                in the area. Using this data, we tested several different models to determine the best performing model for our data
-                set. In order to compare the performance, we calculated the accuracy, precision, recall, and F-1 values for Softmax,
-                Random Forest, Decision Tree, and KNN models. After analyzing the performance of the models and fine-tuning them
-                to improve their performance, we create ensembles with different combinations of the models to determine the best
-                ensemble by looking at each of the accuracy, precision, recall, and F-1 values of each class. After determining the
-                ensemble with the best performance, we compared the performance of hard voting and soft voting as well. With our
-                prediction model, both the users and the electric bike rental companies can benefit and maximize the efficiency of bike
-                usage in Virginia.
-            </p>
+                <strong><u>Algorithm</u></strong><br>
+                The algorithm takes as input: a list of courses that the user has previously taken. 
+                This list is necessary because from a practical standpoint, there is no reason to take a course twice. 
+                For that reason, the algorithm will omit courses that the user has already taken in a previous semester. 
+                Also, the input list of previous courses will be used to determine which prerequisites the user satisfies. 
+                The algorithm will only select courses that the user has satisfied the prerequisites for. <br><br>
+                The scheduler algorithm is a modified version of the general backtracking CSP algorithm <br><br>
+                The function “recursive backtracking algorithm” is the modified implementation of the general backtracking 
+                CSP algorithm shown above. For this function a set of assigned courses and courses available are passed in as arguments  
+                and a randomized schedule is returned with information about whether an optimal schedule of 15 credits were found or 
+                that with the given courses the algorithm was not able to find an optimal schedule of 15 credits.
+                <pre><code class="python info-block">
+def recursive_backtracking(assignment, courses):
+    global max_credits
+    global max_assignment
+                
+    num_of_credits = num_credits(assignment)
+    if num_of_credits >= 15:
+        return "Pass"
+                
+    if num_of_credits > max_credits:
+        max_credits = num_of_credits
+        max_assignment = assignment
+                
+    for course in courses:
+        if not has_course_number(course, assignment) and not has_time_overlap(course, assignment):
+            if course[0] in set_haslab:
+                lab_added = False
+                assignment.append(course)
+                for labs in valid_labs:
+                    if labs[0] == course[0] and not has_time_overlap(labs, assignment):
+                        lab_added = True
+                        assignment.append(labs)
+                        break
+                if not lab_added:
+                    assignment.pop()
+                else:
+                    assignment.append(course)
+                
+                result = recursive_backtracking(assignment, courses)
+                
+                if result != 'Fail':
+                    return result
+                
+                assignment.pop()
+    return 'Fail'
+</code></pre>
+              </p>
+              <p class="info-block">
+                A Generated class schedule for a student who has taken CS1110, CS2102, CS2110, CS2150, CS4760, CS4750 is shown below. <br><br>
+              </p>
+              <img src="../assets/logos/ai-schedule-output.png" alt="schedule" style="height: 10em;" />
               <p class="info-block">
                 <strong><u>Conclusion</u></strong><br>
-                After comparing several type of models and ensembles, the hard voting ensemble consisting of the Random Forest,
-                Decision Tree, and KNN models performed the best with the highest accuracy value compared to other ensembles that
-                either included the SVM model or did not include the KNN model. From this performance analysis and comparison, we
-                can see that even though soft voting tends to perform better in many cases, there are exceptions as seen with our data set
-                and the higher accuracy value from hard voting compared to soft voting. Since the accuracy value from hard voting
-                ensemble consisting of the Random Forest, Decision Tree, and KNN models was about 85.79%, this seems accurate
-                enough to help electric bike companies as well as regular bike users in Virginia in determining the busiest and least busy
-                hours to maximize profit as well as avoid bike traffic. Even though this prediction will not be used to predict something
-                that can greatly harm one’s health and therefore there will not be a huge risk in making wrong predictions, we would
-                still like to find ways to improve the accuracy of our prediction model in the future. For future experiments, we can
-                develop our own Neural Network model in order to solve our problem of predicting the busiest and least busy ours and
-                also try using transfer learning of a model that has already been established in order to achieve more accurate model
-                that provides better results, helping the electric bike companies and regular bike users in Virginia, making Virginia
-                more eco-friendly.
+                This project explores the possibility of using CSP to generate an optimal course schedule fulfilling the most credit hours. 
+                The courses considered are computer science courses offered at the University of Virginia, available to undergraduates pursuing 
+                a B.A. Computer Science degree. Data about these courses was scraped from Lou’s List, and a scheduling algorithm based on recursive 
+                backtracking was developed in order to produce the optimal schedule. 
             </p>
             <hr>
               <p class="info-block">
                   A written report of the full project is available for downlod.
                   <br><br>
-                  <a href="../assets/papers/cs4501-bikeshare.pdf"><i class="fas fa-download"></i> Download Research Paper</a>
+                  <a href="../assets/papers/CS-4710-Final Report.pdf"><i class="fas fa-download"></i> Download Research Paper</a>
               </p>
             </div>
             <br><br>
+            <h6>Similar Posts</h6>
+            <div class="table-responsive keywords" style="padding: 1em">
+              <table class="table table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th class="col-5">Title</th>
+                    <th class="col-5">Key Words</th>
+                    <th class="col-2">Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr onclick="window.location='../posts/DS5100-olympic.html';">
+                    <td class="col-5">
+                      Analysis of Olympic Data with GDP
+                      <img
+                        src="../assets/olympic_rings.png"
+                        style="height: 1em"
+                      />
+                    </td>
+                    <td class="col-5">
+                      <button>Web Scrapping</button>
+                      <button>Linear Regression</button>
+                      <button>Linear Regression</button>
+                      <button>Data Science</button>
+                      <button>DS 5100</button>
+                    </td>
+                    <td class="col-2">Fall 2021</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
               <h6><a href="../main.html">All Posts</a></h6>
         </div>
         </div>

@@ -59,7 +59,6 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="../jquery/1.11.0-jquery.min.js"></script>
     <script src="../js/left-nav.js"></script>
-    <script src="../js/filter.js"></script>
   </head>
 
   <body class="main">
@@ -91,7 +90,7 @@
             <a class="nav-link" href="../main.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../archive/archive.html">Archive</a>
+            <a class="nav-link" href="./archive.html">Archive</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../categories/all-categories.html"
@@ -208,17 +207,9 @@
         </div>
         <div class="col-sm-8">
           <div class="card">
-            <h4>Category - Web Scrapping</h4>
-            <input
-              type="text"
-              id="searchparam"
-              class="search"
-              onkeyup="filterPosts()"
-              placeholder="Search for titles or keywords"
-              title="Type in a name"
-            />
+            <h4>Archive - Fall 2019</h4>
             <div class="table-responsive keywords" style="padding: 1em">
-              <table class="table table-bordered table-hover" id="blogposts">
+              <table class="table table-bordered table-hover">
                 <thead>
                   <tr>
                     <th class="col-5">Title</th>
@@ -227,22 +218,6 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr onclick="window.location='../posts/DS5100-olympic.html';">
-                    <td class="col-5">
-                      Analysis of Olympic Data with GDP
-                      <img
-                        src="../assets/olympic_rings.png"
-                        style="height: 1em"
-                      />
-                    </td>
-                    <td class="col-5">
-                      <button>Web Scrapping</button>
-                      <button>Linear Regression</button>
-                      <button>Data Science</button>
-                      <button>DS 5100</button>
-                    </td>
-                    <td class="col-2">Fall 2021</td>
-                  </tr>
                   <tr onclick="window.location='../posts/CS4710-ai-schedule.html';">
                     <td class="col-5">
                     Artificial Scheduling
@@ -318,7 +293,6 @@
         </div>
       </div>
     </footer>
-
     <!-- Bootstrap core JavaScript -->
     <script src="../../vendor/jquery/jquery.min.js"></script>
     <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -326,6 +300,10 @@
     <!-- Plugin JavaScript -->
     <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
 
+    <!-- Custom scripts for this template -->
+    <script src="../../js/agency.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {
