@@ -37,6 +37,9 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script src="../jquery/1.11.0-jquery.min.js"></script>
   <script src="../js/left-nav.js"></script>
+  <!-- Youtube API -->
+  <!-- <script src="https://apis.google.com/js/api.js"></script> -->
+  <script src="../js/youtube-scrapper.js"></script>
 
   <!-- Editor -->
   <link rel="stylesheet"
@@ -160,107 +163,34 @@
         </div>
         <div class="col-sm-8">
           <div class="card">
-            <h4>Artificial Scheduling</h4>
-            <h6>Class Schedule as a Constraint Satisfaction Problem with backtracking</h6>
+            <h4>Youtube Scrapper</h4>
+            <h6>Scrapping Recent Korean League of Legends Youtube Videos.</h6>
             <div class="keywords">
-              <button style="pointer-events: none;">
-                Machine Learning
-              </button>
-              <button style="pointer-events: none;">
-                Aritifical Intelligence
-              </button>
-              <button style="pointer-events: none;">
-                Backtracking
-              </button>
-              <button style="pointer-events: none;">
-                Constraint Satisfaction Problem (CSP)
-              </button>
               <button style="pointer-events: none;">
                 Web Scrapping
               </button>
               <button style="pointer-events: none;">
-                Data Science
+                Web Development
               </button>
               <button style="pointer-events: none;">
-                CS 4710
+                HTML / CSS
               </button>
             </div>
-            <p><i class="far fa-clock"></i> ~ 10 min read <i class="far fa-calendar-alt"></i> Fall 2019</p>
+            <p><i class="far fa-clock"></i> ~ 2 min read <i class="far fa-calendar-alt"></i> Fall 2021</p>
             <div class='container'>
-              <img src="../assets/logos/schedule-logo.png" alt="logo-ai" style="height: 10em;" />
+              <img src="../assets/logos/lollogo.png" alt="logo-ai" style="height: 10em;" />
               <p class="info-block">
                 <strong><u>Summary</u></strong><br>
-                This research project was done for the class <i>Artifical Intelligence</i> (CS4710). 
-                The outcome of the research project was to propose a solution based on <i>Constraint Satisfaction Problem</i> (CSP) 
-                to fit the most amount of classes possible (with an upper-bound of 15 credits) in an optimal manner. 
+                This project was done for the sake of collecting korean league of legends videos to watch for my personal interest. 
+                Recently I'm subscribed to many different channels ranging from the topics of video games, coding, cooking, etc... Sometimes
+                it's sort of hard to constantly search every League of Legends youtuber to see if they have any content, which is why I decided
+                to make a webpage on my Blog that outputs the most recent videos of my favorite youtubers so that I can quickly glance if I have missed anything.
                 <br><br>
+                You can also click the search button below to see the same videos I'm seeing!
               </p>
-              <p class="info-block">
-                <strong><u>Algorithm</u></strong><br>
-                The algorithm takes as input: a list of courses that the user has previously taken. 
-                This list is necessary because from a practical standpoint, there is no reason to take a course twice. 
-                For that reason, the algorithm will omit courses that the user has already taken in a previous semester. 
-                Also, the input list of previous courses will be used to determine which prerequisites the user satisfies. 
-                The algorithm will only select courses that the user has satisfied the prerequisites for. <br><br>
-                The scheduler algorithm is a modified version of the general backtracking CSP algorithm <br><br>
-                The function “recursive backtracking algorithm” is the modified implementation of the general backtracking 
-                CSP algorithm shown above. For this function a set of assigned courses and courses available are passed in as arguments  
-                and a randomized schedule is returned with information about whether an optimal schedule of 15 credits were found or 
-                that with the given courses the algorithm was not able to find an optimal schedule of 15 credits.
-                <pre><code class="python info-block">
-def recursive_backtracking(assignment, courses):
-    global max_credits
-    global max_assignment
-                
-    num_of_credits = num_credits(assignment)
-    if num_of_credits >= 15:
-        return "Pass"
-                
-    if num_of_credits > max_credits:
-        max_credits = num_of_credits
-        max_assignment = assignment
-                
-    for course in courses:
-        if not has_course_number(course, assignment) and not has_time_overlap(course, assignment):
-            if course[0] in set_haslab:
-                lab_added = False
-                assignment.append(course)
-                for labs in valid_labs:
-                    if labs[0] == course[0] and not has_time_overlap(labs, assignment):
-                        lab_added = True
-                        assignment.append(labs)
-                        break
-                if not lab_added:
-                    assignment.pop()
-                else:
-                    assignment.append(course)
-                
-                result = recursive_backtracking(assignment, courses)
-                
-                if result != 'Fail':
-                    return result
-                
-                assignment.pop()
-    return 'Fail'
-</code></pre>
-              </p>
-              <p class="info-block">
-                A Generated class schedule for a student who has taken CS1110, CS2102, CS2110, CS2150, CS4760, CS4750 is shown below. <br><br>
-              </p>
-              <img src="../assets/logos/ai-schedule-output.png" alt="schedule" style="width: 80%;" /> <br>
-              <p class="info-block">
-                <strong><u>Conclusion</u></strong><br>
-                This project explores the possibility of using CSP to generate an optimal course schedule fulfilling the most credit hours. 
-                The courses considered are computer science courses offered at the University of Virginia, available to undergraduates pursuing 
-                a B.A. Computer Science degree. Data about these courses was scraped from Lou’s List, and a scheduling algorithm based on recursive 
-                backtracking was developed in order to produce the optimal schedule. 
-            </p>
-            <hr>
-              <p class="info-block">
-                  A written report of the full project is available for downlod.
-                  <br><br>
-                  <a href="../assets/papers/CS-4710-Final Report.pdf"><i class="fas fa-download"></i> Download Research Paper</a>
-              </p>
+
+              <button onclick="httpGet()" class="btn btn-primary">Search</button>
+              <div id="response"></div>
             </div>
             <br><br>
             <h6>Similar Posts</h6>
