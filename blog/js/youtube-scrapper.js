@@ -3,10 +3,17 @@ function httpGet()
     var channels = ['UCDBAVzfX3yZ1hah0FHnOoaA', 'UC4q2QOe3Ht73lVO-31JnkQQ', 'UCS3_H_feQRm4QbXipKTvSrw', 'UCZW0yRW2HK7_fzgL9HQu9ZA', 'UCRpdlPk671uOMiBtf5HtB3Q', 'UCugNO83_V7xZLzCsjpABGeg'];
     var title = [];
     var embeds = [];
+    var err = '';
     for (i =0 ; i < channels.length; i++ ) {
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.open( "GET", 'https://www.googleapis.com/youtube/v3/search?key=AIzaSyC9gghahjuzwathjU4GGIwlKE3_H2a57HE&channelId='+ channels[i] +'&part=snippet,id&order=date&maxResults=2', false );
         xmlHttp.send( null );
+        console.log(JSON.parse(xmlHttp.responseText))
+        if (JSON.parse(xmlHttp.responseText).hasOwnProperty('error')) {
+            err = '<p class="info-block">Error : '
+            err = err + JSON.parse(xmlHttp.responseText).error.message + '</p>'
+            break;
+        }
         var response = JSON.parse(xmlHttp.responseText).items;
         var title_1 = response[0].snippet.channelTitle + ' : ' + response[0].snippet.title
         var url = '<iframe src="https://www.youtube.com/embed/'+ response[0].id.videoId +'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
@@ -20,6 +27,10 @@ function httpGet()
         table = table + '<div class="col-md-6" style="padding:0;"> ' + title[i] + '<br><br>' + embeds[i] + '</div>'
     }
     table = table + '</div>';
-
-    document.getElementById('response').innerHTML = table;
+    console.log(err)
+    if (err == '') {
+        document.getElementById('response').innerHTML = table;
+    } else {
+        document.getElementById('response').innerHTML = err;
+    }
 }
