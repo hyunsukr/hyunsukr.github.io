@@ -59,6 +59,12 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="../jquery/1.11.0-jquery.min.js"></script>
     <script src="../js/left-nav.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript"
+      src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
   </head>
 
   <body class="main">
@@ -211,7 +217,84 @@
               Multiple Linear Regression and Logistic Regression on Insurance
               Charges in America
             </h4>
-            <p>Information to Come!</p>
+            <div class="keywords">
+              <button style="pointer-events: none;">
+                Multiple Linear Regression
+              </button>
+              <button style="pointer-events: none;">
+                Logistic Regression
+              </button>
+              <button style="pointer-events: none;">
+                Interaction
+              </button>
+              <button style="pointer-events: none;">
+                Data Science
+              </button>
+              <button style="pointer-events: none;">
+                STAT 6021
+              </button>
+            </div>
+            <p><i class="fab fa-github"></i> Github Link : <a href="https://github.com/hyunsukr/STAT6021/tree/main/Project2">Github</a></p>
+            <p><i class="far fa-clock"></i> ~ 5 min read <i class="far fa-calendar-alt"></i> Spring 2019</p>
+            <div class="text-align:center">
+              <img src="../assets/insurance_logo.jpg" alt="tokyo" style="max-width: 100%" />
+            </div>
+            <p class="info-block">
+              <strong><u>Abstract</u></strong><br>
+              Medical insurance has become one of the most widely utilized forms of insurance, with 92% of Americans being either partly or fully covered in the year 2019. Because of this, it is important that people have an idea of the level of charges they will incur when utilizing their insurance. Our goal was to predict and see variables that affect the insurance charges for individuals.
+            </p>
+
+            <p class="info-block">
+              <strong><u>Summary</u></strong><br>
+              For the study a total of three models were constructure. 
+              <ol class="info-block" style="margin-left: 2em;">
+                <li>Multiple Linear Regression for Smokers</li>
+                <li>Multiple Linear Regression for Non Smokers</li>
+                <li>Logistic Regression for both Smokers and Non Smokers</li>
+              </ol>
+            </p>
+
+            <p class="info-block">
+              The multiple linear regression model was split into the two subgroups of smokers and non smokers based on the two populations following seperate trends. 
+              The reasoning behind the splitting of the populations and construction of the models can be found in the report, which will be posted in the bottom of this blog post.
+              <br>
+              <i><u>Smoker Multiple Linear Regression</u></i> <br>
+              <div style="overflow-x: scroll; margin:0.5em">
+                $$ \widehat{y^{0.5}} = 19.9145 + 4.1245 \text{bmi} + 0.7634 \text{age} $$
+                $$ R^2 = 0.7587 $$
+                $$ \text{Adjusted } R^2 = 0.7569 $$
+              </div>
+            </p>
+            <p class="info-block">
+              <i><u>Non Smoker Multiple Linear Regression*</u></i> <br>
+              <div style="overflow-x: scroll; margin:0.5em">
+                $$ \widehat{y^{0.5}} = 14.284 -1.388 I_1 - 4.108 I_2 - 3.919 I_3 + 1.679 \text{age } + 3.585 \text{children } - {3.230} \text{sex }$$
+                $$ R^2 = 0.9962 $$
+                $$ \text{Adjusted } R^2 = 0.9962 $$
+              </div>
+            </p>
+            <p class="info-block">
+              <i><u>Logistic Regression</u></i> <br>
+              <div style="overflow-x: scroll; margin:0.5em">
+                $$ \hat{y} = -8.397 + 0.185\text{age} + 0.010 \text{bmi} + 0.180 \text{children} + 22.858 \text{smoker} -0.279 I_1 - 0.813 I_2 - 0.887 I_3 - 0.278 \text{sex}$$
+                $$ \text{Null Deviance }: 1287.57 \text{ on } 935 DF $$
+                $$ \text{Residual Deviance }: 503.54 \text{ on } 927 DF $$
+                $$ AIC = 521.54 $$
+              </div>
+            </p>
+
+            <p class="info-block">
+              <small>* Multiple Linear Regression Assumption of constant variance not met.</small>
+            </p>
+            <hr>
+            <p class="info-block">
+              The project paper is available for preview.
+            <br>
+              <a href="../assets/papers/STAT6021-Final.pdf"><i class="fas fa-download"></i> Preview Research Paper</a>
+            <br>
+            <small>Group Members: Cepehr Alizadeh, Seth Harrison, Said Mrad</small>
+            </p>
+
 
             <h6>Similar Posts</h6>
             <div class="table-responsive keywords" style="padding: 1em">
