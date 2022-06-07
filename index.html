@@ -51,19 +51,16 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">about</a>
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#education">education</a>
+            <a class="nav-link js-scroll-trigger" href="#education">Education</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#research">Research</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
@@ -81,12 +78,16 @@
     <div class="container">
       <div class="intro-text">
         <div class="intro-heading text-uppercase">Max Ryoo</div>
-        <div class="intro-lead-in">Developer and Data Scientist </div>
+        <div class="intro-lead-in">
+          I am a <span>
+            <span class="typewrite" data-period="2000" data-type='[ "Software Developer", "Data Scientist"]'></span>
+            <span class="wrap"></span>
+          </span>
+        </div>
         <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#about">About Me!</a>
       </div>
     </div>
   </header>
-
   <!-- Services -->
   <section class="page-section" id="about" data-aos="fade-in" data-aos-duration="1500">
     <div class="container">
@@ -135,7 +136,7 @@
         <div class="col-md-8">
           <p class="text-muted text-left">Hello.  I’m Max Ryoo and I am a recent graduate from the University of Virginia where I received my Bachelor of Arts in Computer Science & Statistics (Biostatistics Concentration) (Class of 2020).  I decided to continue my studies and am pursuing a Masters of Data Science at University of Virginia starting in August 2021. 
             <br><br>
-            I also like to research in the areas of Machine Learning, Data Mining, and Quantitative Methods. I have done a couple of research projects, which you can check out in the research section! I also like to research the mechanisms behind different models and like to experiment with the area of model analysis using different models and machine learning techniques.
+            I also like to research in the areas of Machine Learning, Data Mining, and Quantitative Methods. I have done a couple of research projects, which you can check out in the blog section! I also like to research the mechanisms behind different models and like to experiment with the area of model analysis using different models and machine learning techniques.
             <br><br>
             I was born in Busan, South Korea, but am currently living in Northern Virginia. I’ve lived a good portion of my life in both countries so I’m fluent in Korean and English. In my free time I like to play guitar / learn music.         
             <br><br>
@@ -228,6 +229,21 @@
           <ul class="timeline">
             <li data-aos="fade-in" data-aos-duration="1500">
               <div class="timeline-image">
+                <img class="rounded-circle img-fluid" src="img/microsoft.png" style="background-color:white" alt="">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4>June 2022 - Present</h4>
+                  <h3 class="section-subheading" style="margin-bottom: 0;">Microsoft</h3>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">Software Development Engineer</p>
+                  <small class="text-muted" style="cursor: pointer;" data-toggle="modal" data-target="#micro">Learn More <i class="fas fa-info-circle"></i></small>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted" data-aos="fade-in" data-aos-duration="1500">
+              <div class="timeline-image">
                 <img class="rounded-circle img-fluid" src="img/capone.png" alt="">
               </div>
               <div class="timeline-panel">
@@ -241,7 +257,7 @@
                 </div>
               </div>
             </li>
-            <li class="timeline-inverted" data-aos="fade-in" data-aos-duration="1500">
+            <li data-aos="fade-in" data-aos-duration="1500">
               <div class="timeline-image">
                 <img class="rounded-circle img-fluid" src="img/twt.png" alt="">
               </div>
@@ -256,7 +272,7 @@
                 </div>
               </div>
             </li>
-            <li data-aos="fade-in" data-aos-duration="1500">
+            <li class="timeline-inverted" data-aos="fade-in" data-aos-duration="1500">
               <div class="timeline-image">
                 <img class="rounded-circle img-fluid" src="img/fannie.png" alt="">
               </div>
@@ -271,7 +287,7 @@
                 </div>
               </div>
             </li>
-            <li class="timeline-inverted" data-aos="fade-in" data-aos-duration="1500">
+            <li data-aos="fade-in" data-aos-duration="1500">
               <div class="timeline-image" style="background-color:transparent;">
                 <img class="rounded-circle img-fluid" src="img/swift.png" alt="">
               </div>
@@ -288,7 +304,7 @@
                 </div>
               </div>
             </li>
-            <li data-aos="fade-in" data-aos-duration="1500">
+            <li class="timeline-inverted" data-aos="fade-in" data-aos-duration="1500">
               <div class="timeline-image">
                 <img class="rounded-circle img-fluid" src="img/uva.jpg" alt="">
               </div>
@@ -303,7 +319,7 @@
                 </div>
               </div>
             </li>
-            <li class="timeline-inverted" data-aos="fade-in" data-aos-duration="1500">
+            <li data-aos="fade-in" data-aos-duration="1500">
               <div class="timeline-image" style="background-color:transparent;">
                 <img class="rounded-circle img-fluid" src="img/swift.png" alt="">
               </div>
@@ -332,7 +348,7 @@
     </div>
   </section>
 
-  <section class="bg-light page-section" id="projects" data-aos="fade-in" data-aos-duration="1500">
+  <!-- <section class="bg-light page-section" id="projects" data-aos="fade-in" data-aos-duration="1500">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
@@ -370,82 +386,7 @@
         </div>
       </div>
     </div>
-  </section>
-  <section class="page-section" id="research" data-aos="fade-in" data-aos-duration="1500">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Research</h2>
-          <h3 class="section-subheading text-muted">Topics of Interest: Health Informatics, Machine Learning, Quantitative Methods</h3>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/research/vtt.png" alt="">
-            <h4>Machine Learning <br> Data Mining</h4>
-            <p class="text-muted" style="margin-bottom: 0;">Research Assistnat</p>
-            <ul class="list-inline">
-              <li>
-                P.I.: <span class="text-muted">Hudson Golino Ph.D.</span>
-              </li>
-              <li>
-                Affiliation : <span class="text-muted">UVA</span>
-              </li>
-              <li>
-                Period: <span class="text-muted">Aug 2019 - Present</span>
-              </li>
-              <li>
-                <small class="text-muted" style="cursor: pointer;" data-toggle="modal" data-target="#golinoresearch">Learn More <i class="fas fa-info-circle"></i></small>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/research/moca.png" alt="">
-            <h4>M.O.C.A</h4>
-            <p class="text-muted" style="margin-bottom: 0;">Data Engineer</p>
-            <ul class="list-inline">
-              <li>
-                P.I.: <span class="text-muted">Ji Hoon Ryoo Ph.D.</span>
-              </li>
-              <li>
-                Affiliation : <span class="text-muted">USC, UVA</span>
-              </li>
-              <li>
-                Period: <span class="text-muted">May 2019 - Feb 2020</span>
-              </li>
-              <li>
-                <small class="text-muted" style="cursor: pointer;" data-toggle="modal" data-target="#moca">Learn More <i class="fas fa-info-circle"></i></small>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/research/gel.png" alt="">
-            <h4>Auditory Neurobiology</h4>
-            <p class="text-muted" style="margin-bottom: 0;">Undergraduate Research Assistnat</p>
-            <ul class="list-inline">
-              <li>
-                P.I.: <span class="text-muted">Jung Bum Shin Ph.D.</span>
-              </li>
-              <li>
-                Affiliation : <span class="text-muted">UVA</span>
-              </li>
-              <li>
-                Period: <span class="text-muted">Sept 2014 - Dec 2017</span>
-              </li>
-              <li>
-                <small class="text-muted" style="cursor: pointer;" data-toggle="modal" data-target="#shinlab">Learn More <i class="fas fa-info-circle"></i></small>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  </section> -->
 
   <section class="bg-light page-section" id="skills" data-aos="fade-in" data-aos-duration="1500">
     <div class="container">
@@ -1129,6 +1070,29 @@
       </div>
     </div>
     <!-- End modals for research -->
+    <div class="modal fade" id="micro" tabindex="-1" role="dialog" aria-labelledby="micro" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">SDE 2 @ Microsoft</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="resume-date">
+              June 2022 - Present
+            </div>
+            <br>
+            <p>SDE II</p> 
+  
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
       <!-- twt modal -->
   <div class="modal fade" id="c1" tabindex="-1" role="dialog" aria-labelledby="c1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -1141,7 +1105,7 @@
         </div>
         <div class="modal-body">
           <div class="resume-date">
-            <span class="text-primary">August 2020 - Present</span>
+            August 2020 - June 2022
           </div>
           <br>
           <p>First Rotation: C4AML (Center for Machine Learning - Anti-Money Laundering)</p> 
@@ -1170,7 +1134,7 @@
         </div>
         <div class="modal-body">
           <div class="resume-date">
-            <span class="text-primary">December 2019 - Present</span>
+            December 2019 - August 2020
           </div>
           <br>
           <p>Started developing as a Software Developer at Thinking With Tools, LLC. </p> 
@@ -1194,7 +1158,7 @@
         </div>
         <div class="modal-body">
           <div class="resume-date">
-            <span class="text-primary">June 2019 - August 2019</span>
+            June 2019 - August 2019
           </div>
           <br>
           Team:  Capital Markets Treasury CASH TMS L3
@@ -1223,7 +1187,7 @@
         </div>
         <div class="modal-body">
           <div class="resume-date">
-            <span class="text-primary">August 2018 - May 2019</span>
+            August 2018 - May 2019
           </div>
           <br>
           Team:  Innovation Lab
@@ -1249,7 +1213,7 @@
         </div>
         <div class="modal-body">
           <div class="resume-date">
-            <span class="text-primary">August 2018 - December 2019</span>
+            August 2018 - December 2019
           </div>
           <br>
           Department: Computer Science
@@ -1278,7 +1242,7 @@
           </div>
           <div class="modal-body">
             <div class="resume-date">
-              <span class="text-primary">June 2019 - August 2019</span>
+              June 2019 - August 2019
             </div>
             <br>
             Team:  Capital Markets Treasury CASH TMS L3
@@ -1360,6 +1324,7 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/agency.min.js"></script>
+  <script src="js/typeWriter.js"></script>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script type="text/javascript">
